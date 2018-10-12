@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "timezone": "+05:00",
+  "programs": [
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "00:00",
+      "endtime": "01:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "01:00",
+      "endtime": "02:00",
+      "name": "Off the record"
+    },
+    {
+      "days": ["Saturday", "Sunday"],
+      "starttime": "01:00",
+      "endtime": "02:00",
+      "name": "Aiteraaz hai"
+    },
+    {
+      "days": ["Monday"],
+      "starttime": "01:00",
+      "endtime": "02:00",
+      "name": "Zimma dar kon"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "02:00",
+      "endtime": "03:00",
+      "name": "Power Play"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "02:00",
+      "endtime": "03:00",
+      "name": "Sawal ye hai"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "03:00",
+      "endtime": "04:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "04:00",
+      "endtime": "05:00",
+      "name": "11th Hour"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "04:00",
+      "endtime": "05:00",
+      "name": "Sar e aam"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "05:00",
+      "endtime": "06:00",
+      "name": "The Reporters"
+    },
+    {
+      "days": ["Monday"],
+      "starttime": "05:00",
+      "endtime": "06:00",
+      "name": "Hamaray Mehman"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "06:00",
+      "endtime": "07:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "07:00",
+      "endtime": "08:00",
+      "name": "Power Play"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "07:00",
+      "endtime": "08:00",
+      "name": "Sawal ye hai"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "08:00",
+      "endtime": "09:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "09:00",
+      "endtime": "10:00",
+      "name": "11th Hour"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "09:00",
+      "endtime": "10:00",
+      "name": "Sar e aam"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "10:00",
+      "endtime": "11:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "11:00",
+      "endtime": "12:00",
+      "name": "The Reporters"
+    },
+    {
+      "days": ["Saturday", "Sunday"],
+      "starttime": "11:00",
+      "endtime": "12:00",
+      "name": "Aiteraaz hai"
+    },
+    {
+      "days": ["Monday"],
+      "starttime": "11:00",
+      "endtime": "12:00",
+      "name": "Zimma dar kon"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "12:00",
+      "endtime": "13:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "13:00",
+      "endtime": "14:00",
+      "name": "Off the record"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "13:00",
+      "endtime": "14:00",
+      "name": "Sawal ye hai"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "14:00",
+      "endtime": "15:00",
+      "name": "Power Play"
+    },
+    {
+      "days": ["Monday"],
+      "starttime": "14:00",
+      "endtime": "15:00",
+      "name": "Hamaray Mehman"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "15:00",
+      "endtime": "16:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "starttime": "16:00",
+      "endtime": "18:00",
+      "name": "Talk Show"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "16:30",
+      "endtime": "18:00",
+      "name": "Amazing Dunya"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "18:00",
+      "endtime": "19:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "starttime": "19:00",
+      "endtime": "20:00",
+      "name": "The Reporters"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "19:00",
+      "endtime": "20:00",
+      "name": "Hamaray Mehman"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "starttime": "20:00",
+      "endtime": "21:00",
+      "name": "Off the record"
+    },
+    {
+      "days": ["Friday", "Saturday"],
+      "starttime": "20:00",
+      "endtime": "21:00",
+      "name": "Aiteraaz hai"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "20:00",
+      "endtime": "21:00",
+      "name": "Zimma dar kom"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "21:00",
+      "endtime": "22:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "starttime": "22:00",
+      "endtime": "23:00",
+      "name": "Power Play"
+    },
+    {
+      "days": ["Friday", "Saturday", "Sunday"],
+      "starttime": "22:00",
+      "endtime": "23:00",
+      "name": "Sawal ye hai"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "starttime": "23:00",
+      "endtime": "24:00",
+      "name": "11th Hour"
+    },
+    {
+      "days": ["Friday", "Saturday"],
+      "starttime": "23:00",
+      "endtime": "24:00",
+      "name": "Sar e aam"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "23:00",
+      "endtime": "24:00",
+      "name": "Criminals most wanted"
+    }
+  ]
+}

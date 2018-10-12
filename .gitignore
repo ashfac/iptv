@@ -3,6 +3,7 @@
 app/app.iml
 app/build/
 build/
+iptv/epg/backup/
 local.properties
 *.iml
 .DS_Store
