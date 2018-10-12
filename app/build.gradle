@@ -1,17 +1,23 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'sony_android_apk_key'
+            keyPassword 'sonytv'
+            storeFile file('D:/Engineering/Android/TV/sony-android-apk-key.keystore')
+            storePassword 'sonytv'
+        }
+    }
     compileSdkVersion 24
-    buildToolsVersion '23.0.3'
-
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.example.android.sampletvinput"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 24
         versionCode 2
         versionName "1.1"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -21,9 +27,9 @@ android {
 }
 
 dependencies {
-    compile project(':library')
-    compile 'com.android.support:recyclerview-v7:24.0.0'
-    compile 'com.android.support:leanback-v17:24.0.0'
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.google.android.exoplayer:exoplayer:r1.5.6'
+    implementation project(':library')
+    implementation project(':exoplayer')
+    implementation 'com.android.support:recyclerview-v7:24.2.1'
+    implementation 'com.android.support:leanback-v17:24.2.1'
+    implementation 'com.android.support:appcompat-v7:24.2.1'
 }

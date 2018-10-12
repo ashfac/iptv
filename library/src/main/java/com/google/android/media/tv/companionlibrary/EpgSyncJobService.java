@@ -144,6 +144,12 @@ public abstract class EpgSyncJobService extends JobService {
     private Context mContext;
 
     /**
+     * Resets Channels Listings.
+     *
+     */
+    public abstract void resetTvListings();
+
+    /**
      * Returns the channels that your app contains.
      *
      * @return The list of channels for your app.
@@ -326,6 +332,7 @@ public abstract class EpgSyncJobService extends JobService {
         if (jobServiceComponent.getClass().isAssignableFrom(EpgSyncJobService.class)) {
             throw new IllegalArgumentException("This class does not extend EpgSyncJobService");
         }
+
         PersistableBundle persistableBundle = new PersistableBundle();
         persistableBundle.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
         persistableBundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
@@ -378,6 +385,12 @@ public abstract class EpgSyncJobService extends JobService {
                 return null;
             }
 
+            if(extras.getBoolean(ContentResolver.SYNC_EXTRAS_MANUAL) == true) {
+                mContext.getContentResolver().delete(TvContract.buildChannelsUriForInput(mInputId)
+                        , null, null);
+                resetTvListings();
+            }
+
             List<Channel> tvChannels = getChannels();
             TvContractUtils.updateChannels(mContext, mInputId, tvChannels);
             LongSparseArray<Channel> channelMap = TvContractUtils.buildChannelMap(
@@ -387,7 +400,7 @@ public abstract class EpgSyncJobService extends JobService {
                 return null;
             }
             // Default to one hour sync
-            long durationMs = extras.getLong(
+                long durationMs = extras.getLong(
                     BUNDLE_KEY_SYNC_PERIOD, DEFAULT_IMMEDIATE_EPG_DURATION_MILLIS);
             long startMs = System.currentTimeMillis();
             long endMs = startMs + durationMs;

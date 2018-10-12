@@ -141,6 +141,7 @@ public class TvContractUtils {
                     Log.d(TAG, "Updating channel " + channel.getDisplayName() + " at " + uri);
                 }
                 resolver.update(uri, values, null, null);
+
                 channelMap.remove(channel.getOriginalNetworkId());
             }
             if (channel.getChannelLogo() != null && !TextUtils.isEmpty(channel.getChannelLogo())) {

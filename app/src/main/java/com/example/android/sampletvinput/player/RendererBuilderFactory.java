@@ -38,7 +38,8 @@ public class RendererBuilderFactory {
      */
     public static DemoPlayer.RendererBuilder createRendererBuilder(
             Context context, int contentType, Uri contentUri) {
-        String userAgent = Util.getUserAgent(context, "ExoVideoPlayer");
+        //String userAgent = Util.getUserAgent(context, "ExoVideoPlayer");
+        String userAgent = com.example.android.sampletvinput.util.Util.USER_AGENT_FIREFOX;
 
         switch (contentType) {
             case TvContractUtils.SOURCE_TYPE_MPEG_DASH: {

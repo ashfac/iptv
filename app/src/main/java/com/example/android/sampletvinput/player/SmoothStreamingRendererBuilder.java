@@ -162,7 +162,7 @@ public class SmoothStreamingRendererBuilder implements DemoPlayer.RendererBuilde
 
             // Build the video renderer.
             DataSource videoDataSource =
-                    new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
             ChunkSource videoChunkSource = new SmoothStreamingChunkSource(manifestFetcher,
                     DefaultSmoothStreamingTrackSelector.newVideoInstance(context, true, false),
                     videoDataSource, new AdaptiveEvaluator(bandwidthMeter), LIVE_EDGE_LATENCY_MS);
@@ -177,7 +177,7 @@ public class SmoothStreamingRendererBuilder implements DemoPlayer.RendererBuilde
 
             // Build the audio renderer.
             DataSource audioDataSource =
-                    new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
             ChunkSource audioChunkSource = new SmoothStreamingChunkSource(manifestFetcher,
                     DefaultSmoothStreamingTrackSelector.newAudioInstance(),
                     audioDataSource, null, LIVE_EDGE_LATENCY_MS);
@@ -191,7 +191,7 @@ public class SmoothStreamingRendererBuilder implements DemoPlayer.RendererBuilde
 
             // Build the text renderer.
             DataSource textDataSource =
-                    new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
             ChunkSource textChunkSource = new SmoothStreamingChunkSource(manifestFetcher,
                     DefaultSmoothStreamingTrackSelector.newTextInstance(),
                     textDataSource, null, LIVE_EDGE_LATENCY_MS);

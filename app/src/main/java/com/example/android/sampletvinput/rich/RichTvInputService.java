@@ -20,7 +20,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.graphics.Point;
 import android.media.tv.TvContentRating;
-import android.media.tv.TvContract;
 import android.media.tv.TvInputManager;
 import android.media.tv.TvInputService;
 import android.media.tv.TvTrackInfo;
@@ -28,6 +27,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.StrictMode;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
@@ -36,12 +36,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.accessibility.CaptioningManager;
+import android.widget.Toast;
 
 import com.example.android.sampletvinput.R;
+import com.example.android.sampletvinput.parsers.TvUrlParser;
 import com.example.android.sampletvinput.player.DemoPlayer;
 import com.example.android.sampletvinput.player.RendererBuilderFactory;
 
 import com.example.android.sampletvinput.SampleJobService;
+import com.example.android.sampletvinput.util.SimpleHttpClient;
 import com.google.android.exoplayer.ExoPlayer;
 import com.google.android.exoplayer.MediaFormat;
 import com.google.android.exoplayer.text.CaptionStyleCompat;
@@ -57,6 +60,7 @@ import com.google.android.media.tv.companionlibrary.BaseTvInputService;
 import com.google.android.media.tv.companionlibrary.EpgSyncJobService;
 import com.google.android.media.tv.companionlibrary.utils.TvContractUtils;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -96,6 +100,9 @@ public class RichTvInputService extends BaseTvInputService {
     public void onCreate() {
         super.onCreate();
         mCaptioningManager = (CaptioningManager) getSystemService(Context.CAPTIONING_SERVICE);
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
     }
 
     @Override
@@ -205,8 +212,15 @@ public class RichTvInputService extends BaseTvInputService {
                 notifyVideoUnavailable(TvInputManager.VIDEO_UNAVAILABLE_REASON_TUNING);
                 return false;
             }
-            createPlayer(program.getInternalProviderData().getVideoType(),
-                    Uri.parse(program.getInternalProviderData().getVideoUrl()));
+
+            String videoUrl = TvUrlParser.parseVideoUrl(program.getInternalProviderData().getVideoUrl());
+
+            if(videoUrl == null || videoUrl.length() == 0) {
+                Toast.makeText(mContext, "Stream not available" , Toast.LENGTH_SHORT).show();
+                    return false;
+            }
+
+            createPlayer(program.getInternalProviderData().getVideoType(), Uri.parse(videoUrl));
             if (startPosMs > 0) {
                 mPlayer.seekTo(startPosMs);
             }

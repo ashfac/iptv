@@ -7,7 +7,7 @@ apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "23.0.3"
+    buildToolsVersion "27.0.3"
 
     defaultConfig {
         minSdkVersion 21
@@ -19,10 +19,11 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
     sourceSets {
-        instrumentTest.setRoot('src/androidTest/')
+        androidTest.setRoot('src/androidTest/')
     }
 }
 
@@ -31,18 +32,18 @@ configurations {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.google.ads.interactivemedia.v3:interactivemedia:3.2.1'
-    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:24.0.0'
+    implementation 'com.google.ads.interactivemedia.v3:interactivemedia:3.2.1'
+    implementation 'com.google.android.gms:play-services-ads:8.4.0'
 
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.mockito:mockito-core:1.10.19'
-    testCompile "org.robolectric:robolectric:3.1"
-    androidTestCompile 'com.android.support:support-annotations:24.0.0'
-    androidTestCompile 'com.android.support.test:runner:0.4.1'
-    androidTestCompile 'com.android.support.test:rules:0.4.1'
-    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+    testImplementation "org.robolectric:robolectric:3.1"
+    androidTestImplementation 'com.android.support:support-annotations:24.0.0'
+    androidTestImplementation 'com.android.support.test:runner:0.4.1'
+    androidTestImplementation 'com.android.support.test:rules:0.4.1'
+    androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
     doclava 'com.google.doclava:doclava:1.0.6'
 }
 
@@ -84,7 +85,7 @@ publishing {
             artifact javadocJar
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.compile.allDependencies.each {
+                configurations.implementation.allDependencies.each {
                     if(it.group != null && (it.name != null || "unspecified".equals(it.name)) && it.version != null)
                     {
                         def dependencyNode = dependenciesNode.appendNode('dependency')

@@ -672,6 +672,7 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
     @Override
     public void onDrawnToSurface(Surface surface) {
         // Do nothing.
+
     }
 
     @Override

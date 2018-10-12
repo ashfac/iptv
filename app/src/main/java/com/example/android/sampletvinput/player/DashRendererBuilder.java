@@ -124,7 +124,7 @@ public class DashRendererBuilder implements DemoPlayer.RendererBuilder {
             this.drmCallback = drmCallback;
             this.player = player;
             MediaPresentationDescriptionParser parser = new MediaPresentationDescriptionParser();
-            manifestDataSource = new DefaultUriDataSource(context, userAgent);
+            manifestDataSource = new DefaultUriDataSource(context, null, userAgent, true);
             manifestFetcher = new ManifestFetcher<>(url, manifestDataSource, parser);
         }
 
@@ -221,7 +221,7 @@ public class DashRendererBuilder implements DemoPlayer.RendererBuilder {
 
             // Build the video renderer.
             DataSource videoDataSource =
-                    new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
             ChunkSource videoChunkSource = new DashChunkSource(manifestFetcher,
                     DefaultDashTrackSelector.newVideoInstance(context, true, filterHdContent),
                     videoDataSource, new AdaptiveEvaluator(bandwidthMeter), LIVE_EDGE_LATENCY_MS,
@@ -238,7 +238,7 @@ public class DashRendererBuilder implements DemoPlayer.RendererBuilder {
 
             // Build the audio renderer.
             DataSource audioDataSource =
-                    new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
             ChunkSource audioChunkSource = new DashChunkSource(manifestFetcher,
                     DefaultDashTrackSelector.newAudioInstance(), audioDataSource, null,
                     LIVE_EDGE_LATENCY_MS,
@@ -253,7 +253,7 @@ public class DashRendererBuilder implements DemoPlayer.RendererBuilder {
 
             // Build the text renderer.
             DataSource textDataSource =
-                    new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
             ChunkSource textChunkSource = new DashChunkSource(manifestFetcher,
                     DefaultDashTrackSelector.newTextInstance(), textDataSource, null,
                     LIVE_EDGE_LATENCY_MS,

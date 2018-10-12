@@ -105,7 +105,7 @@ public class HlsRendererBuilder implements DemoPlayer.RendererBuilder {
             this.player = player;
             HlsPlaylistParser parser = new HlsPlaylistParser();
             playlistFetcher = new ManifestFetcher<>(url,
-                    new DefaultUriDataSource(context, userAgent), parser);
+                    new DefaultUriDataSource(context, null, userAgent, true), parser);
         }
 
         public void init() {
@@ -139,7 +139,7 @@ public class HlsRendererBuilder implements DemoPlayer.RendererBuilder {
                     new PtsTimestampAdjusterProvider();
 
             // Build the video/audio/metadata renderers.
-            DataSource dataSource = new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+            DataSource dataSource = new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
             HlsChunkSource chunkSource = new HlsChunkSource(true /* isMaster */, dataSource, url,
                     manifest, DefaultHlsTrackSelector.newDefaultInstance(context), bandwidthMeter,
                     timestampAdjusterProvider, HlsChunkSource.ADAPTIVE_MODE_SPLICE);
@@ -166,7 +166,7 @@ public class HlsRendererBuilder implements DemoPlayer.RendererBuilder {
             TrackRenderer textRenderer;
             if (preferWebvtt) {
                 DataSource textDataSource =
-                        new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+                        new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
                 HlsChunkSource textChunkSource =
                         new HlsChunkSource(false /* isMaster */, textDataSource,
                                 url, manifest, DefaultHlsTrackSelector.newVttInstance(),
