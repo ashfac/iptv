@@ -3,6 +3,7 @@
 app/app.iml
 app/build/
 build/
+iptv/iptv_channels-backup.m3u8
 iptv/epg/backup/
 local.properties
 *.iml
