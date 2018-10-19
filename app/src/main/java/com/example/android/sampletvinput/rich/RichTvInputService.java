@@ -131,6 +131,7 @@ public class RichTvInputService extends BaseTvInputService {
         private boolean mCaptionEnabled;
         private String mInputId;
         private Context mContext;
+        private String mVideoUrl = null;
 
         RichTvInputSessionImpl(Context context, String inputId) {
             super(context, inputId);
@@ -213,7 +214,15 @@ public class RichTvInputService extends BaseTvInputService {
                 return false;
             }
 
-            String videoUrl = TvUrlParser.parseVideoUrl(program.getInternalProviderData().getVideoUrl());
+            String videoUrl = program.getInternalProviderData().getVideoUrl();
+
+            // return from here if videoUrl is the same as that of currently playing program
+            if(videoUrl.equalsIgnoreCase(mVideoUrl)) {
+                return true;
+            }
+
+            mVideoUrl = videoUrl;
+            videoUrl = TvUrlParser.parseVideoUrl(videoUrl);
 
             if(videoUrl == null || videoUrl.length() == 0) {
                 Toast.makeText(mContext, "Stream not available" , Toast.LENGTH_SHORT).show();
