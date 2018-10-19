@@ -33,16 +33,16 @@ https://www.mjunoon.tv/dunya-news-live
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lahore_News_Logo_%28For_Tv_Screen%29.png/440px-Lahore_News_Logo_%28For_Tv_Screen%29.png",Lahore News HD
 http://mlive.lahorenews.tv:1935/lahorelive/lnews_1/playlist.m3u8
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/02/PTV_news_logo.png" tvg-epg="https://www.ptv.com.pk/public/userView/getShowTvGuide?channel=5", Ptv News
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/02/PTV_news_logo.png" tvg-epg="https://www.ptv.com.pk/public/getShowTvGuide?channel=5", Ptv News
 https://www.youtube.com/channel/UCOHkx2rlTIpRJnjgxzo1g9A/live
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/02/PTV_news_logo.png" tvg-epg="https://www.ptv.com.pk/public/userView/getShowTvGuide?channel=5", Ptv News
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/02/PTV_news_logo.png" tvg-epg="https://www.ptv.com.pk/public/getShowTvGuide?channel=5", Ptv News
 https://www.youtube.com/channel/UC3vLbhFEpTyXz8XNlcaYLDQ/live
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/02/PTV_news_logo.png" tvg-epg="https://www.ptv.com.pk/public/userView/getShowTvGuide?channel=5", Ptv News
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/02/PTV_news_logo.png" tvg-epg="https://www.ptv.com.pk/public/getShowTvGuide?channel=5", Ptv News
 https://59aeddfe9f01c.streamlock.net/live/PTVnews/player.m3u8
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/PTV_World_logo.png/300px-PTV_World_logo.png" tvg-epg="https://www.ptv.com.pk/public/userView/getShowTvGuide?channel=1", Ptv World
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/PTV_World_logo.png/300px-PTV_World_logo.png" tvg-epg="https://www.ptv.com.pk/public/getShowTvGuide?channel=1", Ptv World
 https://59aeddfe9f01c.streamlock.net/live/8090/player.m3u8
 
 #EXTINF:0 tvg-logo="https://khybernews.tv/wp-content/uploads/2018/08/logo-khybernews.png", Khyber News
@@ -66,10 +66,10 @@ https://rt-news.secure.footprint.net/1103.m3u8
 
 
 
-#EXTINF:0 tvg-logo="https://i.vimeocdn.com/portrait/11750117_300x300" tvg-epg="https://www.ptv.com.pk/public/userView/getShowTvGuide?channel=3", Ptv Home
+#EXTINF:0 tvg-logo="https://i.vimeocdn.com/portrait/11750117_300x300" tvg-epg="https://www.ptv.com.pk/public/getShowTvGuide?channel=3", Ptv Home
 https://hw.goonj.pk/ptvhomeweb_720p/index.m3u8
 
-#EXTINF:0 tvg-logo="https://i.vimeocdn.com/portrait/11750117_300x300" tvg-epg="https://www.ptv.com.pk/public/userView/getShowTvGuide?channel=3", Ptv Home
+#EXTINF:0 tvg-logo="https://i.vimeocdn.com/portrait/11750117_300x300" tvg-epg="https://www.ptv.com.pk/public/getShowTvGuide?channel=3", Ptv Home
 https://59aeddfe9f01c.streamlock.net/live/PTVhome/player.m3u8
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/83/Atv_pakistan.PNG", Atv
