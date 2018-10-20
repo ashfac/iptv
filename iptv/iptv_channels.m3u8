@@ -84,7 +84,7 @@ https://www.mjunoon.tv/a-plus-live
 #EXTINF:0 tvg-logo="http://a-plus.tv/wp-content/uploads/2017/10/aplus-logo.png" tvg-epg="http://a-plus.tv/schedule", A Plus
 http://173.212.252.47:1935/Aplus%20Pakistan/AplusPK/chunklist_w1071879192.m3u8
 
-#EXTINF:0 tvg-logo="http://okteve.com/wp-content/uploads/media/afd7cd1238808993a22c0c8ec5b47057.jpeg", Urdu 1
+#EXTINF:0 tvg-logo="http://okteve.com/wp-content/uploads/media/afd7cd1238808993a22c0c8ec5b47057.jpeg" tvg-epg="https://www.urdu1.tv/schedule", Urdu 1
 https://www.mjunoon.tv/urdu-1-live
 
 #EXTINF:0 tvg-logo="https://icon2.kisspng.com/20180716/xj/kisspng-pakistan-hum-tv-television-channel-drama-hum-5b4cf75ac71e12.9084820015317707148156.jpg" tvg-epg="https://www.hum.tv/schedule", HUM TV

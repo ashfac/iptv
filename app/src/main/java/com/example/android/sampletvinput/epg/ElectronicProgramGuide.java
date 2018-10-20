@@ -75,6 +75,9 @@ public class ElectronicProgramGuide {
             } else if(epgUrl.contains(APlusEpg.getEpgUrlIdentifier())) {
                 programs = APlusEpg.getAllPrograms(channelNumber, channelName, videoUrl, logoUrl, epgUrl);
 
+            } else if(epgUrl.contains(Urdu1Epg.getEpgUrlIdentifier())) {
+                programs = Urdu1Epg.getAllPrograms(channelNumber, channelName, videoUrl, logoUrl, epgUrl);
+
             } else if(epgUrl.contains(JsonEpg.getEpgUrlIdentifier())) {
                 programs = JsonEpg.getAllPrograms(context, channelNumber, channelName, videoUrl, logoUrl, epgUrl);
             }

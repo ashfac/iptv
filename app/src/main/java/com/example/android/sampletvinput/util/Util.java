@@ -3,9 +3,9 @@ package com.example.android.sampletvinput.util;
 import android.content.Context;
 import android.os.Environment;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -17,6 +17,8 @@ public class Util {
     public static class DateTime {
         public static final long MS_IN_ONE_HOUR = 60 * 60 * 1000;
         public static final long MS_IN_24_HOUR = 24 * MS_IN_ONE_HOUR;
+        public static final String DATE_FORMAT_12HR = "h:mm a";
+        public static final String DATE_FORMAT_24HR = "HH:mm";
 
         public static long getMidnightTimeMs() {
             Calendar calendar = Calendar.getInstance();
@@ -47,6 +49,20 @@ public class Util {
             }
 
             return (1000 * (time + Long.parseLong(timeNow[timeNow.length - 1])));
+        }
+
+        public static long getTimeMs12Hr(String dateTime, String dateFormat) {
+            try {
+                SimpleDateFormat dateParser = new SimpleDateFormat(DATE_FORMAT_12HR);
+
+                Date date = dateParser.parse(dateTime);
+                SimpleDateFormat dateFormater = new SimpleDateFormat(DATE_FORMAT_24HR);
+
+                return date.getTime();
+            } catch (ParseException e) {
+                System.err.println("Cannot parse this time string !");
+            }
+            return 0;
         }
     }
 

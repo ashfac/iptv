@@ -20,4 +20,4 @@ for %%f in (*.json) do (
     adb push %%f /sdcard/Download/iptv/epg/
 )
 
-cd ..\..\iptv
+cd ..\..
