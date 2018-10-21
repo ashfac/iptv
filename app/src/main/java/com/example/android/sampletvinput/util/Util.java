@@ -82,6 +82,21 @@ public class Util {
             return tag;
         }
 
+        public static String getTagReverse(String line, String begin, String end) {
+            String tag = null;
+
+            if(line != null && line.contains(end)) {
+                tag = line.substring(0, line.indexOf(end));
+
+                if(tag.contains(begin)) {
+                    tag = tag.substring(tag.indexOf(begin)+1);
+                } else {
+                    tag = null;
+                }
+            }
+            return tag;
+        }
+
         public static String getTag(String line, String begin, int count) {
             String tag = null;
 

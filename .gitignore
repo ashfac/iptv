@@ -2,6 +2,7 @@
 .idea/
 app/app.iml
 app/build/
+app/release/
 build/
 iptv/iptv_channels-backup.m3u8
 iptv/epg/backup/

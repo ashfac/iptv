@@ -50,21 +50,21 @@ public class Urdu1Epg {
                         Calendar calendar = Calendar.getInstance();
 
                         // make Monday first day of week
-                        int startcurrentDay = ((calendar.get(Calendar.DAY_OF_WEEK) + 6) % 7) - 1;
+                        int startDay = ((calendar.get(Calendar.DAY_OF_WEEK) + 5) % 7);
 
                         long timeCorrection = Util.DateTime.getMidnightTimeMsUtc() + TIME_ZONE_CORRECTION;
 
-                        String day_tag = weeklySchedule.get(startcurrentDay).substring(0, 3);
+                        String day_tag = weeklySchedule.get(startDay).substring(0, 3);
 
                         for (int i = 0; i < weeklySchedule.size(); i++) {
-                            int currentDay = (startcurrentDay + i) % weeklySchedule.size();
+                            int currentDay = (startDay + i) % weeklySchedule.size();
 
                             if(!weeklySchedule.get(currentDay).startsWith(day_tag)) {
                                 timeCorrection += MS_IN_24_HOUR;
                                 day_tag = weeklySchedule.get(currentDay).substring(0, 3);
                             }
 
-                            String[] dailySchedule = weeklySchedule.get(currentDay).split("<div class=\"slide\">");
+                            String[] dailySchedule = weeklySchedule.get(currentDay).split("class=\"slide\">");
 
                             if(dailySchedule.length > 1) {
                                 for (int index = 1; index < dailySchedule.length; index++) {
@@ -99,11 +99,20 @@ public class Urdu1Epg {
         String epgProgramTitle = Util.Html.getTag(currentProgram, "<h2>", "</h2>");
         String epgEpisode = Util.Html.getTag(currentProgram, "<h4>", "</h4>");
         String epgLogo = Util.Html.getTag(currentProgram, "<img src=\"", "\"");
-        String epgStartTime = Util.Html.getTag(currentProgram, "<h3 class=", "</h3>");
-        String epgEndTime = (nextProgram == null) ? "12:00 AM" : Util.Html.getTag(nextProgram, "<h3 class=", "</h3>");
+        String epgStartTime = Util.Html.getTagReverse(currentProgram, ">", "</h3>");
+        String epgEndTime = (nextProgram == null) ? "12:00 AM" : Util.Html.getTagReverse(nextProgram, ">", "</h3>");
 
-        epgStartTime = epgStartTime.substring(epgStartTime.indexOf(">")+1);
-        epgEndTime = epgEndTime.substring(epgEndTime.indexOf(">")+1);
+        if(epgLogo == null || epgLogo.startsWith("//")) {
+            epgLogo = "https:" + epgLogo;
+        }
+
+        if(epgStartTime == null || epgEndTime == null) {
+            epgStartTime = "12:00 AM";
+            epgEndTime =   "12:00 AM";
+        } else {
+            epgStartTime = epgStartTime.substring(epgStartTime.indexOf(">")+1);
+            epgEndTime = epgEndTime.substring(epgEndTime.indexOf(">")+1);
+        }
 
         long epgStartTimeMs = convertTimeMs(epgStartTime) + timeCorrection;
         long epgEndTimeMs = convertTimeMs(epgEndTime) + timeCorrection;
