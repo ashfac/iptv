@@ -138,7 +138,7 @@ public class Urdu1Epg {
             program = new Program.Builder()
                     .setChannelId(channelId.hashCode())
                     .setTitle(epgProgramTitle)
-                    .setSeasonTitle(epgEpisode)
+                    .setDescription(epgEpisode)
                     .setDescription(" ")
                     .setPosterArtUri(epgLogo)
                     .setStartTimeUtcMillis(epgStartTimeMs)

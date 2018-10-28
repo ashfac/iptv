@@ -23,11 +23,8 @@ public class M3U8Feed {
     public static final String EXT_CHANNEL = "tvg-channel=";
     public static final String EXT_LOGO = "tvg-logo=";
     public static final String EXT_EPG = "tvg-epg=";
-    public static final String EXT_URL_HTTP = "http://";
-    public static final String EXT_URL_HTTPS = "https://";
     public static final String EPG_URL = "epg-url";
-
-    private static final long MS_IN_ONE_HOUR = 60 * 60 * 1000;
+    public static final String EXT_URL_SEPARATOR = ";";
 
     public static List<Channel> getChannels(Context context, @NonNull InputStream inputStream) {
         List<Channel> channels = new ArrayList<>();
@@ -53,7 +50,7 @@ public class M3U8Feed {
                 if (currLine.contains(EXT_M3U)) {
                     // skip header of file
                 } else {
-                    String[] dataArray = currLine.split(",");
+                    String[] dataArray = currLine.split("\\r?\\n");
 
                     if (dataArray[0].contains(EXT_CHANNEL)) {
                         channelNumber = dataArray[0].substring(dataArray[0].indexOf(EXT_CHANNEL) + EXT_CHANNEL.length()+1);
@@ -73,17 +70,12 @@ public class M3U8Feed {
                         epgUrl = epgUrl.substring(0, epgUrl.indexOf("\""));
                     }
 
+                    channelName = dataArray[0].substring(dataArray[0].indexOf(",") + 1)
+                            .replace("\r", "")
+                            .replace("\n", "")
+                            .trim();
                     try {
-                        String ext_url = dataArray[1].contains(EXT_URL_HTTP) ? EXT_URL_HTTP : EXT_URL_HTTPS;
-                        videoUrl = dataArray[1].substring(dataArray[1].indexOf(ext_url))
-                                .replace("\r", "")
-                                .replace("\n", "");
-
-                        channelName = dataArray[1].substring(0, dataArray[1].indexOf(ext_url))
-                                .replace("\r", "")
-                                .replace("\n", "")
-                                .trim();
-
+                        videoUrl = dataArray[1].replace("\r", "").replace("\n", "");
                     } catch (Exception fdfd) {
                         Log.e(TAG, "Error: " + fdfd.fillInStackTrace());
                     }
