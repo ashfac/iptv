@@ -32,6 +32,10 @@ public class SimpleHttpClient
         return execute(urlStr, HTTP_GET, userAgent, null, DEFAULT_TIMEOUT);
     }
 
+    public static String GET(String urlStr, String userAgent, int timeout) throws IOException {
+        return execute(urlStr, HTTP_GET, userAgent, null, timeout);
+    }
+
     public static String POST(String urlStr, String queryParams) throws IOException {
         return execute(urlStr, HTTP_POST, null, queryParams, DEFAULT_TIMEOUT);
     }

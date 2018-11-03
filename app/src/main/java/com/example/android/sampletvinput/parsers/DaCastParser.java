@@ -34,7 +34,7 @@ public class DaCastParser extends VideoUrlParser{
                 }
             }
         } catch (IOException e) {
-            Log.e(TAG, "getVideoUrl " + e.getMessage());
+            Log.e(TAG, "parseVideoUrl " + e.getMessage());
         }
 
         return videoUrl;

@@ -9,6 +9,7 @@ public class TvUrlParser {
             new YouTubeParser(),
             new MjunoonTvParser(),
             new EuroNewsParser(),
+            new StreamLinkParser(),
             new DaCastParser(),
             new ArconaiTvParser()
     };
