@@ -19,16 +19,19 @@ public class TvUrlParser {
 
         for(String url : videoUrlArray) {
             returnUrl = null;
+            boolean parserFound = false;
             for (VideoUrlParser videoUrlParser: videoUrlParserArray) {
                 if(url.contains(videoUrlParser.getParserId())) {
+                    parserFound = true;
                     returnUrl = videoUrlParser.parseVideoUrl(url);
                     break;
                 }
             }
 
-            if(returnUrl == null){
-                returnUrl = url;
+            if(parserFound == false) {
+                returnUrl = videoUrl;
             }
+
             if(SimpleHttpClient.isValidUrl(returnUrl, Util.USER_AGENT_FIREFOX)) {
                 return returnUrl;
             }

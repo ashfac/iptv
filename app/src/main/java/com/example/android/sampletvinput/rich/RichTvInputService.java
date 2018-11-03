@@ -233,9 +233,7 @@ public class RichTvInputService extends BaseTvInputService {
             if (startPosMs > 0) {
                 mPlayer.seekTo(startPosMs);
             }
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                notifyTimeShiftStatusChanged(TvInputManager.TIME_SHIFT_STATUS_AVAILABLE);
-            }
+            notifyTimeShiftStatusChanged(TvInputManager.TIME_SHIFT_STATUS_AVAILABLE);
             mPlayer.setPlayWhenReady(true);
             return true;
         }
@@ -248,9 +246,7 @@ public class RichTvInputService extends BaseTvInputService {
             long recordingStartTime = recordedProgram.getInternalProviderData()
                     .getRecordedProgramStartTime();
             mPlayer.seekTo(recordingStartTime - recordedProgram.getStartTimeUtcMillis());
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                notifyTimeShiftStatusChanged(TvInputManager.TIME_SHIFT_STATUS_AVAILABLE);
-            }
+            notifyTimeShiftStatusChanged(TvInputManager.TIME_SHIFT_STATUS_AVAILABLE);
             mPlayer.setPlayWhenReady(true);
             return true;
         }

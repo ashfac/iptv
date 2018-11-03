@@ -19,7 +19,7 @@ public class SimpleHttpClient
     private static String TAG = "SimpleHttpClient";
 
     public static final String ENCODING_UTF_8 = "UTF-8";
-    public static final int DEFAULT_TIMEOUT = 10000;
+    public static final int DEFAULT_TIMEOUT = 3000;
 
     public static final String HTTP_GET = "GET";
     public static final String HTTP_POST = "POST";
@@ -47,6 +47,10 @@ public class SimpleHttpClient
     public static boolean isValidUrl(String urlStr, String userAgent) {
         URL url = null;
         HttpURLConnection urlConnection = null;
+
+        if(urlStr == null) {
+            return false;
+        }
 
         try {
             url = new URL(urlStr);
@@ -83,6 +87,10 @@ public class SimpleHttpClient
         OutputStream outStream = null;
         String response = null;
 
+        if(urlStr == null) {
+            return null;
+        }
+
         try
         {
             url = new URL(urlStr);
@@ -117,9 +125,10 @@ public class SimpleHttpClient
                 response="";
             }
         } catch (Exception e) {
-
-            inStream = new BufferedInputStream(urlConnection.getInputStream());
-            response = getInput(inStream);
+            if(urlConnection != null) {
+                inStream = new BufferedInputStream(urlConnection.getInputStream());
+                response = getInput(inStream);
+            }
         }
         finally
         {

@@ -51,15 +51,14 @@ public class MjunoonTvParser extends VideoUrlParser {
         for (String streamUrl : streamUrls) {
             String html_response = SimpleHttpClient.GET(streamUrl, Util.USER_AGENT_FIREFOX);
 
-            if(html_response.contains("#EXTM3U")) {
-                return streamUrl;
+            if(html_response != null && html_response.contains("#EXTM3U")) {
+                return parseStreamUrl(streamUrl);
             }
         }
 
         return null;
     }
 
-    /*
     private static String parseStreamUrl(String streamUrl) throws IOException {
         String html_response = SimpleHttpClient.GET(streamUrl, Util.USER_AGENT_FIREFOX);
 
@@ -91,6 +90,4 @@ public class MjunoonTvParser extends VideoUrlParser {
 
         return null;
     }
-    */
-
 }
