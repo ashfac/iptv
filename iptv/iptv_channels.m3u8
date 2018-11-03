@@ -119,10 +119,7 @@ http://z5ams.akamaized.net/zcinemasd/tracks-v1a1/index.m3u8
 http://z5ams.akamaized.net/andprivehd/tracks-v1a1/index.m3u8
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/%26flix_logo.png/220px-%26flix_logo.png" tvg-epg="https://tvwish.com/Channels/Flix-HD/Schedule/699", & Flix HD
-http://z5ams.akamaized.net/andflixhd/tracks-v1a1/index.m3u8
-
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/%26flix_logo.png/220px-%26flix_logo.png" tvg-epg="https://tvwish.com/Channels/Flix-HD/Schedule/700", & Flix
-http://z5ams.akamaized.net/andflix/tracks-v1a1/index.m3u8
+http://z5ams.akamaized.net/andflixhd/tracks-v1a1/index.m3u8;http://z5ams.akamaized.net/andflix/tracks-v1a1/index.m3u8
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/85/Sony_Movie_Channel.png", Sony Movies
 http://yipcontent-lh.akamaihd.net/i/sonymoviechannel_1@569927/master.m3u8

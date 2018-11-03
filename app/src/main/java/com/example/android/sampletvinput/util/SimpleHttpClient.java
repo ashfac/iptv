@@ -44,30 +44,49 @@ public class SimpleHttpClient
         return isValidUrl(urlStr, null);
     }
 
-    public static boolean isValidUrl(String urlStr, String userAgent) {
-        URL url = null;
-        HttpURLConnection urlConnection = null;
-
+    public static boolean isValidUrl(final String urlStr, final String userAgent) {
         if(urlStr == null) {
             return false;
         }
 
-        try {
-            url = new URL(urlStr);
-            urlConnection = (HttpURLConnection) url.openConnection();
+        final boolean[] executed = {false};
+        final boolean[] response = {false};
+        final long startTime = System.currentTimeMillis();
 
-            urlConnection.setConnectTimeout(DEFAULT_TIMEOUT);
-            urlConnection.setRequestMethod(HTTP_GET);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    URL url = new URL(urlStr);
+                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
 
-            if(userAgent != null) {
-                urlConnection.setRequestProperty("User-Agent", userAgent);
+                    urlConnection.setConnectTimeout(DEFAULT_TIMEOUT);
+                    urlConnection.setRequestMethod(HTTP_GET);
+
+                    if(userAgent != null) {
+                        urlConnection.setRequestProperty("User-Agent", userAgent);
+                    }
+
+                    if(urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                        response[0] = true;
+                    }
+                } catch (IOException e) {
+                    Log.e(TAG, "isValidUrl: " + e.getMessage());
+                } finally {
+                    executed[0] = true;
+                }
             }
+        }).start();
 
-            if(urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                return true;
+        while (((System.currentTimeMillis() - startTime) <= DEFAULT_TIMEOUT)) {
+            if (executed[0] == true || (System.currentTimeMillis() - startTime) >= DEFAULT_TIMEOUT) {
+                return response[0];
             }
-        } catch (IOException e) {
-            Log.e(TAG, "isValidUrl: " + e.getMessage());
+            try {
+                Thread.sleep(50);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
         return false;
@@ -75,77 +94,76 @@ public class SimpleHttpClient
     }
 
 
-    private static String execute(String urlStr,
-                           String httpMethod,
-                           String userAgent,
-                           String queryParams,
-                           int timeout) throws IOException
+    private static String execute(final String urlStr,
+                           final String httpMethod,
+                           final String userAgent,
+                           final String queryParams,
+                           final int timeout) throws IOException
     {
-        URL url = null;
-        HttpURLConnection urlConnection = null;
-        InputStream inStream = null;
-        OutputStream outStream = null;
-        String response = null;
-
         if(urlStr == null) {
             return null;
         }
 
-        try
-        {
-            url = new URL(urlStr);
-            urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setConnectTimeout(timeout);
-            urlConnection.setRequestMethod(httpMethod);
+        final String[] response = {null};
+        final boolean[] executed = {false};
+        final long startTime = System.currentTimeMillis();
 
-            if(userAgent != null) {
-                urlConnection.setRequestProperty("User-Agent", userAgent);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    URL url = new URL(urlStr);
+                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                    urlConnection.setConnectTimeout(timeout);
+                    urlConnection.setReadTimeout(timeout);
+                    urlConnection.setRequestMethod(httpMethod);
+
+                    if (userAgent != null) {
+                        urlConnection.setRequestProperty("User-Agent", userAgent);
+                    }
+
+                    if (httpMethod.contentEquals(HTTP_POST) && queryParams != null) {
+                        urlConnection.setDoInput(true);
+                        urlConnection.setDoOutput(true);
+                        OutputStream outStream = new BufferedOutputStream(urlConnection.getOutputStream());
+
+                        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outStream, "UTF-8"));
+                        writer.write(queryParams);
+                        writer.flush();
+                        writer.close();
+                        outStream.close();
+
+                        urlConnection.connect();
+                    }
+
+                    int responseCode = urlConnection.getResponseCode();
+
+                    if (responseCode == HttpsURLConnection.HTTP_OK) {
+                        InputStream inStream = new BufferedInputStream(urlConnection.getInputStream());
+                        response[0] = getInput(inStream);
+                    } else {
+                        response[0] = null;
+                    }
+                } catch (Exception e) {
+                    Log.e(TAG, "error getting url: " + urlStr + " with message: " + e.getMessage());
+                } finally {
+                    executed[0] = true;
+                }
             }
+        }).start();
 
-            if(httpMethod.contentEquals(HTTP_POST) && queryParams != null) {
-                urlConnection.setDoInput(true);
-                urlConnection.setDoOutput(true);
-                outStream = new BufferedOutputStream(urlConnection.getOutputStream());
-
-                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outStream, "UTF-8"));
-                writer.write(queryParams);
-                writer.flush();
-                writer.close();
-                outStream.close();
-
-                urlConnection.connect();
+        while (((System.currentTimeMillis() - startTime) <= timeout)) {
+            if (executed[0] == true || (System.currentTimeMillis() - startTime) >= timeout) {
+                return response[0];
             }
-
-            int responseCode=urlConnection.getResponseCode();
-
-            if (responseCode == HttpsURLConnection.HTTP_OK) {
-                inStream = new BufferedInputStream(urlConnection.getInputStream());
-                response = getInput(inStream);
-            } else {
-                response="";
-            }
-        } catch (Exception e) {
-            if(urlConnection != null) {
-                inStream = new BufferedInputStream(urlConnection.getInputStream());
-                response = getInput(inStream);
+            try {
+                Thread.sleep(50);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
-        finally
-        {
-            if(urlConnection != null && urlConnection.getErrorStream() != null)
-            {
-                String errorResponse = " : ";
-                errorResponse = errorResponse + getInput(urlConnection.getErrorStream());
-                response = response + errorResponse;
-            }
 
-            if (urlConnection != null)
-            {
-                urlConnection.disconnect();
-            }
-        }
-
-        return response;
+        return response[0];
     }
 
     private static String getInput(InputStream in) throws IOException

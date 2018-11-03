@@ -29,7 +29,7 @@ public class TvUrlParser {
             }
 
             if(parserFound == false) {
-                returnUrl = videoUrl;
+                returnUrl = url;
             }
 
             if(SimpleHttpClient.isValidUrl(returnUrl, Util.USER_AGENT_FIREFOX)) {
