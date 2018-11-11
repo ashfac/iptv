@@ -19,7 +19,7 @@ public class SimpleHttpClient
     private static String TAG = "SimpleHttpClient";
 
     public static final String ENCODING_UTF_8 = "UTF-8";
-    public static final int DEFAULT_TIMEOUT = 3000;
+    public static final int DEFAULT_TIMEOUT = 5000;
 
     public static final String HTTP_GET = "GET";
     public static final String HTTP_POST = "POST";

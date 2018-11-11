@@ -26,6 +26,8 @@ public class M3U8Feed {
     public static final String EPG_URL = "epg-url";
     public static final String EXT_URL_SEPARATOR = ";";
 
+    public static final String DEFAULT_LOGI_URL = "android.resource://com.example.android.sampletvinput/drawable/android_48dp.png";
+
     public static List<Channel> getChannels(Context context, @NonNull InputStream inputStream) {
         List<Channel> channels = new ArrayList<>();
 
@@ -63,6 +65,8 @@ public class M3U8Feed {
                     if (dataArray[0].contains(EXT_LOGO)) {
                         logoUrl = dataArray[0].substring(dataArray[0].indexOf(EXT_LOGO) + EXT_LOGO.length()+1);
                         logoUrl = logoUrl.substring(0, logoUrl.indexOf("\""));
+                    } else {
+                        logoUrl = DEFAULT_LOGI_URL;
                     }
 
                     if (dataArray[0].contains(EXT_EPG)) {

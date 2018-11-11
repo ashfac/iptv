@@ -225,7 +225,7 @@ public class RichTvInputService extends BaseTvInputService {
             videoUrl = TvUrlParser.parseVideoUrl(videoUrl);
 
             if(videoUrl == null || videoUrl.length() == 0) {
-                Toast.makeText(mContext, "Stream not available" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Channel Offline" , Toast.LENGTH_SHORT).show();
                     return false;
             }
 

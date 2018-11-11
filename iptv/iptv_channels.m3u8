@@ -121,35 +121,146 @@ http://z5ams.akamaized.net/andprivehd/tracks-v1a1/index.m3u8
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/%26flix_logo.png/220px-%26flix_logo.png" tvg-epg="https://tvwish.com/Channels/Flix-HD/Schedule/699", & Flix HD
 http://z5ams.akamaized.net/andflixhd/tracks-v1a1/index.m3u8;http://z5ams.akamaized.net/andflix/tracks-v1a1/index.m3u8
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/85/Sony_Movie_Channel.png", Sony Movies
-http://yipcontent-lh.akamaihd.net/i/sonymoviechannel_1@569927/master.m3u8
+
+#EXTINF:0 ,Al Jazeera English
+http://www.filmon.com/api-v2/channel/4?protocol=hls
+
+#EXTINF:0 ,BBC News
+http://www.filmon.com/api-v2/channel/27?protocol=hls
 
 
+#EXTINF:0 ,Channel 4
+http://www.filmon.com/api-v2/channel/2?protocol=hls
+
+#EXTINF:0 ,Channel 5
+http://www.filmon.com/api-v2/channel/22?protocol=hls
+
+#EXTINF:0 ,5Star
+http://www.filmon.com/api-v2/channel/851?protocol=hls
+
+#EXTINF:0 ,5USA
+http://www.filmon.com/api-v2/channel/845?protocol=hls
+
+#EXTINF:0 ,Film4
+http://www.filmon.com/api-v2/channel/13?protocol=hls
+
+#EXTINF:0 ,ITV
+http://www.filmon.com/api-v2/channel/11?protocol=hls
+
+#EXTINF:0 ,ITV+1
+http://www.filmon.com/api-v2/channel/1817?protocol=hls
+
+#EXTINF:0 ,ITV2
+http://www.filmon.com/api-v2/channel/67?protocol=hls
+
+#EXTINF:0 ,ITV2+1
+http://www.filmon.com/api-v2/channel/1820?protocol=hls
+
+#EXTINF:0 ,ITV3
+http://www.filmon.com/api-v2/channel/26?protocol=hls
+
+#EXTINF:0 ,ITV3+1
+http://www.filmon.com/api-v2/channel/1823?protocol=hls
+
+#EXTINF:0 ,ITV4
+http://www.filmon.com/api-v2/channel/101?protocol=hls
+
+#EXTINF:0 ,ITV4+1
+http://www.filmon.com/api-v2/channel/1826?protocol=hls
+
+#EXTINF:0 ,ITVBe
+http://www.filmon.com/api-v2/channel/3211?protocol=hls
+
+#EXTINF:0 ,More 5
+http://www.filmon.com/api-v2/channel/97?protocol=hls
+
+#EXTINF:0 ,POP
+http://www.filmon.com/api-v2/channel/320?protocol=hls
+
+
+
+#EXTINF:0 ,BBC One
+http://www.filmon.com/api-v2/channel/14?protocol=hls
+
+#EXTINF:0 ,BBC Two
+http://www.filmon.com/api-v2/channel/25?protocol=hls
+
+#EXTINF:0 ,Drama
+http://www.filmon.com/api-v2/channel/5944?protocol=hls
+
+#EXTINF:0 ,Challenge
+http://www.filmon.com/api-v2/channel/1036?protocol=hls
+
+#EXTINF:0 ,Food Network
+http://www.filmon.com/api-v2/channel/20?protocol=hls
+
+#EXTINF:0 ,CBS Reality
+http://www.filmon.com/api-v2/channel/1808?protocol=hls
+
+#EXTINF:0 ,CBS Reality+1
+http://www.filmon.com/api-v2/channel/1811?protocol=hls
+
+#EXTINF:0 ,CBS Drama
+http://www.filmon.com/api-v2/channel/1805?protocol=hls
+
+#EXTINF:0 ,CBS Action
+http://www.filmon.com/api-v2/channel/1952?protocol=hls
+
+#EXTINF:0 ,truTV
+http://www.filmon.com/api-v2/channel/3707?protocol=hls
+
+#EXTINF:0 ,E4
+http://www.filmon.com/api-v2/channel/65?protocol=hls
+
+#EXTINF:0 ,Horror Channel
+http://www.filmon.com/api-v2/channel/836?protocol=hls
+
+#EXTINF:0 ,Forces TV
+http://www.filmon.com/api-v2/channel/3386?protocol=hls
+
+#EXTINF:0 ,Yesterday
+http://www.filmon.com/api-v2/channel/1039?protocol=hls
+
+#EXTINF:0 ,Pick TV
+http://www.filmon.com/api-v2/channel/371?protocol=hls
+
+
+#EXTINF:0 ,FilmOn Kids
+http://www.filmon.com/api-v2/channel/7?protocol=hls
+
+#EXTINF:0 ,CBBC Kids
+http://www.filmon.com/api-v2/channel/29?protocol=hls
+
+#EXTINF:0 ,CBeebies Kids
+http://www.filmon.com/api-v2/channel/3191?protocol=hls
+
+#EXTINF:0 ,Tiny Pop
+http://www.filmon.com/api-v2/channel/318?protocol=hls
 
 
 #EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/263/logo/logo-npo1.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=1", Npo 1
 http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-1
 
-#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/283/logo/NPO_TV1_Extra_Logo_RGB_1200dpi.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=64", Npo 1 Extra
-http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-1-extra
-
 #EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/264/logo/logo-npo2.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=2", Npo 2
 http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-2
 
-#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/280/logo/NPO_TV2_Extra_Logo_RGB_1200dpi.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=70", Npo 2 Extra
-http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-2-extra
-
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/NPO_3_logo_2014.svg/1200px-NPO_3_logo_2014.svg.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=3", Npo 3 Zapp
 http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-3zapp
+
+#EXTINF:0 tvg-logo="http://contentimages.tv-visie.be/4/NPO_Zappelin.JPG/crop/310x210/", Npo Zappelin
+http://192.168.1.168:6543/streamlink?streamlink=https://www.zappelin.nl/kinderfilmpjes/tv-kijken
+
+#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/283/logo/NPO_TV1_Extra_Logo_RGB_1200dpi.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=64", Npo 1 Extra
+http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-1-extra
+
+#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/280/logo/NPO_TV2_Extra_Logo_RGB_1200dpi.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=70", Npo 2 Extra
+http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-2-extra
 
 #EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/281/logo/NPO_TV3_Extra_Logo_RGB_1200dpi.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=410", Npo 3 Extra
 http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-3-extra
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/08/NPO_Zapp_Xtra_logo.png", Npo Zapp Xtra
 http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-zapp-xtra
-
-#EXTINF:0 tvg-logo="http://contentimages.tv-visie.be/4/NPO_Zappelin.JPG/crop/310x210/", Npo Zappelin
-http://192.168.1.168:6543/streamlink?streamlink=https://www.zappelin.nl/kinderfilmpjes/tv-kijken
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/NPO_Nieuws_logo.png/1200px-NPO_Nieuws_logo.png", Npo Nieuws
 http://192.168.1.168:6543/streamlink?streamlink=https://nos.nl/livestream/npo-nieuws.html

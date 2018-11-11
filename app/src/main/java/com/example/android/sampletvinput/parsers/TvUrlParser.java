@@ -8,6 +8,7 @@ public class TvUrlParser {
     private static VideoUrlParser[] videoUrlParserArray = {
             new YouTubeParser(),
             new MjunoonTvParser(),
+            new FilmOnParser(),
             new EuroNewsParser(),
             new StreamLinkParser(),
             new DaCastParser(),
