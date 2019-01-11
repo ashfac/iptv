@@ -17,6 +17,9 @@ public class MjunoonTvParser extends VideoUrlParser {
     private static final String TAG = "MjnunoonTvParser";
     private static final String PARSER_ID = "mjunoon.tv";
 
+    private static final String TAG_SEC = "sec=";
+    private static final String TAG_WMS_AUTH_SIGN = "?wmsAuthSign=";
+
     private static final String TAG_STREAM_URL = "streamUrl=";
     private static final String TAG_BACKUP_STREAM_URL = "backup_live_stream_url=";
     private static final String TAG_TEMP_URL = "temp_url=";
@@ -43,48 +46,47 @@ public class MjunoonTvParser extends VideoUrlParser {
 
     private static String extractStreamUrl(String data) throws IOException
     {
+        String wmsAuthSign = Util.Html.getTag(data, TAG_SEC, "\"");
+
         String[] streamUrls = {
-                Util.Html.getTag(data, TAG_BACKUP_STREAM_URL, "&"),
-                Util.Html.getTag(data, TAG_STREAM_URL, "&"),
-                Util.Html.getTag(data, TAG_TEMP_URL, "&") };
+                Util.Html.getTag(data, TAG_BACKUP_STREAM_URL, "&") + TAG_WMS_AUTH_SIGN + wmsAuthSign,
+                Util.Html.getTag(data, TAG_STREAM_URL, "&") + TAG_WMS_AUTH_SIGN + wmsAuthSign,
+                Util.Html.getTag(data, TAG_TEMP_URL, "&") + TAG_WMS_AUTH_SIGN + wmsAuthSign };
+
 
         for (String streamUrl : streamUrls) {
             String html_response = SimpleHttpClient.GET(streamUrl, Util.USER_AGENT_FIREFOX);
 
             if(html_response != null && html_response.contains("#EXTM3U")) {
-                return parseStreamUrl(streamUrl);
+                return parseHlsManifest(streamUrl, html_response);
             }
         }
 
         return null;
     }
 
-    private static String parseStreamUrl(String streamUrl) throws IOException {
-        String html_response = SimpleHttpClient.GET(streamUrl, Util.USER_AGENT_FIREFOX);
+    private static String parseHlsManifest(String streamUrl, String html_response) throws IOException {
+        InputStream inputStream = new ByteArrayInputStream(
+                html_response.getBytes(Charset.forName(C.UTF8_NAME)));
 
-        if(html_response.contains("#EXTM3U")) {
-            InputStream inputStream = new ByteArrayInputStream(
-                    html_response.getBytes(Charset.forName(C.UTF8_NAME)));
+        HlsMasterPlaylist playlist = (HlsMasterPlaylist) new HlsPlaylistParser().parse(streamUrl, inputStream);
 
-            HlsMasterPlaylist playlist = (HlsMasterPlaylist) new HlsPlaylistParser().parse(streamUrl, inputStream);
+        if(playlist.variants.size() > 0) {
+            int maxBitRate = playlist.variants.get(0).format.bitrate;
+            String videoUrl = playlist.variants.get(0).url;
 
-            if(playlist.variants.size() > 0) {
-                int maxBitRate = playlist.variants.get(0).format.bitrate;
-                String videoUrl = playlist.variants.get(0).url;
-
-                // select the variant with max bit-rate
-                for (int i=1; i < playlist.variants.size(); i++) {
-                    if(playlist.variants.get(i).format.bitrate > maxBitRate) {
-                        maxBitRate = playlist.variants.get(i).format.bitrate;
-                        videoUrl = playlist.variants.get(i).url;
-                    }
+            // select the variant with max bit-rate
+            for (int i=1; i < playlist.variants.size(); i++) {
+                if(playlist.variants.get(i).format.bitrate > maxBitRate) {
+                    maxBitRate = playlist.variants.get(i).format.bitrate;
+                    videoUrl = playlist.variants.get(i).url;
                 }
+            }
 
-                if(videoUrl.startsWith("http")) {
-                    return videoUrl;
-                } else {
-                    return streamUrl;
-                }
+            if(videoUrl.startsWith("http")) {
+                return videoUrl;
+            } else {
+                return streamUrl;
             }
         }
 
