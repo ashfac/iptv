@@ -68,15 +68,7 @@ public class SimpleHttpClient
                     urlConnection.setRequestMethod(HTTP_GET);
 
                     if(userAgent != null) {
-//                        urlConnection.setRequestProperty("User-Agent", userAgent);
-
-                        urlConnection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0");
-                        urlConnection.setRequestProperty("Accept", "*/*");
-                        urlConnection.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
-                        urlConnection.setRequestProperty("Accept-Encoding", "gzip, deflate, br");
-                        urlConnection.setRequestProperty("Origin", "https://www.streamlive.to");
-                        urlConnection.setRequestProperty("Connection", "keep-alive");
-                        urlConnection.setRequestProperty("Referer", "https://www.streamlive.to/view/57976/CBS-(HD)");
+                        urlConnection.setRequestProperty("User-Agent", userAgent);
                     }
 
                     int responseCode = urlConnection.getResponseCode();

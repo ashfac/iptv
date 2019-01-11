@@ -28,7 +28,7 @@ https://59aeddfe9f01c.streamlock.net/live/8090/player.m3u8
 https://www.mjunoon.tv/khyber-news-live
 
 
-#EXTINF:0 tvg-logo="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png" tvg-epg="https://www.aljazeera.com/addons/Schedule.ashx", Al Jazeera English
+#EXTINF:0 tvg-channel="11" tvg-logo="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png" tvg-epg="https://www.aljazeera.com/addons/Schedule.ashx", Al Jazeera English
 https://english.streaming.aljazeera.net/aljazeera/english2/index.m3u8
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png", euro news

@@ -12,7 +12,7 @@ public class TvUrlParser {
             new EuroNewsParser(),
             new StreamLinkParser(),
             new DaCastParser(),
-            new ArconaiTvParser(),
+            new ArconaiTvParser()
     };
 
     public static String parseVideoUrl(String videoUrl) {
