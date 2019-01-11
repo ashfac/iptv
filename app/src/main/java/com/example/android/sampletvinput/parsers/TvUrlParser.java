@@ -12,12 +12,12 @@ public class TvUrlParser {
             new EuroNewsParser(),
             new StreamLinkParser(),
             new DaCastParser(),
-            new ArconaiTvParser()
+            new ArconaiTvParser(),
     };
 
     public static String parseVideoUrl(String videoUrl) {
         String videoUrlArray[] = videoUrl.split(M3U8Feed.EXT_URL_SEPARATOR);
-        String returnUrl;
+        String returnUrl = null;
 
         for(String url : videoUrlArray) {
             returnUrl = null;
@@ -39,6 +39,6 @@ public class TvUrlParser {
             }
         }
 
-        return null;
+        return returnUrl;
     }
 }

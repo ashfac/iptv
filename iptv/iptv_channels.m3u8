@@ -1,22 +1,19 @@
 #EXTM3U
 
 #EXTINF:0 tvg-logo="https://yt3.ggpht.com/-GzuAS_9sNTc/AAAAAAAAAAI/AAAAAAAAAAA/illJOId_OVk/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg" tvg-epg="file:hum-news.json", HUM News
-https://www.humnews.pk/live/youtube-embed
+https://www.youtube.com/channel/UCt4pLfULsDlvIyMF5fKmtRg/live
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/d2/Dawn_News.jpg" tvg-epg="file:dawn-news.json", Dawn News
-https://www.dawnnews.tv/watch-live/youtube-embed;https://www.mjunoon.tv/dawn-news-live;http://199.167.151.237:1935/live/sp15_23.stream/gmswf.m3u8
+https://www.mjunoon.tv/dawn-news-live;https://www.dawnnews.tv/watch-live/youtube-embed;http://199.167.151.237:1935/live/sp15_23.stream/gmswf.m3u8
 
 #EXTINF:0 tvg-logo="https://arynews.tv/wp-content/uploads/2018/03/news-logo-2-1.jpg" tvg-epg="file:ary-news.json", Ary News
 https://live.arynews.tv/hq/youtube-embed;http://158.69.229.30:1935/newslive/myStream/playlist.m3u8;http://158.69.228.195:1935/newsmobile/myStream/playlist.m3u8
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e1/92_News_HD_Plus_logo.png", 92 News HD
-http://92news.vdn.dstreamone.net/92newshd/92hd/playlist.m3u8
-
-#EXTINF:0 tvg-logo="https://vignette.wikia.nocookie.net/logopedia/images/2/29/Dunya_News.png", Dunya News
-https://www.mjunoon.tv/dunya-news-live
-
 #EXTINF:0 tvg-logo="https://yt3.ggpht.com/a-/ACSszfFsX7SBaSrby6SKTKl4BtXS90oDgR3D0GQEuA=s900-mo-c-c0xffffffff-rj-k-no", Aaj News
 https://www.mjunoon.tv/aaj-news-live
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e1/92_News_HD_Plus_logo.png", 92 News HD
+http://92news.vdn.dstreamone.net/92newshd/92hd/playlist.m3u8
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lahore_News_Logo_%28For_Tv_Screen%29.png/440px-Lahore_News_Logo_%28For_Tv_Screen%29.png",Lahore News HD
 http://mlive.lahorenews.tv:1935/lahorelive/lnews_1/playlist.m3u8
@@ -34,10 +31,10 @@ https://www.mjunoon.tv/khyber-news-live
 #EXTINF:0 tvg-logo="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png" tvg-epg="https://www.aljazeera.com/addons/Schedule.ashx", Al Jazeera English
 https://english.streaming.aljazeera.net/aljazeera/english2/index.m3u8
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=422", euro news
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png", euro news
 https://www.euronews.com/api/watchlive.json
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/BBC_World_News_red.svg/400px-BBC_World_News_red.svg.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=86", BBC World News
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/BBC_World_News_red.svg/400px-BBC_World_News_red.svg.png", BBC World News
 http://z5ams.akamaized.net/bbcworldnews/tracks-v1a1/index.m3u8
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Russia-today-logo.svg/400px-Russia-today-logo.svg.png", Russia Today
@@ -64,7 +61,20 @@ http://peacetv.api.visionip.tv/live/ASHTTP/peacetv-peacetv-peacetv-urdu-hsslive-
 
 
 
-#EXTINF:0 tvg-channel="31" tvg-logo="https://i.vimeocdn.com/portrait/11750117_300x300" tvg-epg="https://www.ptv.com.pk/public/getShowTvGuide?channel=3", Ptv Home
+#EXTINF:0 tvg-channel="33" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/%26flix_logo.png/220px-%26flix_logo.png" tvg-epg="https://tvwish.com/Channels/Flix-HD/Schedule/699", & Flix HD
+http://z5ams.akamaized.net/andflixhd/tracks-v1a1/index.m3u8;http://z5ams.akamaized.net/andflix/tracks-v1a1/index.m3u8
+
+#EXTINF:0 tvg-logo="https://tvnews4u.com/wp-content/uploads/2017/10/privehd-logo.jpg" tvg-epg="https://tvwiz.in/app/app/channelBrowse/25265399", & Privé HD
+http://z5ams.akamaized.net/andprivehd/tracks-v1a1/index.m3u8
+
+#EXTINF:0 tvg-logo="https://yt3.ggpht.com/a-/AN66SAxePCxrKGxoMxEEmLs5QKnNx1ZTiWBOLjk2yg=s900-mo-c-c0xffffffff-rj-k-no" tvg-epg="https://tvwiz.in/app/app/channelBrowse/280", &pictures HD
+http://z5ams.akamaized.net/andpicshd/tracks-v1a1/index.m3u8
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/d5/Zee_Cinema_New_Logo.png" tvg-epg="https://tvwiz.in/app/app/channelBrowse/424", Zee Cinema HD
+http://z5ams.akamaized.net/zcinemahd/tracks-v1a1/index.m3u8;http://216.144.250.174/Zee_cinema_hD/index.m3u8
+
+
+#EXTINF:0 tvg-logo="https://i.vimeocdn.com/portrait/11750117_300x300" tvg-epg="https://www.ptv.com.pk/public/getShowTvGuide?channel=3", Ptv Home
 https://59aeddfe9f01c.streamlock.net/live/PTVhome/player.m3u8
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/83/Atv_pakistan.PNG", Atv
@@ -78,7 +88,7 @@ https://www.mjunoon.tv/a-plus-live;http://173.212.252.47:1935/Aplus%20Pakistan/A
 https://www.mjunoon.tv/urdu-1-live
 
 #EXTINF:0 tvg-logo="https://icon2.kisspng.com/20180716/xj/kisspng-pakistan-hum-tv-television-channel-drama-hum-5b4cf75ac71e12.9084820015317707148156.jpg" tvg-epg="https://www.hum.tv/schedule", HUM TV
-https://www.hum.tv/live/youtube-embed
+https://www.mjunoon.tv/hum-tv-live;https://www.hum.tv/live/youtube-embed
 
 #EXTINF:0 tvg-logo="https://vignette.wikia.nocookie.net/logopedia/images/b/b6/Ary_digital_logo.png", ARY Digital
 http://158.69.228.195:1935/digitalnew/myStream/playlist.m3u8;http://149.202.205.24:1935/DIGITAL/myStream/playlist.m3u8
@@ -105,158 +115,25 @@ https://www.mjunoon.tv/avt-khyber-tv-live;http://json.dacast.com/b/75341/c/47899
 #EXTINF:0 tvg-logo="http://avtchannels.com/wp-content/uploads/2015/02/pashto-1-300x300.png", Pashto 1
 https://www.mjunoon.tv/pashto1-live
 
-
-#EXTINF:0 tvg-logo="https://yt3.ggpht.com/a-/AN66SAxePCxrKGxoMxEEmLs5QKnNx1ZTiWBOLjk2yg=s900-mo-c-c0xffffffff-rj-k-no" tvg-epg="https://tvwiz.in/app/app/channelBrowse/280", &pictures HD
-http://z5ams.akamaized.net/andpicshd/tracks-v1a1/index.m3u8
-
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/d5/Zee_Cinema_New_Logo.png" tvg-epg="https://tvwiz.in/app/app/channelBrowse/424", Zee Cinema HD
-http://z5ams.akamaized.net/zcinemahd/tracks-v1a1/index.m3u8;http://216.144.250.174/Zee_cinema_hD/index.m3u8
-
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/d5/Zee_Cinema_New_Logo.png" tvg-epg="https://tvwiz.in/app/app/channelBrowse/423", Zee Cinema
-http://z5ams.akamaized.net/zcinemasd/tracks-v1a1/index.m3u8
-
-#EXTINF:0 tvg-logo="https://tvnews4u.com/wp-content/uploads/2017/10/privehd-logo.jpg" tvg-epg="https://tvwiz.in/app/app/channelBrowse/25265399", & Privé HD
-http://z5ams.akamaized.net/andprivehd/tracks-v1a1/index.m3u8
-
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/%26flix_logo.png/220px-%26flix_logo.png" tvg-epg="https://tvwish.com/Channels/Flix-HD/Schedule/699", & Flix HD
-http://z5ams.akamaized.net/andflixhd/tracks-v1a1/index.m3u8;http://z5ams.akamaized.net/andflix/tracks-v1a1/index.m3u8
-
-
-#EXTINF:0 ,Al Jazeera English
-http://www.filmon.com/api-v2/channel/4?protocol=hls
-
-#EXTINF:0 ,BBC News
-http://www.filmon.com/api-v2/channel/27?protocol=hls
-
-
-#EXTINF:0 ,Channel 4
-http://www.filmon.com/api-v2/channel/2?protocol=hls
-
-#EXTINF:0 ,Channel 5
-http://www.filmon.com/api-v2/channel/22?protocol=hls
-
-#EXTINF:0 ,5Star
-http://www.filmon.com/api-v2/channel/851?protocol=hls
-
-#EXTINF:0 ,5USA
-http://www.filmon.com/api-v2/channel/845?protocol=hls
-
-#EXTINF:0 ,Film4
-http://www.filmon.com/api-v2/channel/13?protocol=hls
-
-#EXTINF:0 ,ITV
-http://www.filmon.com/api-v2/channel/11?protocol=hls
-
-#EXTINF:0 ,ITV+1
-http://www.filmon.com/api-v2/channel/1817?protocol=hls
-
-#EXTINF:0 ,ITV2
-http://www.filmon.com/api-v2/channel/67?protocol=hls
-
-#EXTINF:0 ,ITV2+1
-http://www.filmon.com/api-v2/channel/1820?protocol=hls
-
-#EXTINF:0 ,ITV3
-http://www.filmon.com/api-v2/channel/26?protocol=hls
-
-#EXTINF:0 ,ITV3+1
-http://www.filmon.com/api-v2/channel/1823?protocol=hls
-
-#EXTINF:0 ,ITV4
-http://www.filmon.com/api-v2/channel/101?protocol=hls
-
-#EXTINF:0 ,ITV4+1
-http://www.filmon.com/api-v2/channel/1826?protocol=hls
-
-#EXTINF:0 ,ITVBe
-http://www.filmon.com/api-v2/channel/3211?protocol=hls
-
-#EXTINF:0 ,More 5
-http://www.filmon.com/api-v2/channel/97?protocol=hls
-
-#EXTINF:0 ,POP
-http://www.filmon.com/api-v2/channel/320?protocol=hls
-
-
-
-#EXTINF:0 ,BBC One
-http://www.filmon.com/api-v2/channel/14?protocol=hls
-
-#EXTINF:0 ,BBC Two
-http://www.filmon.com/api-v2/channel/25?protocol=hls
-
-#EXTINF:0 ,Drama
-http://www.filmon.com/api-v2/channel/5944?protocol=hls
-
-#EXTINF:0 ,Challenge
-http://www.filmon.com/api-v2/channel/1036?protocol=hls
-
-#EXTINF:0 ,Food Network
-http://www.filmon.com/api-v2/channel/20?protocol=hls
-
-#EXTINF:0 ,CBS Reality
-http://www.filmon.com/api-v2/channel/1808?protocol=hls
-
-#EXTINF:0 ,CBS Reality+1
-http://www.filmon.com/api-v2/channel/1811?protocol=hls
-
-#EXTINF:0 ,CBS Drama
-http://www.filmon.com/api-v2/channel/1805?protocol=hls
-
-#EXTINF:0 ,CBS Action
-http://www.filmon.com/api-v2/channel/1952?protocol=hls
-
-#EXTINF:0 ,truTV
-http://www.filmon.com/api-v2/channel/3707?protocol=hls
-
-#EXTINF:0 ,E4
-http://www.filmon.com/api-v2/channel/65?protocol=hls
-
-#EXTINF:0 ,Horror Channel
-http://www.filmon.com/api-v2/channel/836?protocol=hls
-
-#EXTINF:0 ,Forces TV
-http://www.filmon.com/api-v2/channel/3386?protocol=hls
-
-#EXTINF:0 ,Yesterday
-http://www.filmon.com/api-v2/channel/1039?protocol=hls
-
-#EXTINF:0 ,Pick TV
-http://www.filmon.com/api-v2/channel/371?protocol=hls
-
-
-#EXTINF:0 ,FilmOn Kids
-http://www.filmon.com/api-v2/channel/7?protocol=hls
-
-#EXTINF:0 ,CBBC Kids
-http://www.filmon.com/api-v2/channel/29?protocol=hls
-
-#EXTINF:0 ,CBeebies Kids
-http://www.filmon.com/api-v2/channel/3191?protocol=hls
-
-#EXTINF:0 ,Tiny Pop
-http://www.filmon.com/api-v2/channel/318?protocol=hls
-
-
-#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/263/logo/logo-npo1.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=1", Npo 1
+#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/263/logo/logo-npo1.png", Npo 1
 http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-1
 
-#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/264/logo/logo-npo2.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=2", Npo 2
+#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/264/logo/logo-npo2.png", Npo 2
 http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-2
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/NPO_3_logo_2014.svg/1200px-NPO_3_logo_2014.svg.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=3", Npo 3 Zapp
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/NPO_3_logo_2014.svg/1200px-NPO_3_logo_2014.svg.png", Npo 3 Zapp
 http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-3zapp
 
 #EXTINF:0 tvg-logo="http://contentimages.tv-visie.be/4/NPO_Zappelin.JPG/crop/310x210/", Npo Zappelin
 http://192.168.1.168:6543/streamlink?streamlink=https://www.zappelin.nl/kinderfilmpjes/tv-kijken
 
-#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/283/logo/NPO_TV1_Extra_Logo_RGB_1200dpi.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=64", Npo 1 Extra
+#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/283/logo/NPO_TV1_Extra_Logo_RGB_1200dpi.png", Npo 1 Extra
 http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-1-extra
 
-#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/280/logo/NPO_TV2_Extra_Logo_RGB_1200dpi.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=70", Npo 2 Extra
+#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/280/logo/NPO_TV2_Extra_Logo_RGB_1200dpi.png", Npo 2 Extra
 http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-2-extra
 
-#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/281/logo/NPO_TV3_Extra_Logo_RGB_1200dpi.png" tvg-epg="https://www.tvgids.nl/json/lists/programs.php?channels=410", Npo 3 Extra
+#EXTINF:0 tvg-logo="https://www-assets.npo.nl/uploads/tv_channel/281/logo/NPO_TV3_Extra_Logo_RGB_1200dpi.png", Npo 3 Extra
 http://192.168.1.168:6543/streamlink?streamlink=https://www.npo.nl/live/npo-3-extra
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/08/NPO_Zapp_Xtra_logo.png", Npo Zapp Xtra

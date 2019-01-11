@@ -5,9 +5,13 @@ import android.util.Log;
 import com.example.android.sampletvinput.util.SimpleHttpClient;
 import com.example.android.sampletvinput.util.Util;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -24,9 +28,11 @@ public class YouTubeParser extends VideoUrlParser
     private static final String URL_YOUTUBE_GET_VIDEO_INFO = "http://www.youtube.com/get_video_info?&video_id=";
     private static final String URL_YOUTUBE_GET_VIDEO_INFO_PARAMS = "&gl=US&hl=en&ps=default&eurl=https://youtube.googleapis.com/v/";
 
-    public static final String KEY_DASH_VIDEO = "dashmpd";
-    public static final String KEY_HLS_VIDEO = "hlsvp";
     public static final String KEY_LIVE_STREAM = "live_playback";
+    public static final String KEY_PLAYER_RESPONSE = "player_response";
+
+    public static final String KEY_STREAMING_DATA = "streamingData";
+    public static final String KEY_HLS_MANIFEST_URL = "hlsManifestUrl";
 
     private static final String KEY_CHANNEL_TO_VIDEO_ID = "<meta property=\"og:video:secure_url\" content=\"https://www.youtube.com/v/";
     private static final String KEY_EMBED_TO_VIDEO_ID = "youtube.com/embed/";
@@ -97,10 +103,10 @@ public class YouTubeParser extends VideoUrlParser
         try {
             parse(SimpleHttpClient.GET(URL_YOUTUBE_GET_VIDEO_INFO + videoId + URL_YOUTUBE_GET_VIDEO_INFO_PARAMS + videoId));
 
-            String is_live = getInfo(YouTubeParser.KEY_LIVE_STREAM);
+            String is_live = getInfo(KEY_LIVE_STREAM);
 
             if(is_live != null && is_live.contentEquals("1")) {
-                videoUrl = getInfo(YouTubeParser.KEY_HLS_VIDEO);
+                videoUrl = getHlsManifestUrl(getInfo(KEY_PLAYER_RESPONSE));
             } else {
                 videoUrl = null;
             }
@@ -165,5 +171,20 @@ public class YouTubeParser extends VideoUrlParser
                 throw ex;
             }
         }
+    }
+
+    private String getHlsManifestUrl(String player_response) {
+        String videoUrl = null;
+
+        try {
+            JSONObject jsonObject = new JSONObject(player_response);
+            jsonObject = jsonObject.getJSONObject(KEY_STREAMING_DATA);
+            videoUrl = jsonObject.getString(KEY_HLS_MANIFEST_URL);
+
+        } catch (JSONException e) {
+            Log.e(TAG, "Error parsing player_response");
+        }
+
+        return videoUrl;
     }
 }
