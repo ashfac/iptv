@@ -23,6 +23,7 @@ public class YouTubeParser extends VideoUrlParser
     private static final String TAG = "YouTubeParser";
     private static final String PARSER_ID = "youtube";
     private static final String URL_TYPE_CHANNEL = "youtube.com/channel/";
+    private static final String URL_TYPE_EMBED_CHANNEL = "embed/live_stream?channel";
     private static final String URL_TYPE_EMBED = "/youtube-embed";
 
     private static final String URL_YOUTUBE_GET_VIDEO_INFO = "http://www.youtube.com/get_video_info?&video_id=";
@@ -34,8 +35,9 @@ public class YouTubeParser extends VideoUrlParser
     public static final String KEY_STREAMING_DATA = "streamingData";
     public static final String KEY_HLS_MANIFEST_URL = "hlsManifestUrl";
 
-    private static final String KEY_CHANNEL_TO_VIDEO_ID = "<meta property=\"og:video:secure_url\" content=\"https://www.youtube.com/v/";
+    private static final String KEY_SECURE_URL = "<meta property=\"og:video:secure_url\" content=\"";
     private static final String KEY_EMBED_TO_VIDEO_ID = "youtube.com/embed/";
+    private static final String KEY_EMBED_CHANNEL_TO_VIDEO_ID = "youtube.com/watch?v=";
 
     private TreeMap<String, String> kvpList = new TreeMap<>();
 
@@ -48,6 +50,8 @@ public class YouTubeParser extends VideoUrlParser
     public String parseVideoUrl(String videoUrl){
         if (videoUrl.contains(URL_TYPE_CHANNEL)) {
             return parseChannelUrl(videoUrl);
+        } else if (videoUrl.contains(URL_TYPE_EMBED_CHANNEL)) {
+            return parseEmbedChannelUrl(videoUrl);
         } else if (videoUrl.contains(URL_TYPE_EMBED)) {
             return parseEmbedUrl(videoUrl);
         } else {
@@ -58,13 +62,43 @@ public class YouTubeParser extends VideoUrlParser
     public String parseChannelUrl(String videoUrl) {
         try {
             String html_response = SimpleHttpClient.GET(videoUrl, Util.USER_AGENT_FIREFOX);
-            String videoId = Util.Html.getTag(html_response, KEY_CHANNEL_TO_VIDEO_ID, ">");
+            String videoId = Util.Html.getTag(html_response, KEY_SECURE_URL, "\"");
+
+            if (videoId != null) {
+                if (videoId.contains("/embed/")) {
+                    return parseEmbedChannelUrl(videoId);
+                }
+                else if (videoId.contains("/v/")) {
+                    videoId = videoId.substring(0, videoId.indexOf("/v/"));
+                    if (videoId.contains("?")) {
+                        videoId = videoId.substring(0, videoId.indexOf("?"));
+                    }
+                }
+            }
+
+            return videoIdToVideoUrl(videoId);
+
+        } catch (IOException e) {
+            Log.e(TAG, e.getMessage());
+        }
+
+        return null;
+    }
+
+    public String parseEmbedChannelUrl(String videoUrl) {
+        return videoIdToVideoUrl(embedChannelToVideoId(videoUrl));
+    }
+
+    public String embedChannelToVideoId(String videoUrl) {
+        try {
+            String html_response = SimpleHttpClient.GET(videoUrl);
+            String videoId = Util.Html.getTag(html_response, KEY_EMBED_CHANNEL_TO_VIDEO_ID, "\"");
 
             if (videoId != null && videoId.contains("?")) {
                 videoId = videoId.substring(0, videoId.indexOf("?"));
             }
 
-            return videoIdToVideoUrl(videoId);
+            return videoId;
 
         } catch (IOException e) {
             Log.e(TAG, e.getMessage());
