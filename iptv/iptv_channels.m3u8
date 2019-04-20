@@ -3,50 +3,64 @@
 #EXTINF:0 tvg-logo="https://yt3.ggpht.com/-GzuAS_9sNTc/AAAAAAAAAAI/AAAAAAAAAAA/illJOId_OVk/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg" tvg-epg="file:hum-news.json", HUM News
 https://www.youtube.com/embed/live_stream?channel=UCt4pLfULsDlvIyMF5fKmtRg
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/d2/Dawn_News.jpg" tvg-epg="file:dawn-news.json", Dawn News
-https://www.mjunoon.tv/dawn-news-live;https://www.dawnnews.tv/watch-live/youtube-embed;http://199.167.151.237:1935/live/sp15_23.stream/gmswf.m3u8
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Dawn-News.png" tvg-epg="file:dawn-news.json", Dawn News
+https://www.mjunoon.tv/dawn-news-live;https://www.dawnnews.tv/watch-live/youtube-embed
 
 #EXTINF:0 tvg-logo="https://arynews.tv/wp-content/uploads/2018/03/news-logo-2-1.jpg" tvg-epg="file:ary-news.json", Ary News
 https://live.arynews.tv/hq/youtube-embed;http://158.69.229.30:1935/newslive/myStream/playlist.m3u8;http://158.69.228.195:1935/newsmobile/myStream/playlist.m3u8
 
-#EXTINF:0 tvg-logo="https://yt3.ggpht.com/a-/ACSszfFsX7SBaSrby6SKTKl4BtXS90oDgR3D0GQEuA=s900-mo-c-c0xffffffff-rj-k-no", Aaj News
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Ajj-news.png", Aaj News
 https://www.mjunoon.tv/aaj-news-live
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lahore_News_Logo_%28For_Tv_Screen%29.png/440px-Lahore_News_Logo_%28For_Tv_Screen%29.png",Lahore News HD
-http://mlive.lahorenews.tv:1935/lahorelive/lnews_1/playlist.m3u8
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/Express-News.png", Express News
+https://www.mjunoon.tv/express-news-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/samaa-tv.png?v=1", Samaa News
+https://www.mjunoon.tv/samaa-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/24-News.png", 24 News
+https://www.mjunoon.tv/channel-24-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/News-one.png", News One
+https://www.mjunoon.tv/news-one-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Abb-Takk-.png", Abb Takk
+https://www.mjunoon.tv/abb-takk-news-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/Channel-5-Logo.png", Channel 5
+https://www.mjunoon.tv/channel-five-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Neo-News-logo.png", Neo News
+https://www.mjunoon.tv/neo-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Roz-news.png", Roze news
+https://www.mjunoon.tv/roze-news-live
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/02/PTV_news_logo.png", Ptv News
-https://www.youtube.com/embed/live_stream?channel=UCOHkx2rlTIpRJnjgxzo1g9A;https://www.youtube.com/embed/live_stream?channel=UC3vLbhFEpTyXz8XNlcaYLDQ;https://59aeddfe9f01c.streamlock.net/live/PTVnews/player.m3u8
+https://59aeddfe9f01c.streamlock.net/live/PTVnews/player.m3u8
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/PTV_World_logo.png/300px-PTV_World_logo.png", Ptv World
 https://59aeddfe9f01c.streamlock.net/live/8090/player.m3u8
 
-#EXTINF:0 tvg-logo="https://khybernews.tv/wp-content/uploads/2018/08/logo-khybernews.png", Khyber News
-https://www.mjunoon.tv/khyber-news-live
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Uk-news.png", UK44
+https://www.mjunoon.tv/uk44-live
 
 
-#EXTINF:0 tvg-channel="11" tvg-logo="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png", Al Jazeera English
+#EXTINF:0 tvg-logo="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png", Al Jazeera English
 https://english.streaming.aljazeera.net/aljazeera/english2/index.m3u8
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png", euro news
 https://www.euronews.com/api/watchlive.json
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Russia-today-logo.svg/400px-Russia-today-logo.svg.png", Russia Today
-https://rt-news.secure.footprint.net/1103.m3u8
-
 #EXTINF:0 tvg-logo="https://vignette.wikia.nocookie.net/logopedia/images/b/b1/NHK_World_Japan.png",NHK World
-https://nhkwtvglobal-i.akamaihd.net/hls/live/263941/nhkwtvglobal/index_1180.m3u8
-
+https://nhkwlive-xjp.akamaized.net/hls/live/2003458/nhkwlive-xjp/index_1180.m3u8
 
 
 #EXTINF:0 tvg-channel="21" tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Quran-Tv.png", Makkah Live
-https://www.youtube.com/embed/live_stream?channel=UClIIopOeuwL8KEK0wnFcodw
+https://www.youtube.com/embed/live_stream?channel=UClIIopOeuwL8KEK0wnFcodw;https://www.mjunoon.tv/saudi-quran-makkah-tv-hd-live
 
 #EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Sunnah-TV.png", Madina Live
 https://www.youtube.com/embed/live_stream?channel=UCraPI8sg-eiNzUrurxhKeEQ;https://www.mjunoon.tv/saudi-sunnah-madinah-tv-hd-live
-
-#EXTINF:0 tvg-logo="http://www.huda.tv/templates/hudatv/images/logo/logo.png", huda
-http://41.33.67.146:1935/live/mystream/playlist.m3u8
 
 #EXTINF:0 tvg-logo="https://api.visionip.tv/portals/peacetv/peacetv/thumbs/peacetv-peacetv-peacetv-english-hsslive-25f-16x9-thumb-SDh.jpg.png", Peace TV English
 http://peacetv.api.visionip.tv/live/ASHTTP/peacetv-peacetv-peacetv-english-hsslive-25f-16x9-MB/playlist.m3u8
@@ -59,17 +73,14 @@ http://peacetv.api.visionip.tv/live/ASHTTP/peacetv-peacetv-peacetv-urdu-hsslive-
 #EXTINF:0 tvg-channel="33" tvg-logo="https://i.vimeocdn.com/portrait/11750117_300x300", Ptv Home
 https://59aeddfe9f01c.streamlock.net/live/PTVhome/player.m3u8
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/83/Atv_pakistan.PNG", Atv
-https://www.mjunoon.tv/a-tv-live;http://stream.tapmad.com:1935/pitvlive/atv3.stream/chunklist.m3u8
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/A-tv-Nws.png", Atv
+https://www.mjunoon.tv/a-tv-live
 
-#EXTINF:0 tvg-logo="http://a-plus.tv/wp-content/uploads/2017/10/aplus-logo.png", A Plus
-https://www.mjunoon.tv/a-plus-live;http://173.212.252.47:1935/Aplus%20Pakistan/AplusPK/chunklist_w1071879192.m3u8
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Aplus.png", A Plus
+https://www.mjunoon.tv/a-plus-live
 
 
-#EXTINF:0 tvg-logo="http://okteve.com/wp-content/uploads/media/afd7cd1238808993a22c0c8ec5b47057.jpeg", Urdu 1
-https://www.mjunoon.tv/urdu-1-live
-
-#EXTINF:0 tvg-logo="https://icon2.kisspng.com/20180716/xj/kisspng-pakistan-hum-tv-television-channel-drama-hum-5b4cf75ac71e12.9084820015317707148156.jpg", HUM TV
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/Hum-Tv.png", HUM TV
 https://www.hum.tv/live/youtube-embed;https://www.mjunoon.tv/hum-tv-live;
 
 #EXTINF:0 tvg-logo="https://vignette.wikia.nocookie.net/logopedia/images/b/b6/Ary_digital_logo.png", ARY Digital
@@ -79,21 +90,92 @@ http://158.69.228.195:1935/digitalnew/myStream/playlist.m3u8;http://149.202.205.
 #EXTINF:0 tvg-logo="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/e5/53/7a/e5537a94-d5af-a501-626b-9149fb36f3d8/source/512x512bb.jpg", ARY Zindagi
 http://149.202.205.24:1935/ARYZINDAGI/ngrp:myStream_all/playlist.m3u8
 
-#EXTINF:0 tvg-logo="http://freetvall.me/files/thumbs/1351580290ecc77-1.jpg", Aaj
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Ajj-ent.png", Aaj
 https://www.mjunoon.tv/aaj-entertainment-live
 
-#EXTINF:0 tvg-logo="http://zameer36.com/wp-content/uploads/2015/04/TVOne-Global-tv-channel.png", Tv One
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Tvone.png", Tv One
 https://www.mjunoon.tv/tv-one-live
 
-#EXTINF:0 tvg-logo="https://hnow.tv/wp-content/uploads/2018/03/h-now-LOGO-UPDATED-1-1.png", h now
-http://stream.tapmad.com:1935/pitvlive/healthtv3.stream/chunklist.m3u8
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Urdu-1.png", Urdu 1
+https://www.mjunoon.tv/urdu-1-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Khaber.png", Khyber
+https://www.mjunoon.tv/avt-khyber-tv-live;http://json.dacast.com/b/75341/c/478992
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Pashto1.png", Pashto 1
+https://www.mjunoon.tv/pashto1-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/Express-Entertainment.png", Express
+https://www.mjunoon.tv/express-entertainment-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Apna.png", Apna
+https://www.mjunoon.tv/apna-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Aruj.png", Aruj
+https://www.mjunoon.tv/aruj-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/SEE-Tv.png", See
+https://www.mjunoon.tv/see-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Awaz.png", Awaz
+https://www.mjunoon.tv/awaz-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Kashish.png", Kashish
+https://www.mjunoon.tv/kashish-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Kay2.png", K2
+https://www.mjunoon.tv/kay2-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Punjab-logo.png", Punjab TV
+https://www.mjunoon.tv/punjab-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Rohi.png", Rohi
+https://www.mjunoon.tv/rohi-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Waseb.png", Waseeb
+https://www.mjunoon.tv/waseb-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/sindhtv1.png", Sindh TV
+https://www.mjunoon.tv/sindh-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Film-World.png", Film World
+https://www.mjunoon.tv/filmworld-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Film-mazia.png", Filmazi
+https://www.mjunoon.tv/filmazia-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Filmax.png", Filmax
+https://www.mjunoon.tv/filmax-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Khabar-news-.png", Khyber News
+https://www.mjunoon.tv/khyber-news-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Such-.png", Such TV
+https://www.mjunoon.tv/such-tv-live
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lahore_News_Logo_%28For_Tv_Screen%29.png/440px-Lahore_News_Logo_%28For_Tv_Screen%29.png",Lahore News HD
+http://mlive.lahorenews.tv:1935/lahorelive/lnews_1/playlist.m3u8
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/sindhtv.png", Sindh News
+https://www.mjunoon.tv/sindh-tv-news-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/City-41.png", City 41
+https://www.mjunoon.tv/city41-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/City-42.png", City 42
+https://www.mjunoon.tv/city-42-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/K-21-news.png", K21
+https://www.mjunoon.tv/k21-news-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/7-news-.png", 7 News
+https://www.mjunoon.tv/7-news-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/VSH.png", VSH News
+https://www.mjunoon.tv/vsh-news-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/cinematchi-tv.png?v=2", Cinemachi
+https://www.mjunoon.tv/cinemachi-kids-tv-live
 
 #EXTINF:0 tvg-logo="https://www.masala.tv/wp-content/themes/masala-ri/images/masalalogo.png", Masala TV
 https://www.masala.tv/livetv/youtube-embed
-
-#EXTINF:0 tvg-logo="http://avtkhyber.tv/demo/wp-content/uploads/2016/12/KHYBER-LOGO-0.png", Khyber
-https://www.mjunoon.tv/avt-khyber-tv-live;http://json.dacast.com/b/75341/c/478992
-
-#EXTINF:0 tvg-logo="http://avtchannels.com/wp-content/uploads/2015/02/pashto-1-300x300.png", Pashto 1
-https://www.mjunoon.tv/pashto1-live
-

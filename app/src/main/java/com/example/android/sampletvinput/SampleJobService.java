@@ -16,7 +16,10 @@
 package com.example.android.sampletvinput;
 
 import android.net.Uri;
+import android.nfc.Tag;
+import android.util.Log;
 
+import com.example.android.sampletvinput.feeds.ArconaiTvFeed;
 import com.example.android.sampletvinput.feeds.M3U8Feed;
 import com.example.android.sampletvinput.rich.RichFeedUtil;
 
@@ -25,6 +28,7 @@ import com.google.android.media.tv.companionlibrary.model.Program;
 import com.google.android.media.tv.companionlibrary.EpgSyncJobService;
 import com.google.android.media.tv.companionlibrary.XmlTvParser;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,6 +55,14 @@ public class SampleJobService extends EpgSyncJobService {
         // Add channels through an m3u8 file
         channelList.addAll(RichFeedUtil.getM3u8Listings(this));
 
+        // add arconai tv channels
+        try {
+            ArconaiTvFeed.init();
+            channelList.addAll(ArconaiTvFeed.getChannels());
+        } catch (IOException e) {
+            Log.e("", "failed to initialize arconai tv feed");
+        }
+
         return channelList;
     }
 
@@ -66,7 +78,11 @@ public class SampleJobService extends EpgSyncJobService {
         }
 
         if(programs == null || programs.size() == 0) {
-            programs = M3U8Feed.getProgramsForChannel(getApplicationContext(), channel, startMs, endMs);
+            if (ArconaiTvFeed.isAcronaiChannel(channel)) {
+                programs = ArconaiTvFeed.getProgramsForChannel(channel);
+            } else {
+                programs = M3U8Feed.getProgramsForChannel(getApplicationContext(), channel, startMs, endMs);
+            }
         }
 
         return programs;
