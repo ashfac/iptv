@@ -26,7 +26,7 @@ public class YouTubeParser extends VideoUrlParser
     private static final String URL_TYPE_EMBED_CHANNEL = "embed/live_stream?channel";
     private static final String URL_TYPE_EMBED = "/youtube-embed";
 
-    private static final String URL_YOUTUBE_GET_VIDEO_INFO = "http://www.youtube.com/get_video_info?&video_id=";
+    private static final String URL_YOUTUBE_GET_VIDEO_INFO = "https://www.youtube.com/get_video_info?&video_id=";
     private static final String URL_YOUTUBE_GET_VIDEO_INFO_PARAMS = "&gl=US&hl=en&ps=default&eurl=https://youtube.googleapis.com/v/";
 
     public static final String KEY_LIVE_STREAM = "live_playback";
