@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE tv SYSTEM "xmltv.dtd">
+<!--
+xmltv.dtd are extended to be align with Android TV Input Framework and contain static video
+contents. For details, please see the documentation of XmlTvParser class.
+-->
+<tv>
+    <channel id="1-DAWN-NEWS" repeat-programs="true">
+        <display-name>Dawn News</display-name>
+        <display-number>1</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/d/d2/Dawn_News.jpg"/>
+    </channel>
+    <channel id="1-1-DAWN-NEWS" repeat-programs="true">
+        <display-name>Dawn News</display-name>
+        <display-number>1-1</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/d/d2/Dawn_News.jpg"/>
+    </channel>
+    <channel id="1-2-DAWN-NEWS" repeat-programs="true">
+        <display-name>Dawn News</display-name>
+        <display-number>1-2</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/d/d2/Dawn_News.jpg"/>
+    </channel>
+    <channel id="2-HUM-NEWS" repeat-programs="true">
+        <display-name>HUM News</display-name>
+        <display-number>2</display-number>
+        <icon src="https://yt3.ggpht.com/-GzuAS_9sNTc/AAAAAAAAAAI/AAAAAAAAAAA/illJOId_OVk/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg"/>
+    </channel>
+    <channel id="3-ARY-NEWS" repeat-programs="true">
+        <display-name>ARY News</display-name>
+        <display-number>3</display-number>
+        <icon src="https://arynews.tv/wp-content/uploads/2018/03/news-logo-2-1.jpg"/>
+    </channel>
+    <channel id="7-AAJ-NEWS" repeat-programs="true">
+        <display-name>Aaj News</display-name>
+        <display-number>7</display-number>
+        <icon src="https://yt3.ggpht.com/a-/ACSszfFsX7SBaSrby6SKTKl4BtXS90oDgR3D0GQEuA=s900-mo-c-c0xffffffff-rj-k-no"/>
+    </channel>
+    <channel id="8-EXPRESS-NEWS" repeat-programs="true">
+        <display-name>Express News</display-name>
+        <display-number>8</display-number>
+        <icon src="https://yt3.ggpht.com/a-/ACSszfEJFM0M3Md6yK1bNBfeq506m0vZFjK7UaCHEQ=s900-mo-c-c0xffffffff-rj-k-no"/>
+    </channel>
+    <channel id="9-DUNYA-NEWS" repeat-programs="true">
+        <display-name>Dunya News</display-name>
+        <display-number>9</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/thumb/1/10/Dunya_News.jpg/220px-Dunya_News.jpg"/>
+    </channel>
+    <channel id="21-PTV-HOME" repeat-programs="true">
+        <display-name>PTV Home</display-name>
+        <display-number>21</display-number>
+        <icon src="http://www.ptv.com.pk/public/user/assets/images/ptv-familyHome.jpg"/>
+    </channel>
+    <channel id="21-1-PTV-HOME" repeat-programs="true">
+        <display-name>PTV Home</display-name>
+        <display-number>21-1</display-number>
+        <icon src="http://www.ptv.com.pk/public/user/assets/images/ptv-familyHome.jpg"/>
+    </channel>
+    <channel id="22-ARY-DIGITAL" repeat-programs="true">
+        <display-name>ARY Digital</display-name>
+        <display-number>22</display-number>
+        <icon src="https://demo.arydigital.tv/uploads/2018/03/digital-logo.gif"/>
+    </channel>
+    <channel id="23-ARY-ZINDAGI" repeat-programs="true">
+        <display-name>ARY Zindagi</display-name>
+        <display-number>23</display-number>
+        <icon src="http://www.aryzindagi.tv/wp-content/uploads/2014/10/Final-logo-2.gif"/>
+    </channel>
+    <channel id="24-A-PLUS" repeat-programs="true">
+        <display-name>A Plus</display-name>
+        <display-number>24</display-number>
+        <icon src="http://a-plus.tv/wp-content/uploads/2017/10/aplus-logo.png"/>
+    </channel>
+    <channel id="24-1-A-PLUS" repeat-programs="true">
+        <display-name>A Plus</display-name>
+        <display-number>24-1</display-number>
+        <icon src="http://a-plus.tv/wp-content/uploads/2017/10/aplus-logo.png"/>
+    </channel>
+    <channel id="25-HUM-TV" repeat-programs="true">
+        <display-name>HUM TV</display-name>
+        <display-number>25</display-number>
+        <icon src="https://icon2.kisspng.com/20180716/xj/kisspng-pakistan-hum-tv-television-channel-drama-hum-5b4cf75ac71e12.9084820015317707148156.jpg"/>
+    </channel>
+    <channel id="25-1-HUM-SITARAY" repeat-programs="true">
+        <display-name>HUM Sitaray</display-name>
+        <display-number>25-1</display-number>
+        <icon src="https://icon2.kisspng.com/20180716/xj/kisspng-pakistan-hum-tv-television-channel-drama-hum-5b4cf75ac71e12.9084820015317707148156.jpg"/>
+    </channel>
+    <channel id="25-2-HUM-MASALA" repeat-programs="true">
+        <display-name>HUM Masala</display-name>
+        <display-number>25-2</display-number>
+        <icon src="https://icon2.kisspng.com/20180716/xj/kisspng-pakistan-hum-tv-television-channel-drama-hum-5b4cf75ac71e12.9084820015317707148156.jpg"/>
+    </channel>
+    <channel id="26-ATV" repeat-programs="true">
+        <display-name>Atv</display-name>
+        <display-number>26</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/8/83/Atv_pakistan.PNG"/>
+    </channel>
+    <channel id="27-URDU-1" repeat-programs="true">
+        <display-name>Urdu 1</display-name>
+        <display-number>27</display-number>
+        <icon src="http://okteve.com/wp-content/uploads/media/afd7cd1238808993a22c0c8ec5b47057.jpeg"/>
+    </channel>
+    <channel id="28-TV-ONE" repeat-programs="true">
+        <display-name>TV One</display-name>
+        <display-number>28</display-number>
+        <icon src="http://zameer36.com/wp-content/uploads/2015/04/TVOne-Global-tv-channel.png"/>
+    </channel>
+    <channel id="29-AAJ-ENTERTAINMENT" repeat-programs="true">
+        <display-name>Aaj Entertainment</display-name>
+        <display-number>29</display-number>
+        <icon src="http://freetvall.me/files/thumbs/1351580290ecc77-1.jpg"/>
+    </channel>
+    <channel id="29-1-EXPRESS-ENTERTAINMENT" repeat-programs="true">
+        <display-name>Express Entertainment</display-name>
+        <display-number>29-1</display-number>
+        <icon src="http://freetvall.me/files/thumbs/1351580290ecc77-1.jpg"/>
+    </channel>
+    <channel id="29-2-APNA-CHANNEL" repeat-programs="true">
+        <display-name>Apna Channel</display-name>
+        <display-number>29-2</display-number>
+        <icon src="https://pbs.twimg.com/profile_images/443341166327517184/RF5VJboh_400x400.jpeg"/>
+    </channel>
+    <channel id="29-3-PLAY-TV" repeat-programs="true">
+        <display-name>Play TV</display-name>
+        <display-number>29-3</display-number>
+        <icon src="https://pbs.twimg.com/profile_images/443341166327517184/RF5VJboh_400x400.jpeg"/>
+    </channel>
+    <channel id="30-ARUJ-TV" repeat-programs="true">
+        <display-name>Aruj TV</display-name>
+        <display-number>30</display-number>
+        <icon src="https://pbs.twimg.com/profile_images/443341166327517184/RF5VJboh_400x400.jpeg"/>
+    </channel>
+    <channel id="31-FILMAX" repeat-programs="true">
+        <display-name>FILMAX</display-name>
+        <display-number>31</display-number>
+        <icon src="https://assets.about.me/background/users/f/i/l/filmaxtv_1394882716_19.jpg"/>
+    </channel>
+    <channel id="32-FILMWORLD" repeat-programs="true">
+        <display-name>FILMWORLD</display-name>
+        <display-number>32</display-number>
+        <icon src="http://3.bp.blogspot.com/-xNyYVPuOyvQ/UYY9to_S74I/AAAAAAAAALw/PZegEIx1z0E/s1600/Film-world.JPG"/>
+    </channel>
+    <channel id="34-8XM" repeat-programs="true">
+        <display-name>8XM</display-name>
+        <display-number>34</display-number>
+        <icon src="http://oklivetv.com/wp-content/uploads/media/1ec26f62177b115c2f3f2b3806858e4f.jpeg"/>
+    </channel>
+    <channel id="35-JALWA" repeat-programs="true">
+        <display-name>Jalwa</display-name>
+        <display-number>35</display-number>
+        <icon src="http://jalwa.tv/wp-content/uploads/2018/01/logo2.png"/>
+    </channel>
+    <channel id="36-1-WASEEB-TV" repeat-programs="true">
+        <display-name>Waseeb</display-name>
+        <display-number>36-1</display-number>
+        <icon src="https://pbs.twimg.com/profile_images/1670844119/oxygene_logo_400x400.png"/>
+    </channel>
+    <channel id="37-PASHTO-1" repeat-programs="true">
+        <display-name>Pashto 1</display-name>
+        <display-number>37</display-number>
+        <icon src="http://avtchannels.com/wp-content/uploads/2015/02/pashto-1-300x300.png"/>
+    </channel>
+    <channel id="37-1-PASHTO-1" repeat-programs="true">
+        <display-name>Pashto 1</display-name>
+        <display-number>37-1</display-number>
+        <icon src="http://avtchannels.com/wp-content/uploads/2015/02/pashto-1-300x300.png"/>
+    </channel>
+    <channel id="38-AVT-KHYBER" repeat-programs="true">
+        <display-name>AVT Khyber</display-name>
+        <display-number>38</display-number>
+        <icon src="http://avtkhyber.tv/demo/wp-content/uploads/2016/12/KHYBER-LOGO-0.png"/>
+    </channel>
+    <channel id="38-1-AVT-KHYBER" repeat-programs="true">
+        <display-name>AVT Khyber</display-name>
+        <display-number>38-1</display-number>
+        <icon src="http://avtkhyber.tv/demo/wp-content/uploads/2016/12/KHYBER-LOGO-0.png"/>
+    </channel>
+    <channel id="39-KHYBER-NEWS" repeat-programs="true">
+        <display-name>Khyber News</display-name>
+        <display-number>39</display-number>
+        <icon src="https://khybernews.tv/wp-content/uploads/2018/08/logo-khybernews.png"/>
+    </channel>
+    <channel id="41-MAKKAH-LIVE" repeat-programs="true">
+        <display-name>Makkah Live</display-name>
+        <display-number>41</display-number>
+        <icon src="https://cdn.sat.tv/wp-content/uploads/2016/05/QuranTVSA.png"/>
+    </channel>
+    <channel id="42-HUDA-TV" repeat-programs="true">
+        <display-name>Huda TV</display-name>
+        <display-number>42</display-number>
+        <icon src="https://cdn.sat.tv/wp-content/uploads/2016/05/QuranTVSA.png"/>
+    </channel>
+    <channel id="43-PEACE-TV-EN" repeat-programs="true">
+        <display-name>Peace TV English</display-name>
+        <display-number>43</display-number>
+        <icon src="https://api.visionip.tv/portals/peacetv/peacetv/thumbs/peacetv-peacetv-peacetv-english-hsslive-25f-16x9-thumb-SDh.jpg.png"/>
+    </channel>
+    <channel id="44-PEACE-TV-URDU" repeat-programs="true">
+        <display-name>Peace TV Urdu</display-name>
+        <display-number>44</display-number>
+        <icon src="https://api.visionip.tv/portals/peacetv/peacetv/thumbs/peacetv-peacetv-peacetv-urdu-hsslive-25f-16x9-thumb-SDh.jpg.png"/>
+    </channel>
+    <channel id="51-AL-JAZEERA-EN" repeat-programs="true">
+        <display-name>Al Jazeera English</display-name>
+        <display-number>51</display-number>
+        <icon src="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png"/>
+    </channel>
+    <channel id="52-AL-JAZEERA-AR" repeat-programs="true">
+        <display-name>Al Jazeera Arabic</display-name>
+        <display-number>52</display-number>
+        <icon src="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png"/>
+    </channel>
+    <channel id="53-AL-JAZEERA-DOC" repeat-programs="true">
+        <display-name>Al Jazeera Documentary</display-name>
+        <display-number>53</display-number>
+        <icon src="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png"/>
+    </channel>
+    <channel id="54-RUSSIA-TODAY" repeat-programs="true">
+        <display-name>Russia Today</display-name>
+        <display-number>54</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Russia-today-logo.svg/400px-Russia-today-logo.svg.png"/>
+    </channel>
+    <channel id="55-SKY-NEWS" repeat-programs="true">
+        <display-name>SKY News</display-name>
+        <display-number>55</display-number>
+        <icon src="https://news.sky.com/assets/2018/sky-news-logo.png"/>
+    </channel>
+    <channel id="56-EURO-NEWS" repeat-programs="true">
+        <display-name>EURO News</display-name>
+        <display-number>56</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="61-NPO-1" repeat-programs="true">
+        <display-name>NPO 1</display-name>
+        <display-number>61</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="62-NPO-2" repeat-programs="true">
+        <display-name>NPO 2</display-name>
+        <display-number>62</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="63-NPO-3ZAPP" repeat-programs="true">
+        <display-name>NPO 3</display-name>
+        <display-number>63</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="64-NPO-1-EXTRA" repeat-programs="true">
+        <display-name>NPO 1 EXTRA</display-name>
+        <display-number>64</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="65-NPO-2-EXTRA" repeat-programs="true">
+        <display-name>NPO 2 EXTRA</display-name>
+        <display-number>65</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="66-NPO-3-EXTRA" repeat-programs="true">
+        <display-name>NPO 3 EXTRA</display-name>
+        <display-number>66</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="67-NPO-ZAPP-EXTRA" repeat-programs="true">
+        <display-name>NPO ZAPP EXTRA</display-name>
+        <display-number>67</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="71-STAR-GOLD" repeat-programs="true">
+        <display-name>Star Gold</display-name>
+        <display-number>71</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="72-AND-PICTURES" repeat-programs="true">
+        <display-name>AND Pictures</display-name>
+        <display-number>80</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="73-ZEE-CINEMA" repeat-programs="true">
+        <display-name>Zee Cinema</display-name>
+        <display-number>74</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="74-ZEE-ACTION" repeat-programs="true">
+        <display-name>Zee Action</display-name>
+        <display-number>75</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="81-ABU-DHABI" repeat-programs="true">
+        <display-name>Abu Dhabi</display-name>
+        <display-number>90</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="82-ABU-DHABI-DRAMA" repeat-programs="true">
+        <display-name>Abu Dhabi Drama</display-name>
+        <display-number>91</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <channel id="83-NATIONAL-GEOGRAPHIC" repeat-programs="true">
+        <display-name>National Geographic</display-name>
+        <display-number>92</display-number>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </channel>
+    <programme channel="1-DAWN-NEWS" start="20180821000000 +0000" stop="20180822000000 +0000"
+        video-src="youtube,b3HM8AXZA6A" 
+        video-type="HLS">
+        <title>Dawn News</title>
+        <category>NEWS</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/d/d2/Dawn_News.jpg"/>
+    </programme>
+    <programme channel="1-1-DAWN-NEWS" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/dawn-news-live"
+        video-type="HLS">
+        <title>Dawn News</title>
+        <category>NEWS</category>
+		<icon src="https://upload.wikimedia.org/wikipedia/en/d/d2/Dawn_News.jpg"/>
+    </programme>
+    <programme channel="1-2-DAWN-NEWS" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="youtube,rLSH_KROn-k"
+        video-type="HLS">
+        <title>Dawn News</title>
+        <category>NEWS</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/d/d2/Dawn_News.jpg"/>
+    </programme>
+    <programme channel="2-HUM-NEWS" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="youtube,GMNJAruCO5I"
+        video-type="HLS">
+        <title>HUM News</title>
+        <category>NEWS</category>
+        <icon src="https://yt3.ggpht.com/-GzuAS_9sNTc/AAAAAAAAAAI/AAAAAAAAAAA/illJOId_OVk/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg"/>
+    </programme>
+    <programme channel="3-ARY-NEWS" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="youtube,yoURFyNZFYo"
+        video-type="HLS">
+        <title>ARY News</title>
+        <category>NEWS</category>
+        <icon src="https://arynews.tv/wp-content/uploads/2018/03/news-logo-2-1.jpg"/>
+    </programme>
+    <programme channel="7-AAJ-NEWS" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/aaj-news-live"
+        video-type="HLS">
+        <title>Aaj News</title>
+        <category>NEWS</category>
+        <icon src="https://yt3.ggpht.com/a-/ACSszfFsX7SBaSrby6SKTKl4BtXS90oDgR3D0GQEuA=s900-mo-c-c0xffffffff-rj-k-no"/>
+    </programme>
+    <programme channel="8-EXPRESS-NEWS" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/express-news-live"
+        video-type="HLS">
+        <title>Express News</title>
+        <category>NEWS</category>
+        <icon src="https://yt3.ggpht.com/a-/ACSszfEJFM0M3Md6yK1bNBfeq506m0vZFjK7UaCHEQ=s900-mo-c-c0xffffffff-rj-k-no"/>
+    </programme>
+    <programme channel="9-DUNYA-NEWS" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/dunya-news-live"
+        video-type="HLS">
+        <title>Dunya News</title>
+        <category>NEWS</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/thumb/1/10/Dunya_News.jpg/220px-Dunya_News.jpg"/>
+    </programme>
+    <programme channel="21-PTV-HOME" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://hw.goonj.pk/ptvhomeweb_720p/index.m3u8"
+        video-type="HLS">
+        <title>PTV Home</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://www.ptv.com.pk/public/user/assets/images/ptv-familyHome.jpg"/>
+    </programme>
+    <programme channel="21-1-PTV-HOME" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://59aeddfe9f01c.streamlock.net/live/PTVhome/player.m3u8"
+        video-type="HLS">
+        <title>PTV Home</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://www.ptv.com.pk/public/user/assets/images/ptv-familyHome.jpg"/>
+    </programme>
+    <programme channel="22-ARY-DIGITAL" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="http://158.69.228.195:1935/digitalnew/myStream/playlist.m3u8"
+        video-type="HLS">
+        <title>ARY Digital</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://demo.arydigital.tv/uploads/2018/03/digital-logo.gif"/>
+    </programme>
+    <programme channel="23-ARY-ZINDAGI" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="http://149.202.205.24:1935/ARYZINDAGI/ngrp:myStream_all/playlist.m3u8"
+        video-type="HLS">
+        <title>ARY Zindagi</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://www.aryzindagi.tv/wp-content/uploads/2014/10/Final-logo-2.gif"/>
+    </programme>
+    <programme channel="24-A-PLUS" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="http://173.212.252.47:1935/Aplus%20Pakistan/AplusPK/chunklist_w1071879192.m3u8"
+        video-type="HLS">
+        <title>A Plus</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://a-plus.tv/wp-content/uploads/2017/10/aplus-logo.png"/>
+    </programme>
+    <programme channel="24-1-A-PLUS" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/a-plus-live"
+        video-type="HLS">
+        <title>A Plus</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://a-plus.tv/wp-content/uploads/2017/10/aplus-logo.png"/>
+    </programme>
+    <programme channel="25-HUM-TV" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="youtube,UPViEwctF1o"
+        video-type="HLS">
+        <title>HUM TV</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://icon2.kisspng.com/20180716/xj/kisspng-pakistan-hum-tv-television-channel-drama-hum-5b4cf75ac71e12.9084820015317707148156.jpg"/>
+    </programme>
+    <programme channel="25-1-HUM-SITARAY" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://hw.goonj.pk/humsitarayweb_720p/index.m3u8"
+        video-type="HLS">
+        <title>HUM Sitaray</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://icon2.kisspng.com/20180716/xj/kisspng-pakistan-hum-tv-television-channel-drama-hum-5b4cf75ac71e12.9084820015317707148156.jpg"/>
+    </programme>
+    <programme channel="25-2-HUM-MASALA" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://hw.goonj.pk/hummasalaweb_720p/index.m3u8"
+        video-type="HLS">
+        <title>HUM Masala</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://icon2.kisspng.com/20180716/xj/kisspng-pakistan-hum-tv-television-channel-drama-hum-5b4cf75ac71e12.9084820015317707148156.jpg"/>
+    </programme>
+    <programme channel="26-ATV" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/a-tv-live"
+        video-type="HLS">
+        <title>Atv</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/8/83/Atv_pakistan.PNG"/>
+    </programme>
+    <programme channel="27-URDU-1" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/urdu-1-live"
+        video-type="HLS">
+        <title>Urdu 1</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://okteve.com/wp-content/uploads/media/afd7cd1238808993a22c0c8ec5b47057.jpeg"/>
+    </programme>
+    <programme channel="28-TV-ONE" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/tv-one-live"
+        video-type="HLS">
+        <title>TV One</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://zameer36.com/wp-content/uploads/2015/04/TVOne-Global-tv-channel.png"/>
+    </programme>
+    <programme channel="29-AAJ-ENTERTAINMENT" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/aaj-entertainment-live"
+        video-type="HLS">
+        <title>Aaj Entertainment</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://freetvall.me/files/thumbs/1351580290ecc77-1.jpg"/>
+    </programme>
+    <programme channel="29-1-EXPRESS-ENTERTAINMENT" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://hw.goonj.pk/expressentweb_720p/index.m3u8"
+        video-type="HLS">
+        <title>Express Entertainment</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://freetvall.me/files/thumbs/1351580290ecc77-1.jpg"/>
+    </programme>
+    <programme channel="29-2-APNA-CHANNEL" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://hw.goonj.pk/apnatvweb_720p/index.m3u8"
+        video-type="HLS">
+        <title>Apna Channel</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://freetvall.me/files/thumbs/1351580290ecc77-1.jpg"/>
+    </programme>
+    <programme channel="29-3-PLAY-TV" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://hw.goonj.pk/playtvweb_720p/index.m3u8"
+        video-type="HLS">
+        <title>Play TV</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://freetvall.me/files/thumbs/1351580290ecc77-1.jpg"/>
+    </programme>
+    <programme channel="30-ARUJ-TV" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/aruj-live"
+        video-type="HLS">
+        <title>Aruj TV</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://pbs.twimg.com/profile_images/443341166327517184/RF5VJboh_400x400.jpeg"/>
+    </programme>
+    <programme channel="31-FILMAX" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/filmax-live"
+        video-type="HLS">
+        <title>FILMAX</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://assets.about.me/background/users/f/i/l/filmaxtv_1394882716_19.jpg"/>
+    </programme>
+    <programme channel="32-FILMWORLD" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/filmworld-live"
+        video-type="HLS">
+        <title>FILMWORLD</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://3.bp.blogspot.com/-xNyYVPuOyvQ/UYY9to_S74I/AAAAAAAAALw/PZegEIx1z0E/s1600/Film-world.JPG"/>
+    </programme>
+    <programme channel="34-8XM" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/8xm-live"
+        video-type="HLS">
+        <title>8XM</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://oklivetv.com/wp-content/uploads/media/1ec26f62177b115c2f3f2b3806858e4f.jpeg"/>
+    </programme>
+    <programme channel="35-JALWA" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/jalwa-tv-live"
+        video-type="HLS">
+        <title>Jalwa</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://jalwa.tv/wp-content/uploads/2018/01/logo2.png"/>
+    </programme>
+    <programme channel="36-1-WASEEB-TV" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/waseb-live"
+        video-type="HLS">
+        <title>Waseeb</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://pbs.twimg.com/profile_images/1670844119/oxygene_logo_400x400.png"/>
+    </programme>
+    <programme channel="37-PASHTO-1" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://dcunilive38-lh.akamaihd.net/i/dclive_1@692671/index_150_av-p.m3u8"
+        video-type="HLS">
+        <title>Pashto 1</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://avtchannels.com/wp-content/uploads/2015/02/pashto-1-300x300.png"/>
+    </programme>
+    <programme channel="37-1-PASHTO-1" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/pashto1-live"
+        video-type="HLS">
+        <title>Pashto 1</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://avtchannels.com/wp-content/uploads/2015/02/pashto-1-300x300.png"/>
+    </programme>
+    <programme channel="38-AVT-KHYBER" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://dcunilive38-lh.akamaihd.net/i/dclive_1@692670/index_150_av-p.m3u8"
+        video-type="HLS">
+        <title>AVT Khyber</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://avtkhyber.tv/demo/wp-content/uploads/2016/12/KHYBER-LOGO-0.png"/>
+    </programme>
+    <programme channel="38-1-AVT-KHYBER" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://hw.goonj.pk/khybertvweb_720p/index.m3u8"
+        video-type="HLS">
+        <title>AVT Khyber</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="http://avtkhyber.tv/demo/wp-content/uploads/2016/12/KHYBER-LOGO-0.png"/>
+    </programme>
+    <programme channel="39-KHYBER-NEWS" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://www.mjunoon.tv/khyber-news-live"
+        video-type="HLS">
+        <title>Khyber News</title>
+        <category>News</category>
+        <icon src="https://khybernews.tv/wp-content/uploads/2018/08/logo-khybernews.png"/>
+    </programme>
+    <programme channel="41-MAKKAH-LIVE" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://cmt-tech.cdn.warpcache.net/teb002/55D6D-channel7/1.m3u8"
+        video-type="HLS">
+        <title>Makkah Live</title>
+        <category>RELIGIOUS</category>
+        <icon src="https://cdn.sat.tv/wp-content/uploads/2016/05/QuranTVSA.png"/>
+    </programme>
+    <programme channel="42-HUDA-TV" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="streamlink,http://192.168.1.168:6543/get_video_info?videoId=https://www.twitch.tv/hudatvlive"
+        video-type="HLS">
+        <title>Huda TV</title>
+        <category>RELIGIOUS</category>
+        <icon src="https://cdn.sat.tv/wp-content/uploads/2016/05/QuranTVSA.png"/>
+    </programme>
+    <programme channel="43-PEACE-TV-EN" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="http://peacetv.api.visionip.tv/live/ASHTTP/peacetv-peacetv-peacetv-english-hsslive-25f-16x9-MB/playlist.m3u8"
+        video-type="HLS">
+        <title>Peace TV English</title>
+        <category>RELIGIOUS</category>
+        <icon src="https://api.visionip.tv/portals/peacetv/peacetv/thumbs/peacetv-peacetv-peacetv-english-hsslive-25f-16x9-thumb-SDh.jpg.png"/>
+    </programme>
+    <programme channel="44-PEACE-TV-URDU" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="http://peacetv.api.visionip.tv/live/ASHTTP/peacetv-peacetv-peacetv-urdu-hsslive-25f-16x9-MB/playlist.m3u8"
+        video-type="HLS">
+        <title>Peace TV Urdu</title>
+        <category>RELIGIOUS</category>
+        <icon src="https://api.visionip.tv/portals/peacetv/peacetv/thumbs/peacetv-peacetv-peacetv-urdu-hsslive-25f-16x9-thumb-SDh.jpg.png"/>
+    </programme>
+    <programme channel="51-AL-JAZEERA-EN" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://english.streaming.aljazeera.net/aljazeera/english2/index.m3u8"
+        video-type="HLS">
+        <title>Al Jazeera English</title>
+        <category>NEWS</category>
+        <icon src="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png"/>
+    </programme>
+    <programme channel="52-AL-JAZEERA-AR" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="youtube,ySWcW3OJ_3k"
+        video-type="HLS">
+        <title>Al Jazeera Arabic</title>
+        <category>NEWS</category>
+        <icon src="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png"/>
+    </programme>
+    <programme channel="53-AL-JAZEERA-DOC" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="youtube,_7cSIDJD4f8"
+        video-type="HLS">
+        <title>Al Jazeera Documentary</title>
+        <category>NEWS</category>
+        <icon src="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png"/>
+    </programme>
+    <programme channel="54-RUSSIA-TODAY" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="https://rt-news.secure.footprint.net/1103.m3u8"
+        video-type="HLS">
+        <title>Russia Today</title>
+        <category>NEWS</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Russia-today-logo.svg/400px-Russia-today-logo.svg.png"/>
+    </programme>
+    <programme channel="55-SKY-NEWS" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="youtube,XOacA3RYrXk"
+        video-type="HLS">
+        <title>SKY News</title>
+        <category>NEWS</category>
+        <icon src="https://news.sky.com/assets/2018/sky-news-logo.png"/>
+    </programme>
+    <programme channel="56-EURO-NEWS" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="youtube,yS2V6jQBXwk"
+        video-type="HLS">
+        <title>EURO News</title>
+        <category>NEWS</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png"/>
+    </programme>
+    <programme channel="61-NPO-1" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="streamlink,http://192.168.1.168:6543/get_video_info?videoId=https://www.npo.nl/live/npo-1"
+        video-type="HLS">
+        <title>NPO 1</title>
+        <category>NEWS</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/e/e1/92_News_HD_Plus_logo.png"/>
+    </programme>
+    <programme channel="62-NPO-2" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="streamlink,http://192.168.1.168:6543/get_video_info?videoId=https://www.npo.nl/live/npo-2"
+        video-type="HLS">
+        <title>NPO 2</title>
+        <category>NEWS</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/e/e1/92_News_HD_Plus_logo.png"/>
+    </programme>
+    <programme channel="63-NPO-3ZAPP" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="streamlink,http://192.168.1.168:6543/get_video_info?videoId=https://www.npo.nl/live/npo-3zapp"
+        video-type="HLS">
+        <title>NPO 3 ZAPP</title>
+        <category>NEWS</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/e/e1/92_News_HD_Plus_logo.png"/>
+    </programme>
+    <programme channel="64-NPO-1-EXTRA" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="streamlink,http://192.168.1.168:6543/get_video_info?videoId=https://www.npo.nl/live/npo-1-extra"
+        video-type="HLS">
+        <title>NPO 1 EXTRA</title>
+        <category>NEWS</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/e/e1/92_News_HD_Plus_logo.png"/>
+    </programme>
+    <programme channel="65-NPO-2-EXTRA" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="streamlink,http://192.168.1.168:6543/get_video_info?videoId=https://www.npo.nl/live/npo-2-extra"
+        video-type="HLS">
+        <title>NPO 2 EXTRA</title>
+        <category>NEWS</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/e/e1/92_News_HD_Plus_logo.png"/>
+    </programme>
+    <programme channel="66-NPO-3-EXTRA" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="streamlink,http://192.168.1.168:6543/get_video_info?videoId=https://www.npo.nl/live/npo-3-extra"
+        video-type="HLS">
+        <title>NPO 3 EXTRA</title>
+        <category>NEWS</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/e/e1/92_News_HD_Plus_logo.png"/>
+    </programme>
+    <programme channel="67-NPO-ZAPP-EXTRA" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="streamlink,http://192.168.1.168:6543/get_video_info?videoId=https://www.npo.nl/live/npo-zapp-xtra"
+        video-type="HLS">
+        <title>NPO ZAPP EXTRA</title>
+        <category>NEWS</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/e/e1/92_News_HD_Plus_logo.png"/>
+    </programme>
+    <programme channel="71-STAR-GOLD" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="http://50.7.198.170:8081/Ind/STARGOLDHD/playlist.m3u8"
+        video-type="HLS">
+        <title>Star Gold</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/8/83/Atv_pakistan.PNG"/>
+    </programme>
+    <programme channel="72-AND-PICTURES" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="http://z5ams.akamaized.net/andpicshd/tracks-v1a1/index.m3u8"
+        video-type="HLS">
+        <title>AND Pictures</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/8/83/Atv_pakistan.PNG"/>
+    </programme>
+    <programme channel="73-ZEE-CINEMA" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="http://216.144.250.174/Zee_cinema_hD/index.m3u8"
+        video-type="HLS">
+        <title>Zee Cinema</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/8/83/Atv_pakistan.PNG"/>
+    </programme>
+    <programme channel="74-ZEE-ACTION" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="http://z5ams.akamaized.net/action/tracks-v1a1/index.m3u8"
+        video-type="HLS">
+        <title>Zee Action</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/8/83/Atv_pakistan.PNG"/>
+    </programme>
+    <programme channel="81-ABU-DHABI" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="http://adtv.ercdn.net/adaloula/adaloula.m3u8"
+        video-type="HLS">
+        <title>Abu Dhabi</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/8/83/Atv_pakistan.PNG"/>
+    </programme>
+    <programme channel="82-ABU-DHABI-DRAMA" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="http://adtv.ercdn.net/addrama/addrama.m3u8"
+        video-type="HLS">
+        <title>Abu Dhabi Drama</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/8/83/Atv_pakistan.PNG"/>
+    </programme>
+    <programme channel="83-NATIONAL-GEOGRAPHIC" start="20180821000000 +0500" stop="20180822000000 +0500"
+        video-src="http://adtv.ercdn.net/adnatgeo/adnatgeo.m3u8"
+        video-type="HLS">
+        <title>National Geographic</title>
+        <category>ENTERTAINMENT</category>
+        <icon src="https://upload.wikimedia.org/wikipedia/en/8/83/Atv_pakistan.PNG"/>
+    </programme>
+</tv>
