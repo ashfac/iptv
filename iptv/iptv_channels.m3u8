@@ -9,12 +9,6 @@ https://www.mjunoon.tv/dawn-news-live;https://www.dawnnews.tv/watch-live/youtube
 #EXTINF:0 tvg-logo="https://arynews.tv/wp-content/uploads/2018/03/news-logo-2-1.jpg" tvg-epg="file:ary-news.json", Ary News
 https://live.arynews.tv/hq/youtube-embed;http://158.69.229.30:1935/newslive/myStream/playlist.m3u8;http://158.69.228.195:1935/newsmobile/myStream/playlist.m3u8
 
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Ajj-news.png", Aaj News
-https://www.mjunoon.tv/aaj-news-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/Express-News.png", Express News
-https://www.mjunoon.tv/express-news-live
-
 #EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/samaa-tv.png?v=1", Samaa News
 https://www.mjunoon.tv/samaa-tv-live
 
@@ -36,14 +30,17 @@ https://www.mjunoon.tv/neo-tv-live
 #EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Roz-news.png", Roze news
 https://www.mjunoon.tv/roze-news-live
 
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lahore_News_Logo_%28For_Tv_Screen%29.png/440px-Lahore_News_Logo_%28For_Tv_Screen%29.png",Lahore News HD
+http://mlive.lahorenews.tv:1935/lahorelive/lnews_1/playlist.m3u8
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Khabar-news-.png", Khyber News
+https://www.mjunoon.tv/khyber-news-live
+
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/02/PTV_news_logo.png", Ptv News
 https://59aeddfe9f01c.streamlock.net/live/PTVnews/player.m3u8
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/PTV_World_logo.png/300px-PTV_World_logo.png", Ptv World
 https://59aeddfe9f01c.streamlock.net/live/8090/player.m3u8
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Uk-news.png", UK44
-https://www.mjunoon.tv/uk44-live
 
 
 #EXTINF:0 tvg-logo="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png", Al Jazeera English
@@ -90,9 +87,6 @@ http://158.69.228.195:1935/digitalnew/myStream/playlist.m3u8;http://149.202.205.
 #EXTINF:0 tvg-logo="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/e5/53/7a/e5537a94-d5af-a501-626b-9149fb36f3d8/source/512x512bb.jpg", ARY Zindagi
 http://149.202.205.24:1935/ARYZINDAGI/ngrp:myStream_all/playlist.m3u8
 
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Ajj-ent.png", Aaj
-https://www.mjunoon.tv/aaj-entertainment-live
-
 #EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Tvone.png", Tv One
 https://www.mjunoon.tv/tv-one-live
 
@@ -105,77 +99,26 @@ https://www.mjunoon.tv/avt-khyber-tv-live;http://json.dacast.com/b/75341/c/47899
 #EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Pashto1.png", Pashto 1
 https://www.mjunoon.tv/pashto1-live
 
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/Express-Entertainment.png", Express
-https://www.mjunoon.tv/express-entertainment-live
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Aruj.png", Aruj
+https://www.mjunoon.tv/aruj-live
 
 #EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Apna.png", Apna
 https://www.mjunoon.tv/apna-tv-live
 
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Aruj.png", Aruj
-https://www.mjunoon.tv/aruj-live
-
 #EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/SEE-Tv.png", See
 https://www.mjunoon.tv/see-tv-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Awaz.png", Awaz
-https://www.mjunoon.tv/awaz-tv-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Kashish.png", Kashish
-https://www.mjunoon.tv/kashish-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Kay2.png", K2
-https://www.mjunoon.tv/kay2-tv-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Punjab-logo.png", Punjab TV
-https://www.mjunoon.tv/punjab-tv-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Rohi.png", Rohi
-https://www.mjunoon.tv/rohi-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Waseb.png", Waseeb
-https://www.mjunoon.tv/waseb-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/sindhtv1.png", Sindh TV
-https://www.mjunoon.tv/sindh-tv-live
 
 #EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Film-World.png", Film World
 https://www.mjunoon.tv/filmworld-live
 
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Film-mazia.png", Filmazi
-https://www.mjunoon.tv/filmazia-live
-
 #EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Filmax.png", Filmax
 https://www.mjunoon.tv/filmax-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Khabar-news-.png", Khyber News
-https://www.mjunoon.tv/khyber-news-live
 
 #EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Such-.png", Such TV
 https://www.mjunoon.tv/such-tv-live
 
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lahore_News_Logo_%28For_Tv_Screen%29.png/440px-Lahore_News_Logo_%28For_Tv_Screen%29.png",Lahore News HD
-http://mlive.lahorenews.tv:1935/lahorelive/lnews_1/playlist.m3u8
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/sindhtv.png", Sindh News
-https://www.mjunoon.tv/sindh-tv-news-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/City-41.png", City 41
-https://www.mjunoon.tv/city41-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/City-42.png", City 42
-https://www.mjunoon.tv/city-42-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/K-21-news.png", K21
-https://www.mjunoon.tv/k21-news-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/7-news-.png", 7 News
-https://www.mjunoon.tv/7-news-tv-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/VSH.png", VSH News
-https://www.mjunoon.tv/vsh-news-live
-
-#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/cinematchi-tv.png?v=2", Cinemachi
-https://www.mjunoon.tv/cinemachi-kids-tv-live
-
 #EXTINF:0 tvg-logo="https://www.masala.tv/wp-content/themes/masala-ri/images/masalalogo.png", Masala TV
 https://www.masala.tv/livetv/youtube-embed
+
+#EXTINF:0 tvg-channel="66" tvg-logo="https://www.arconaitv.us/uploads/streams/5cdef66953e78_mythbusters.jpg", MythBusters
+https://www.arconaitv.us/stream.php?id=165

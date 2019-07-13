@@ -36,6 +36,7 @@ import java.util.List;
  * EpgSyncJobService that periodically runs to update channels and programs.
  */
 public class SampleJobService extends EpgSyncJobService {
+    private static boolean ENABLE_ARCONAI_CHANNELS = false;
 
     @Override
     public void resetTvListings() {
@@ -56,11 +57,13 @@ public class SampleJobService extends EpgSyncJobService {
         channelList.addAll(RichFeedUtil.getM3u8Listings(this));
 
         // add arconai tv channels
-        try {
-            ArconaiTvFeed.init();
-            channelList.addAll(ArconaiTvFeed.getChannels());
-        } catch (IOException e) {
-            Log.e("", "failed to initialize arconai tv feed");
+        if (ENABLE_ARCONAI_CHANNELS) {
+            try {
+                ArconaiTvFeed.init();
+                channelList.addAll(ArconaiTvFeed.getChannels());
+            } catch (IOException e) {
+                Log.e("", "failed to initialize arconai tv feed");
+            }
         }
 
         return channelList;

@@ -136,14 +136,7 @@ public class YouTubeParser extends VideoUrlParser
         String videoUrl = null;
         try {
             parse(SimpleHttpClient.GET(URL_YOUTUBE_GET_VIDEO_INFO + videoId + URL_YOUTUBE_GET_VIDEO_INFO_PARAMS + videoId));
-
-            String is_live = getInfo(KEY_LIVE_STREAM);
-
-            if(is_live != null && is_live.contentEquals("1")) {
-                videoUrl = getHlsManifestUrl(getInfo(KEY_PLAYER_RESPONSE));
-            } else {
-                videoUrl = null;
-            }
+            videoUrl = getHlsManifestUrl(getInfo(KEY_PLAYER_RESPONSE));
         } catch (IOException e) {
             Log.e(TAG, e.getMessage());
         }
