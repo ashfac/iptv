@@ -139,6 +139,27 @@ public class DefaultHttpDataSource implements HttpDataSource {
   public DefaultHttpDataSource(String userAgent, Predicate<String> contentTypePredicate,
       TransferListener listener, int connectTimeoutMillis, int readTimeoutMillis,
       boolean allowCrossProtocolRedirects) {
+    this(userAgent, null, contentTypePredicate, listener,
+            connectTimeoutMillis, readTimeoutMillis, allowCrossProtocolRedirects);
+  }
+
+  /**
+   * @param userAgent The User-Agent string that should be used.
+   * @param contentTypePredicate An optional {@link Predicate}. If a content type is
+   *     rejected by the predicate then a {@link HttpDataSource.InvalidContentTypeException} is
+   *     thrown from {@link #open(DataSpec)}.
+   * @param listener An optional listener.
+   * @param connectTimeoutMillis The connection timeout, in milliseconds. A timeout of zero is
+   *     interpreted as an infinite timeout. Pass {@link #DEFAULT_CONNECT_TIMEOUT_MILLIS} to use
+   *     the default value.
+   * @param readTimeoutMillis The read timeout, in milliseconds. A timeout of zero is interpreted
+   *     as an infinite timeout. Pass {@link #DEFAULT_READ_TIMEOUT_MILLIS} to use the default value.
+   * @param allowCrossProtocolRedirects Whether cross-protocol redirects (i.e. redirects from HTTP
+   *     to HTTPS and vice versa) are enabled.
+   */
+  public DefaultHttpDataSource(String userAgent, String httpRequestHeaders, Predicate<String> contentTypePredicate,
+                               TransferListener listener, int connectTimeoutMillis, int readTimeoutMillis,
+                               boolean allowCrossProtocolRedirects) {
     this.userAgent = Assertions.checkNotEmpty(userAgent);
     this.contentTypePredicate = contentTypePredicate;
     this.listener = listener;
@@ -146,6 +167,17 @@ public class DefaultHttpDataSource implements HttpDataSource {
     this.connectTimeoutMillis = connectTimeoutMillis;
     this.readTimeoutMillis = readTimeoutMillis;
     this.allowCrossProtocolRedirects = allowCrossProtocolRedirects;
+
+    if (httpRequestHeaders != null) {
+      String[] headers = httpRequestHeaders.split(";");
+
+      for (int i=0; i < headers.length; i++) {
+        String[] header = headers[i].split(":=>");
+        if(header.length == 2) {
+          this.setRequestProperty(header[0], header[1]);
+        }
+      }
+    }
   }
 
   @Override

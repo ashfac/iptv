@@ -65,14 +65,16 @@ public class SmoothStreamingRendererBuilder implements DemoPlayer.RendererBuilde
     private final Context context;
     private final String userAgent;
     private final String url;
+    private final String httpRequestHeaders;
     private final MediaDrmCallback drmCallback;
 
     private AsyncRendererBuilder currentAsyncBuilder;
 
-    public SmoothStreamingRendererBuilder(Context context, String userAgent, String url,
+    public SmoothStreamingRendererBuilder(Context context, String userAgent, String url, String httpRequestHeaders,
             MediaDrmCallback drmCallback) {
         this.context = context;
         this.userAgent = userAgent;
+        this.httpRequestHeaders = httpRequestHeaders;
         this.url = Util.toLowerInvariant(url).endsWith("/manifest") ? url : url + "/Manifest";
         this.drmCallback = drmCallback;
     }
@@ -80,7 +82,7 @@ public class SmoothStreamingRendererBuilder implements DemoPlayer.RendererBuilde
     @Override
     public void buildRenderers(DemoPlayer player) {
         currentAsyncBuilder =
-                new AsyncRendererBuilder(context, userAgent, url, drmCallback, player);
+                new AsyncRendererBuilder(context, userAgent, url, httpRequestHeaders, drmCallback, player);
         currentAsyncBuilder.init();
     }
 
@@ -97,16 +99,18 @@ public class SmoothStreamingRendererBuilder implements DemoPlayer.RendererBuilde
 
         private final Context context;
         private final String userAgent;
+        private final String httpRequestHeaders;
         private final MediaDrmCallback drmCallback;
         private final DemoPlayer player;
         private final ManifestFetcher<SmoothStreamingManifest> manifestFetcher;
 
         private boolean canceled;
 
-        public AsyncRendererBuilder(Context context, String userAgent, String url,
+        public AsyncRendererBuilder(Context context, String userAgent, String url, String httpRequestHeaders,
                 MediaDrmCallback drmCallback, DemoPlayer player) {
             this.context = context;
             this.userAgent = userAgent;
+            this.httpRequestHeaders = httpRequestHeaders;
             this.drmCallback = drmCallback;
             this.player = player;
             SmoothStreamingManifestParser parser = new SmoothStreamingManifestParser();
@@ -162,7 +166,7 @@ public class SmoothStreamingRendererBuilder implements DemoPlayer.RendererBuilde
 
             // Build the video renderer.
             DataSource videoDataSource =
-                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
+                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, httpRequestHeaders, true);
             ChunkSource videoChunkSource = new SmoothStreamingChunkSource(manifestFetcher,
                     DefaultSmoothStreamingTrackSelector.newVideoInstance(context, true, false),
                     videoDataSource, new AdaptiveEvaluator(bandwidthMeter), LIVE_EDGE_LATENCY_MS);
@@ -177,7 +181,7 @@ public class SmoothStreamingRendererBuilder implements DemoPlayer.RendererBuilde
 
             // Build the audio renderer.
             DataSource audioDataSource =
-                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
+                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, httpRequestHeaders, true);
             ChunkSource audioChunkSource = new SmoothStreamingChunkSource(manifestFetcher,
                     DefaultSmoothStreamingTrackSelector.newAudioInstance(),
                     audioDataSource, null, LIVE_EDGE_LATENCY_MS);
@@ -191,7 +195,7 @@ public class SmoothStreamingRendererBuilder implements DemoPlayer.RendererBuilde
 
             // Build the text renderer.
             DataSource textDataSource =
-                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
+                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, httpRequestHeaders, true);
             ChunkSource textChunkSource = new SmoothStreamingChunkSource(manifestFetcher,
                     DefaultSmoothStreamingTrackSelector.newTextInstance(),
                     textDataSource, null, LIVE_EDGE_LATENCY_MS);

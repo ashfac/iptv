@@ -62,7 +62,7 @@ public final class DefaultUriDataSource implements UriDataSource {
    * @param userAgent The User-Agent string that should be used when requesting remote data.
    */
   public DefaultUriDataSource(Context context, String userAgent) {
-    this(context, null, userAgent, false);
+    this(context, null, userAgent, null, false);
   }
 
   /**
@@ -78,7 +78,7 @@ public final class DefaultUriDataSource implements UriDataSource {
    * @param userAgent The User-Agent string that should be used when requesting remote data.
    */
   public DefaultUriDataSource(Context context, TransferListener listener, String userAgent) {
-    this(context, listener, userAgent, false);
+    this(context, listener, userAgent, null, false);
   }
 
   /**
@@ -91,9 +91,26 @@ public final class DefaultUriDataSource implements UriDataSource {
    *     to HTTPS and vice versa) are enabled when fetching remote data..
    */
   public DefaultUriDataSource(Context context, TransferListener listener, String userAgent,
+                              boolean allowCrossProtocolRedirects) {
+    this(context, listener,
+            new DefaultHttpDataSource(userAgent,null, listener,
+                    DefaultHttpDataSource.DEFAULT_CONNECT_TIMEOUT_MILLIS,
+                    DefaultHttpDataSource.DEFAULT_READ_TIMEOUT_MILLIS, allowCrossProtocolRedirects));
+  }
+
+  /**
+   * Constructs a new instance, optionally configured to follow cross-protocol redirects.
+   *
+   * @param context A context.
+   * @param listener An optional {@link TransferListener}.
+   * @param userAgent The User-Agent string that should be used when requesting remote data.
+   * @param allowCrossProtocolRedirects Whether cross-protocol redirects (i.e. redirects from HTTP
+   *     to HTTPS and vice versa) are enabled when fetching remote data..
+   */
+  public DefaultUriDataSource(Context context, TransferListener listener, String userAgent, String httpRequestHeaders,
       boolean allowCrossProtocolRedirects) {
     this(context, listener,
-        new DefaultHttpDataSource(userAgent, null, listener,
+        new DefaultHttpDataSource(userAgent, httpRequestHeaders, null, listener,
             DefaultHttpDataSource.DEFAULT_CONNECT_TIMEOUT_MILLIS,
             DefaultHttpDataSource.DEFAULT_READ_TIMEOUT_MILLIS, allowCrossProtocolRedirects));
   }

@@ -45,6 +45,7 @@ import com.example.android.sampletvinput.player.RendererBuilderFactory;
 
 import com.example.android.sampletvinput.SampleJobService;
 import com.example.android.sampletvinput.util.SimpleHttpClient;
+import com.example.android.sampletvinput.util.Util;
 import com.google.android.exoplayer.ExoPlayer;
 import com.google.android.exoplayer.MediaFormat;
 import com.google.android.exoplayer.text.CaptionStyleCompat;
@@ -215,6 +216,7 @@ public class RichTvInputService extends BaseTvInputService {
             }
 
             String videoUrl = program.getInternalProviderData().getVideoUrl();
+            String httpRequestHeaders = null;
 
             // return from here if videoUrl is the same as that of currently playing program
             if(videoUrl.equalsIgnoreCase(mVideoUrl)) {
@@ -229,7 +231,13 @@ public class RichTvInputService extends BaseTvInputService {
                     return false;
             }
 
-            createPlayer(program.getInternalProviderData().getVideoType(), Uri.parse(videoUrl));
+            if(videoUrl.contains(Util.HTTP_REQUEST_HEADERS)) {
+                httpRequestHeaders = videoUrl.substring(videoUrl.indexOf(Util.HTTP_REQUEST_HEADERS)
+                        + Util.HTTP_REQUEST_HEADERS.length());
+                videoUrl = videoUrl.substring(0, videoUrl.indexOf(Util.HTTP_REQUEST_HEADERS));
+            }
+
+            createPlayer(program.getInternalProviderData().getVideoType(), Uri.parse(videoUrl), httpRequestHeaders);
             if (startPosMs > 0) {
                 mPlayer.seekTo(startPosMs);
             }
@@ -241,7 +249,7 @@ public class RichTvInputService extends BaseTvInputService {
         @RequiresApi(api = Build.VERSION_CODES.N)
         public boolean onPlayRecordedProgram(RecordedProgram recordedProgram) {
             createPlayer(recordedProgram.getInternalProviderData().getVideoType(),
-                    Uri.parse(recordedProgram.getInternalProviderData().getVideoUrl()));
+                    Uri.parse(recordedProgram.getInternalProviderData().getVideoUrl()), null);
 
             long recordingStartTime = recordedProgram.getInternalProviderData()
                     .getRecordedProgramStartTime();
@@ -268,13 +276,13 @@ public class RichTvInputService extends BaseTvInputService {
         @Override
         public void onPlayAdvertisement(Advertisement advertisement) {
             createPlayer(TvContractUtils.SOURCE_TYPE_HTTP_PROGRESSIVE,
-                    Uri.parse(advertisement.getRequestUrl()));
+                    Uri.parse(advertisement.getRequestUrl()), null);
         }
 
-        private void createPlayer(int videoType, Uri videoUrl) {
+        private void createPlayer(int videoType, Uri videoUrl, String httpRequestHeaders) {
             releasePlayer();
             mPlayer = new DemoPlayer(RendererBuilderFactory.createRendererBuilder(
-                    mContext, videoType, videoUrl));
+                    mContext, videoType, videoUrl, httpRequestHeaders));
             mPlayer.addListener(this);
             mPlayer.setCaptionListener(this);
             mPlayer.prepare();

@@ -49,10 +49,9 @@ public class MjunoonTvParser extends VideoUrlParser {
         String wmsAuthSign = Util.Html.getTag(data, TAG_SEC, "\"");
 
         String[] streamUrls = {
-                Util.Html.getTag(data, TAG_BACKUP_STREAM_URL, "&") + TAG_WMS_AUTH_SIGN + wmsAuthSign,
                 Util.Html.getTag(data, TAG_STREAM_URL, "&") + TAG_WMS_AUTH_SIGN + wmsAuthSign,
-                Util.Html.getTag(data, TAG_TEMP_URL, "&") + TAG_WMS_AUTH_SIGN + wmsAuthSign };
-
+                Util.Html.getTag(data, TAG_TEMP_URL, "&") + TAG_WMS_AUTH_SIGN + wmsAuthSign,
+        Util.Html.getTag(data, TAG_BACKUP_STREAM_URL, "&") + TAG_WMS_AUTH_SIGN + wmsAuthSign };
 
         for (String streamUrl : streamUrls) {
             String html_response = SimpleHttpClient.GET(streamUrl, Util.USER_AGENT_FIREFOX);

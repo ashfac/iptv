@@ -37,9 +37,10 @@ public class RendererBuilderFactory {
      * @return A {@link DemoPlayer.RendererBuilder} instance.
      */
     public static DemoPlayer.RendererBuilder createRendererBuilder(
-            Context context, int contentType, Uri contentUri) {
+            Context context, int contentType, Uri contentUri, String httpRequestHeaders) {
         //String userAgent = Util.getUserAgent(context, "ExoVideoPlayer");
         String userAgent = com.example.android.sampletvinput.util.Util.USER_AGENT_FIREFOX;
+        String contentUrl = contentUri.toString();
 
         switch (contentType) {
             case TvContractUtils.SOURCE_TYPE_MPEG_DASH: {
@@ -52,10 +53,10 @@ public class RendererBuilderFactory {
                 // Implement your own DRM callback here.
                 MediaDrmCallback drmCallback = new SmoothStreamingTestMediaDrmCallback();
                 return new SmoothStreamingRendererBuilder(context, userAgent,
-                        contentUri.toString(), drmCallback);
+                        contentUri.toString(), httpRequestHeaders, drmCallback);
             }
             case TvContractUtils.SOURCE_TYPE_HLS: {
-                return new HlsRendererBuilder(context, userAgent, contentUri.toString());
+                return new HlsRendererBuilder(context, userAgent, contentUri.toString(), httpRequestHeaders);
             }
             case TvContractUtils.SOURCE_TYPE_HTTP_PROGRESSIVE: {
                 return new ExtractorRendererBuilder(context, userAgent, contentUri);

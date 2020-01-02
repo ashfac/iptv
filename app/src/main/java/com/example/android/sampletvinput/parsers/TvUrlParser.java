@@ -6,13 +6,15 @@ import com.example.android.sampletvinput.util.Util;
 
 public class TvUrlParser {
     private static VideoUrlParser[] videoUrlParserArray = {
-            new YouTubeParser(),
-            new MjunoonTvParser(),
-            new FilmOnParser(),
-            new EuroNewsParser(),
-            new StreamLinkParser(),
-            new DaCastParser(),
-            new ArconaiTvParser()
+              new YouTubeParser()
+            , new MjunoonTvParser()
+            , new ArconaiTvParser()
+            , new UstreaMixParser()
+            , new TvPcUsParser()
+            , new EuroNewsParser()
+            // , new DaCastParser()
+            // , new FilmOnParser()
+            // , new StreamLinkParser()
     };
 
     public static String parseVideoUrl(String videoUrl) {
@@ -30,12 +32,10 @@ public class TvUrlParser {
                 }
             }
 
-            if(parserFound == false) {
-                returnUrl = url;
-            }
-
-            if(SimpleHttpClient.isValidUrl(returnUrl, Util.USER_AGENT_FIREFOX)) {
+            if(parserFound == true) {
                 return returnUrl;
+            } else {
+                returnUrl = url;
             }
         }
 
