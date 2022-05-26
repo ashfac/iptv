@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The Android Open Source Project.
+ * Copyright (c) 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaCodec;
 import android.net.Uri;
+
 import com.google.android.exoplayer.MediaCodecAudioTrackRenderer;
 import com.google.android.exoplayer.MediaCodecSelector;
 import com.google.android.exoplayer.MediaCodecVideoTrackRenderer;
@@ -60,7 +61,7 @@ public class ExtractorRendererBuilder implements DemoPlayer.RendererBuilder {
         // Build the video and audio renderers.
         DefaultBandwidthMeter bandwidthMeter = new DefaultBandwidthMeter(player.getMainHandler(),
                 null);
-        DataSource dataSource = new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+        DataSource dataSource = new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
         ExtractorSampleSource sampleSource = new ExtractorSampleSource(uri, dataSource, allocator,
                 BUFFER_SEGMENT_COUNT * BUFFER_SEGMENT_SIZE);
         MediaCodecVideoTrackRenderer videoRenderer = new MediaCodecVideoTrackRenderer(context,

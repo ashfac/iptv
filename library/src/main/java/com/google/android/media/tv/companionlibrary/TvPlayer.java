@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The Android Open Source Project.
+ * Copyright 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,26 +20,48 @@ import android.media.PlaybackParams;
 import android.view.Surface;
 
 /**
- * The TvPlayer contains common media controller methods that a player can use to interface with the
- * system TV app to handle user input events.
+ * The TvPlayer contains common media controller methods that a player can use to interface with
+ * the system TV app to handle user input events.
  */
 public interface TvPlayer {
-    /** Interface for alerting caller of major video events. */
-    public abstract static class Callback {
-        /** Called when the current video starts playing. */
-        public void onStarted() {}
+    /**
+     * Interface for alerting caller of major video events.
+     */
+    public static abstract class Callback {
+        /**
+         * Called when the current video starts playing.
+         */
+        public void onStarted() {
 
-        /** Called when the current video has completed playback to the end of the video. */
-        public void onCompleted() {}
+        }
 
-        /** Called when an error occurs during video playback. */
-        public void onError(Exception error) {}
+        /**
+         * Called when the current video has completed playback to the end of the video.
+         */
+        public void onCompleted() {
 
-        /** Called when the video is paused. */
-        public void onPaused() {}
+        }
 
-        /** Called when the video is resumed. */
-        public void onResumed() {}
+        /**
+         * Called when an error occurs during video playback.
+         */
+        public void onError() {
+
+        }
+
+        /**
+         * Called when the video is paused.
+         */
+        public void onPaused() {
+
+        }
+
+        /**
+         * Called when the video is resumed.
+         */
+        public void onResumed() {
+
+        }
     }
 
     /**
@@ -56,10 +78,14 @@ public interface TvPlayer {
      */
     void setPlaybackParams(PlaybackParams params);
 
-    /** @return The current time in milliseconds of the media. */
+    /**
+     * @return The current time in milliseconds of the media.
+     */
     long getCurrentPosition();
 
-    /** @return The total length of the currently loaded video in milliseconds. */
+    /**
+     * @return The total length of the currently loaded video in milliseconds.
+     */
     long getDuration();
 
     /**
@@ -76,10 +102,14 @@ public interface TvPlayer {
      */
     void setVolume(float volume);
 
-    /** Pause the current media. */
+    /**
+     * Pause the current media.
+     */
     void pause();
 
-    /** Start playing or resume the current media. */
+    /**
+     * Start playing or resume the current media.
+     */
     void play();
 
     /**
@@ -88,6 +118,8 @@ public interface TvPlayer {
      */
     void registerCallback(Callback callback);
 
-    /** Remove a player callback from getting notified on video events. */
+    /**
+     * Remove a player callback from getting notified on video events.
+     */
     void unregisterCallback(Callback callback);
 }

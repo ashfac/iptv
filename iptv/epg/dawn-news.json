@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "timezone": "+05:00",
+  "programs": [
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "00:00",
+      "endtime": "01:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "01:00",
+      "endtime": "02:00",
+      "name": "News eye",
+      "poster": "http://rava.pk/wp-content/uploads/2015/10/NewsEye.jpg"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "01:00",
+      "endtime": "02:00",
+      "name": "Dusra Rukh",
+      "poster": "http://dprotal.com/wp-content/uploads/2018/09/sddefault-106.jpg"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "02:00",
+      "endtime": "03:00",
+      "name": "Chai toast aur host",
+	  "poster": "https://i.hipinpakistan.com/large/2018/03/5a9924564a802.jpg"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "02:00",
+      "endtime": "03:00",
+      "name": "2 Raaye",
+	  "poster": "https://i.ytimg.com/vi/xOrWyHR_ktU/hqdefault.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "03:00",
+      "endtime": "04:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "04:00",
+      "endtime": "05:00",
+      "name": "Bol Bol Pakistan",
+      "poster": "http://www.paknews.tv/wp-content/uploads/2018/09/bol-bol-pakistan-khawaja-asif-cr-520x293.jpg"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "04:00",
+      "endtime": "05:00",
+      "name": "Musical show (Coke Studio, Saaz kahani)"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "starttime": "05:00",
+      "endtime": "06:00",
+      "name": "News wise",
+	  "poster": "https://i.ytimg.com/vi/tsP1cZQEgUk/hqdefault.jpg"
+    },
+    {
+      "days": ["Sunday", "Monday"],
+      "starttime": "05:00",
+      "endtime": "06:00",
+      "name": "Sawal se agay",
+	  "poster": "https://breakingnewspak.com/wp-content/uploads/mvbthumbs/img_153361_sawal-se-agay-30th-december-2017.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "06:00",
+      "endtime": "07:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "starttime": "07:00",
+      "endtime": "08:00",
+      "name": "Zara Hut Kay",
+      "poster": "https://static2.pakshows.pk/wp-content/uploads/500x310_ba2c3a_Zara-Hut-Kay-Wednesday-12th-September-2018-Dawn-65911.jpg"
+    },
+    {
+      "days": ["Sunday", "Monday"],
+      "starttime": "07:00",
+      "endtime": "08:00",
+      "name": "Dusra Rukh",
+      "poster": "http://dprotal.com/wp-content/uploads/2018/09/sddefault-106.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "08:00",
+      "endtime": "09:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "starttime": "09:00",
+      "endtime": "11:00",
+      "name": "Chai toast aur host",
+	  "poster": "https://i.hipinpakistan.com/large/2018/03/5a9924564a802.jpg"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "09:00",
+      "endtime": "10:00",
+      "name": "Zakir's Kitchen",
+	  "poster": "https://1.bp.blogspot.com/-wjQCVZHvcKY/VSKhXMjsEgI/AAAAAAAANos/Go_V4Bubga4/s1600/Zakir's-Kitchen-Dawn-news-channel.jpg"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "10:00",
+      "endtime": "11:00",
+      "name": "Coke Studio"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "11:00",
+      "endtime": "12:00",
+      "name": "Chai toast aur host",
+	  "poster": "https://i.hipinpakistan.com/large/2018/03/5a9924564a802.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "11:00",
+      "endtime": "12:00",
+      "name": "Zakir's Kitchen",
+	  "poster": "https://1.bp.blogspot.com/-wjQCVZHvcKY/VSKhXMjsEgI/AAAAAAAANos/Go_V4Bubga4/s1600/Zakir's-Kitchen-Dawn-news-channel.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "12:00",
+      "endtime": "13:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "13:00",
+      "endtime": "14:00",
+      "name": "Bol Bol Pakistan",
+      "poster": "http://www.paknews.tv/wp-content/uploads/2018/09/bol-bol-pakistan-khawaja-asif-cr-520x293.jpg"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "13:00",
+      "endtime": "14:00",
+      "name": "Dusra Rukh",
+      "poster": "http://dprotal.com/wp-content/uploads/2018/09/sddefault-106.jpg"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "14:00",
+      "endtime": "15:00",
+      "name": "News eye",
+      "poster": "http://rava.pk/wp-content/uploads/2015/10/NewsEye.jpg"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "14:00",
+      "endtime": "15:00",
+      "name": "2 Raaye",
+	  "poster": "https://i.ytimg.com/vi/xOrWyHR_ktU/hqdefault.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "15:00",
+      "endtime": "16:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "starttime": "16:00",
+      "endtime": "17:00",
+      "name": "News wise",
+	  "poster": "https://i.ytimg.com/vi/tsP1cZQEgUk/hqdefault.jpg"
+    },
+    {
+      "days": ["Sunday", "Monday"],
+      "starttime": "16:00",
+      "endtime": "17:00",
+      "name": "Sawal se agay",
+	  "poster": "https://breakingnewspak.com/wp-content/uploads/mvbthumbs/img_153361_sawal-se-agay-30th-december-2017.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "starttime": "17:00",
+      "endtime": "18:00",
+      "name": "Ba Khabar 5"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "17:00",
+      "endtime": "18:00",
+      "name": "Dusra Rukh",
+      "poster": "http://dprotal.com/wp-content/uploads/2018/09/sddefault-106.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "18:00",
+      "endtime": "19:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "19:00",
+      "endtime": "20:00",
+      "name": "News wise",
+	  "poster": "https://i.ytimg.com/vi/tsP1cZQEgUk/hqdefault.jpg"
+    },
+    {
+      "days": ["Saturday", "Sunday"],
+      "starttime": "19:00",
+      "endtime": "20:00",
+      "name": "Sawal Se agay",
+	  "poster": "https://breakingnewspak.com/wp-content/uploads/mvbthumbs/img_153361_sawal-se-agay-30th-december-2017.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "starttime": "20:00",
+      "endtime": "21:00",
+      "name": "Bol Bol Pakistan",
+      "poster": "http://www.paknews.tv/wp-content/uploads/2018/09/bol-bol-pakistan-khawaja-asif-cr-520x293.jpg"
+    },
+    {
+      "days": ["Friday", "Saturday", "Sunday"],
+      "starttime": "20:00",
+      "endtime": "21:00",
+      "name": "Dusra Rukh",
+      "poster": "http://dprotal.com/wp-content/uploads/2018/09/sddefault-106.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "21:00",
+      "endtime": "22:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "starttime": "22:00",
+      "endtime": "23:00",
+      "name": "News eye",
+      "poster": "http://rava.pk/wp-content/uploads/2015/10/NewsEye.jpg"
+    },
+    {
+      "days": ["Friday", "Saturday", "Sunday"],
+      "starttime": "22:00",
+      "endtime": "23:00",
+      "name": "2 Raaye",
+	  "poster": "https://i.ytimg.com/vi/xOrWyHR_ktU/hqdefault.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "23:00",
+      "endtime": "24:00",
+      "name": "Zara Hut Kay",
+      "poster": "https://static2.pakshows.pk/wp-content/uploads/500x310_ba2c3a_Zara-Hut-Kay-Wednesday-12th-September-2018-Dawn-65911.jpg"
+    },
+    {
+      "days": ["Saturday", "Sunday"],
+      "starttime": "23:00",
+      "endtime": "24:00",
+      "name": "Sawal se agay",
+	  "poster": "https://breakingnewspak.com/wp-content/uploads/mvbthumbs/img_153361_sawal-se-agay-30th-december-2017.jpg"
+    }
+  ]
+}

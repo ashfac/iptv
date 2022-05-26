@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The Android Open Source Project.
+ * Copyright (c) 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ import android.media.AudioManager;
 import android.media.MediaCodec;
 import android.os.Handler;
 import android.util.Log;
+
 import com.google.android.exoplayer.DefaultLoadControl;
 import com.google.android.exoplayer.LoadControl;
 import com.google.android.exoplayer.MediaCodecAudioTrackRenderer;
@@ -50,6 +51,7 @@ import com.google.android.exoplayer.upstream.DefaultUriDataSource;
 import com.google.android.exoplayer.upstream.UriDataSource;
 import com.google.android.exoplayer.util.ManifestFetcher;
 import com.google.android.exoplayer.util.Util;
+
 import java.io.IOException;
 
 /**
@@ -122,7 +124,7 @@ public class DashRendererBuilder implements DemoPlayer.RendererBuilder {
             this.drmCallback = drmCallback;
             this.player = player;
             MediaPresentationDescriptionParser parser = new MediaPresentationDescriptionParser();
-            manifestDataSource = new DefaultUriDataSource(context, userAgent);
+            manifestDataSource = new DefaultUriDataSource(context, null, userAgent, true);
             manifestFetcher = new ManifestFetcher<>(url, manifestDataSource, parser);
         }
 
@@ -219,7 +221,7 @@ public class DashRendererBuilder implements DemoPlayer.RendererBuilder {
 
             // Build the video renderer.
             DataSource videoDataSource =
-                    new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
             ChunkSource videoChunkSource = new DashChunkSource(manifestFetcher,
                     DefaultDashTrackSelector.newVideoInstance(context, true, filterHdContent),
                     videoDataSource, new AdaptiveEvaluator(bandwidthMeter), LIVE_EDGE_LATENCY_MS,
@@ -236,7 +238,7 @@ public class DashRendererBuilder implements DemoPlayer.RendererBuilder {
 
             // Build the audio renderer.
             DataSource audioDataSource =
-                    new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
             ChunkSource audioChunkSource = new DashChunkSource(manifestFetcher,
                     DefaultDashTrackSelector.newAudioInstance(), audioDataSource, null,
                     LIVE_EDGE_LATENCY_MS,
@@ -251,7 +253,7 @@ public class DashRendererBuilder implements DemoPlayer.RendererBuilder {
 
             // Build the text renderer.
             DataSource textDataSource =
-                    new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+                    new DefaultUriDataSource(context, bandwidthMeter, userAgent, true);
             ChunkSource textChunkSource = new DashChunkSource(manifestFetcher,
                     DefaultDashTrackSelector.newTextInstance(), textDataSource, null,
                     LIVE_EDGE_LATENCY_MS,

@@ -1,0 +1,383 @@
+#EXTM3U
+
+#EXTINF:0 tvg-logo="https://yt3.ggpht.com/-GzuAS_9sNTc/AAAAAAAAAAI/AAAAAAAAAAA/illJOId_OVk/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg" tvg-epg="file:hum-news.json", HUM News
+https://www.youtube.com/embed/live_stream?channel=UCt4pLfULsDlvIyMF5fKmtRg
+
+#EXTINF:0 tvg-logo="https://arynews.tv/wp-content/uploads/2018/03/news-logo-2-1.jpg" tvg-epg="file:ary-news.json", Ary News
+https://live.arynews.tv/hq/youtube-embed
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Dawn-News.png" tvg-epg="file:dawn-news.json", Dawn News
+https://www.dawnnews.tv/watch-live/youtube-embed
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/samaa-tv.png?v=1", Samaa News
+https://www.mjunoon.tv/samaa-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/24-News.png", 24 News
+https://www.mjunoon.tv/channel-24-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/News-one.png", News One
+https://www.mjunoon.tv/news-one-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/Channel-5-Logo.png", Channel 5
+https://www.mjunoon.tv/channel-five-live
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lahore_News_Logo_%28For_Tv_Screen%29.png/440px-Lahore_News_Logo_%28For_Tv_Screen%29.png",Lahore News HD
+http://mlive.lahorenews.tv:1935/lahorelive/lnews_1/playlist.m3u8
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/02/PTV_news_logo.png", Ptv News
+https://59aeddfe9f01c.streamlock.net/live/PTVnews/player.m3u8
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/PTV_World_logo.png/300px-PTV_World_logo.png", Ptv World
+https://59aeddfe9f01c.streamlock.net/live/8090/player.m3u8
+
+
+#EXTINF:0 tvg-logo="https://www.aljazeera.com/mritems/assets/images/aj-logo-lg-124.png", Al Jazeera English
+https://english.streaming.aljazeera.net/aljazeera/english2/index.m3u8
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png", euro news
+https://www.euronews.com/api/watchlive.json
+
+#EXTINF:0 tvg-logo="https://vignette.wikia.nocookie.net/logopedia/images/b/b1/NHK_World_Japan.png",NHK World
+https://nhkwlive-xjp.akamaized.net/hls/live/2003458/nhkwlive-xjp/index_1180.m3u8
+
+
+#EXTINF:0 tvg-channel="21" tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Quran-Tv.png", Makkah Live
+https://www.youtube.com/embed/live_stream?channel=UClIIopOeuwL8KEK0wnFcodw
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Sunnah-TV.png", Madina Live
+https://www.youtube.com/embed/live_stream?channel=UCraPI8sg-eiNzUrurxhKeEQ
+
+#EXTINF:0 tvg-logo="https://api.visionip.tv/portals/peacetv/peacetv/thumbs/peacetv-peacetv-peacetv-english-hsslive-25f-16x9-thumb-SDh.jpg.png", Peace TV English
+http://peacetv.api.visionip.tv/live/ASHTTP/peacetv-peacetv-peacetv-english-hsslive-25f-16x9-MB/playlist.m3u8
+
+#EXTINF:0 tvg-logo="https://api.visionip.tv/portals/peacetv/peacetv/thumbs/peacetv-peacetv-peacetv-urdu-hsslive-25f-16x9-thumb-SDh.jpg.png", Peace TV Urdu
+http://peacetv.api.visionip.tv/live/ASHTTP/peacetv-peacetv-peacetv-urdu-hsslive-25f-16x9-MB/playlist.m3u8
+
+
+
+#EXTINF:0 tvg-channel="33" tvg-logo="https://i.vimeocdn.com/portrait/11750117_300x300", Ptv Home
+https://59aeddfe9f01c.streamlock.net/live/PTVhome/player.m3u8
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/A-tv-Nws.png", Atv
+https://www.mjunoon.tv/a-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Aplus.png", A Plus
+https://www.mjunoon.tv/a-plus-live
+
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/Hum-Tv.png", HUM TV
+https://www.mjunoon.tv/hum-tv-live
+
+#EXTINF:0 tvg-logo="https://vignette.wikia.nocookie.net/logopedia/images/b/b6/Ary_digital_logo.png", ARY Digital
+http://158.69.228.195:1935/digitalnew/myStream/playlist.m3u8
+
+
+#EXTINF:0 tvg-logo="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/e5/53/7a/e5537a94-d5af-a501-626b-9149fb36f3d8/source/512x512bb.jpg", ARY Zindagi
+http://149.202.205.24:1935/ARYZINDAGI/ngrp:myStream_all/playlist.m3u8
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Tvone.png", Tv One
+https://www.mjunoon.tv/tv-one-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Urdu-1.png", Urdu 1
+https://www.mjunoon.tv/urdu-1-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Khaber.png", Khyber
+https://www.mjunoon.tv/avt-khyber-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Pashto1.png", Pashto 1
+https://www.mjunoon.tv/pashto1-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Aruj.png", Aruj
+https://www.mjunoon.tv/aruj-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Apna.png", Apna
+https://www.mjunoon.tv/apna-tv-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Film-World.png", Film World
+https://www.mjunoon.tv/filmworld-live
+
+#EXTINF:0 tvg-logo="https://www.mjunoon.tv/uploads/categories/a/Filmax.png", Filmax
+https://www.mjunoon.tv/filmax-live
+
+#EXTINF:0 tvg-channel="66" tvg-logo="https://www.arconaitv.us/uploads/streams/5cdef66953e78_mythbusters.jpg", MythBusters
+https://www.arconaitv.us/stream.php?id=165
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Discovery Channel
+https://ssl.ustreamix.com/embed.php?id=discovery-channel-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Discovery Channel
+https://tvpc.us/player/embed.php?cid=383
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ID (Investigation Discovery)
+https://ssl.ustreamix.com/embed.php?id=investigation-discovery
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", National Geographic
+https://ssl.ustreamix.com/embed.php?id=national-geographic
+
+#EXTINF:0 tvg-logo="https://www.arconaitv.us/uploads/streams/5cdef66953e78_mythbusters.jpg", National Geographic AE
+http://livecdnh1.tvanywhere.ae/hls/nat_geo/index.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", NAT GEO Wild
+https://ssl.ustreamix.com/embed.php?id=nat-geo-wild
+
+#EXTINF:0 tvg-logo="https://www.arconaitv.us/uploads/streams/5cdef66953e78_mythbusters.jpg", NAT GEO Wild AE
+http://livecdnh1.tvanywhere.ae/hls/nat_geo_wild/index.m3u8
+
+#EXTINF:0 tvg-logo="https://www.arconaitv.us/uploads/streams/5cdef66953e78_mythbusters.jpg", NAT GEO People
+http://livecdnh1.tvanywhere.ae/hls/nat_geo_people/05.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", History Channel USA
+https://ssl.ustreamix.com/embed.php?id=history-channel
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", History Channel UK
+https://ssl.ustreamix.com/embed.php?id=history-channel-uk
+
+#EXTINF:0 tvg-logo="https://www.arconaitv.us/uploads/streams/5cdef66953e78_mythbusters.jpg", H2
+http://livecdnh1.tvanywhere.ae/hls/h2/index.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", AMC USA
+https://ssl.ustreamix.com/embed.php?id=amc-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ABC USA
+https://ssl.ustreamix.com/embed.php?id=abc-tv
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", CBS USA
+https://ssl.ustreamix.com/embed.php?id=cbs-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", USA Network
+https://ssl.ustreamix.com/embed.php?id=usa-network
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", USA Network
+https://tvpc.us/player/embed.php?cid=397
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Comedy Central
+https://ssl.ustreamix.com/embed.php?id=comedy-central
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", TBS USA
+https://ssl.ustreamix.com/embed.php?id=tbs-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", NBC USA
+https://ssl.ustreamix.com/embed.php?id=nbc-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Fox USA
+https://ssl.ustreamix.com/embed.php?id=fox-usa-sd
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", CNBC
+https://ssl.ustreamix.com/embed.php?id=cnbc-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", FX USA
+https://ssl.ustreamix.com/embed.php?id=fx-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", CW USA
+https://ssl.ustreamix.com/embed.php?id=the-cw-tv
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", A&E USA
+https://ssl.ustreamix.com/embed.php?id=ae-tv-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Hallmark Channel
+https://ssl.ustreamix.com/embed.php?id=hallmark
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", TNT USA
+https://ssl.ustreamix.com/embed.php?id=tnt-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Showtime
+https://ssl.ustreamix.com/embed.php?id=showtime
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Lifetime
+https://ssl.ustreamix.com/embed.php?id=lifetime-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ABC Spark
+https://ssl.ustreamix.com/embed.php?id=abc-spark
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Sundance
+https://tvpc.us/player/embed.php?cid=394
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", TLC
+https://ssl.ustreamix.com/embed.php?id=tlc
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Bravo USA
+https://ssl.ustreamix.com/embed.php?id=bravo-tv
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Spike TV
+https://ssl.ustreamix.com/embed.php?id=spike-tv-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", HBO USA
+https://ssl.ustreamix.com/embed.php?id=hbo-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Syfy
+https://ssl.ustreamix.com/embed.php?id=syfy
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", SyFy
+https://tvpc.us/player/embed.php?cid=395
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Fashion TV
+https://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_pg16_d9y_27042_ftv_pg16_194_hls.smil/playlist.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Food Network
+https://ssl.ustreamix.com/embed.php?id=food-network
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Animal Planet
+https://ssl.ustreamix.com/embed.php?id=animal-planet
+
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", City TV Canada
+https://ssl.ustreamix.com/embed.php?id=city-tv-ca
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Global TV Canada
+https://ssl.ustreamix.com/embed.php?id=global-tv-canada
+
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", BBC America
+https://ssl.ustreamix.com/embed.php?id=bbc-america
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", BBC One USA
+https://ssl.ustreamix.com/embed.php?id=bbc1
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", BBC One
+https://live2.hoolatv.com/live/bbcone_hi/chunks.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", BBC One
+https://tvpc.us/player/embed.php?cid=5
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", BBC Two
+https://live2.hoolatv.com/live/bbctwo_hi/chunks.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", BBC Two
+https://tvpc.us/player/embed.php?cid=6
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Channel 4
+https://live2.hoolatv.com/live/channel4_hi/chunks.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Channel 4
+https://tvpc.us/player/embed.php?cid=3
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Channel 5
+https://live2.hoolatv.com/live/channel5_hi/chunks.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Channel 5
+https://tvpc.us/player/embed.php?cid=11
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", E4
+https://live2.hoolatv.com/live/e4_hi/chunks.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", DAVE Challenge
+https://live2.hoolatv.com/live/challenge_hi/chunks.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Film 4
+https://tvpc.us/player/embed.php?cid=2
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Film 4+1
+https://tvpc.us/player/embed.php?cid=513
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ITV
+https://live2.hoolatv.com/live/itv_hi/chunks.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ITV
+https://tvpc.us/player/embed.php?cid=62
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ITV 2
+https://live2.hoolatv.com/live/itv2_hi/chunks.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ITV 2
+https://tvpc.us/player/embed.php?cid=7
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ITV 3
+https://live2.hoolatv.com/live/itv3_hi/chunks.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ITV 3
+https://tvpc.us/player/embed.php?cid=8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ITV 4
+https://live2.hoolatv.com/live/itv4_hi/chunks.m3u8
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ITV 4
+https://tvpc.us/player/embed.php?cid=9
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ITV 1+1
+https://tvpc.us/player/embed.php?cid=223
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ITV 2+1
+https://tvpc.us/player/embed.php?cid=222
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ITV 3+1
+https://tvpc.us/player/embed.php?cid=224
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ITV 4+1
+https://tvpc.us/player/embed.php?cid=225
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", E4
+https://tvpc.us/player/embed.php?cid=13
+
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Disney Channel
+https://ssl.ustreamix.com/embed.php?id=disney-channel
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Nickelodeon
+https://ssl.ustreamix.com/embed.php?id=nickelodeon-live
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", PBS USA
+https://ssl.ustreamix.com/embed.php?id=pbs-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", CBC Canada
+https://ssl.ustreamix.com/embed.php?id=cbc-canada
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Cartoon Network
+https://ssl.ustreamix.com/embed.php?id=cartoon-network
+
+
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", NPO 1
+https://ssl.ustreamix.com/embed.php?id=npo-1
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", NPO 2
+https://ssl.ustreamix.com/embed.php?id=npo-2
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", NPO 3
+https://ssl.ustreamix.com/embed.php?id=npo-3
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", RTL4 NL
+https://ssl.ustreamix.com/embed.php?id=rtl4-nl
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", RTL7 NL
+https://ssl.ustreamix.com/embed.php?id=rtl7-nl
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", NET 5 NL
+https://ssl.ustreamix.com/embed.php?id=net-5-nl
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Veronica TV NL
+https://ssl.ustreamix.com/embed.php?id=veronica-tv-nl
+
+
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", ESPN USA
+https://ssl.ustreamix.com/embed.php?id=espn
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", BEIN SPORTS
+https://ssl.ustreamix.com/embed.php?id=bein-sports-usa
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Eurosport 1 UK
+https://ssl.ustreamix.com/embed.php?id=eurosport
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Tennis Channel
+https://ssl.ustreamix.com/embed.php?id=tennis-channel
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Cricket Channel
+https://ssl.ustreamix.com/embed.php?id=cricket-ch2
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Sky Sports Cricket
+https://ssl.ustreamix.com/embed.php?id=sky-sports-cricket
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Sky Sports Racing UK
+https://ssl.ustreamix.com/embed.php?id=sky-sports-racing
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Sky Sports F1
+https://ssl.ustreamix.com/embed.php?id=sky-sports-f1
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Ziggo Sport Select
+https://ssl.ustreamix.com/embed.php?id=ziggo-sport-select
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Ziggo Sport extra 1
+https://ssl.ustreamix.com/embed.php?id=ziggo-sport-1
+
+#EXTINF:0 tvg-logo="http://logok.org/wp-content/uploads/2015/01/Syfy-logo-1024x768.png", Ziggo Sport extra 2
+https://ssl.ustreamix.com/embed.php?id=ziggo-sport-2

@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The Android Open Source Project.
+ * Copyright 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,22 +19,25 @@ package com.google.android.media.tv.companionlibrary.xmltv;
 import android.media.tv.TvContract;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+
 import com.google.android.media.tv.companionlibrary.BuildConfig;
+import com.google.android.media.tv.companionlibrary.XmlTvParser;
 import com.google.android.media.tv.companionlibrary.model.InternalProviderData;
 import com.google.android.media.tv.companionlibrary.utils.TvContractUtils;
+
+import junit.framework.TestCase;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.robolectric.RobolectricGradleTestRunner;
+import org.robolectric.annotation.Config;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import junit.framework.TestCase;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
 
-/** Tests for {@link XmlTvParser}. */
-@RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 23,
-    manifest = "src/main/AndroidManifest.xml")
+@RunWith(RobolectricGradleTestRunner.class)
+@Config(constants = BuildConfig.class, sdk = 23, manifest = "src/main/AndroidManifest.xml")
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class XmlTvParserTest extends TestCase {
     @Test

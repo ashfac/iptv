@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 The Android Open Source Project.
+ * Copyright 2015 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,16 +17,50 @@
 package com.example.android.sampletvinput.rich;
 
 import android.app.Activity;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v17.leanback.app.GuidedStepFragment;
+import android.util.Log;
+import android.support.v4.app.ActivityCompat;
 
-/** The setup activity for demonstrating {@link RichTvInputService}. */
+import com.example.android.sampletvinput.R;
+
+/**
+ * The setup activity for demonstrating {@link RichTvInputService}.
+ */
 public class RichTvInputSetupActivity extends Activity {
+
+    private static final String TAG = "RichTvInputSetup";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (null == savedInstanceState) {
-            GuidedStepFragment.addAsRoot(this, new FirstStepFragment(), android.R.id.content);
+
+        if(isStoragePermissionGranted()) {
+            Log.v(TAG,"Permission is granted");
+        }
+
+        setContentView(R.layout.rich_setup);
+    }
+
+    public  boolean isStoragePermissionGranted() {
+        if (checkSelfPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE)
+                == PackageManager.PERMISSION_GRANTED) {
+            Log.v(TAG,"Read permission is granted");
+            return true;
+        } else {
+            Log.v(TAG, "Read Permission is revoked");
+            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+            return false;
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(grantResults[0]== PackageManager.PERMISSION_GRANTED){
+            Log.v(TAG,"Permission: "+permissions[0]+ "was "+grantResults[0]);
+            //resume tasks needing this permission
         }
     }
 }

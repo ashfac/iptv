@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 The Android Open Source Project.
+ * Copyright 2015 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,14 +19,23 @@ package com.example.android.sampletvinput.rich;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.Uri;
+import android.os.Environment;
 import android.util.Log;
+
 import com.example.android.sampletvinput.R;
-import com.google.android.media.tv.companionlibrary.xmltv.XmlTvParser;
+import com.example.android.sampletvinput.feeds.M3U8Feed;
+import com.example.android.sampletvinput.util.Util;
+import com.google.android.media.tv.companionlibrary.XmlTvParser;
+import com.google.android.media.tv.companionlibrary.model.Channel;
+
 import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.List;
 
 /**
  * Static helper methods for fetching the channel feed.
@@ -39,9 +48,7 @@ public class RichFeedUtil {
 
     private static XmlTvParser.TvListing sSampleTvListing;
 
-    // For this sample we will use the local XML TV feed. In your real app, you will want to use a
-    // remote feed to provide your users with up to date channel listings.
-    private static final boolean USE_LOCAL_XML_FEED = true;
+    private static List<Channel> sM3u8Channels;
 
     private static final int URLCONNECTION_CONNECTION_TIMEOUT_MS = 3000;  // 3 sec
     private static final int URLCONNECTION_READ_TIMEOUT_MS = 10000;  // 10 sec
@@ -49,43 +56,62 @@ public class RichFeedUtil {
     private RichFeedUtil() {
     }
 
-    @SuppressWarnings("IdentityBinaryExpression")
+    public static void resetTvListings() {
+        sSampleTvListing = null;
+        sM3u8Channels = null;
+    }
+
     public static XmlTvParser.TvListing getRichTvListings(Context context) {
-        Uri catalogUri = USE_LOCAL_XML_FEED
-                ? Uri.parse("android.resource://" + context.getPackageName() + "/"
-                + R.raw.rich_tv_input_xmltv_feed)
-                : Uri.parse(context.getResources().getString(R.string.rich_input_feed_url))
-                .normalizeScheme();
         if (sSampleTvListing != null) {
             return sSampleTvListing;
         }
-        InputStream inputStream = null;
-        try {
-             inputStream = getInputStream(context, catalogUri);
-            sSampleTvListing = XmlTvParser.parse(inputStream);
-        } catch (IOException e) {
-            Log.e(TAG, "Error in fetching " + catalogUri, e);
-        } catch (XmlTvParser.XmlTvParseException e) {
-            Log.e(TAG, "Error in parsing " + catalogUri, e);
-        } finally {
-            if (inputStream != null){
-                try {
-                    inputStream.close();
-                } catch (IOException e) {
-                    Log.e(TAG, "Error closing " + catalogUri, e);
-                }
+
+        String xmlFile = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/iptv_channels.xml";
+        File file = new File(xmlFile);
+        if(file.exists()) {
+            Uri catalogUri = Uri.parse("file://" + xmlFile);
+
+            try (InputStream inputStream = getInputStream(context, catalogUri)) {
+                sSampleTvListing = XmlTvParser.parse(inputStream);
+            } catch (IOException e) {
+                Log.e(TAG, "Error in fetching " + catalogUri, e);
+            } catch (XmlTvParser.XmlTvParseException e) {
+                Log.e(TAG, "Error in parsing " + catalogUri, e);
             }
         }
         return sSampleTvListing;
     }
 
-    @SuppressWarnings("IdentityBinaryExpression")
+    public static List<Channel> getM3u8Listings(Context context) {
+        if (sM3u8Channels != null) {
+            return sM3u8Channels;
+        }
+
+        String playlistPath = Util.FileSystem.getPlaylistPath(context);
+        File file = new File(playlistPath);
+        if(file.exists()) {
+            Uri catalogUri = Uri.parse("file://" + playlistPath);
+
+            try (InputStream inputStream = getInputStream(context, catalogUri)) {
+                sM3u8Channels = M3U8Feed.getChannels(context, inputStream);
+            } catch (IOException e) {
+                Log.e(TAG, "Error in fetching " + catalogUri, e);
+            }
+        }
+
+        return sM3u8Channels;
+    }
+
     public static InputStream getInputStream(Context context, Uri uri) throws IOException {
-        InputStream inputStream;
+        InputStream inputStream = null;
         if (ContentResolver.SCHEME_ANDROID_RESOURCE.equals(uri.getScheme())
                 || ContentResolver.SCHEME_ANDROID_RESOURCE.equals(uri.getScheme())
                 || ContentResolver.SCHEME_FILE.equals(uri.getScheme())) {
-            inputStream = context.getContentResolver().openInputStream(uri);
+            try {
+                inputStream = context.getContentResolver().openInputStream(uri);
+            } catch (FileNotFoundException e) {
+                Log.e(TAG, "Error in fetching " + uri, e);
+            }
         } else {
             URLConnection urlConnection = new URL(uri.toString()).openConnection();
             urlConnection.setConnectTimeout(URLCONNECTION_CONNECTION_TIMEOUT_MS);

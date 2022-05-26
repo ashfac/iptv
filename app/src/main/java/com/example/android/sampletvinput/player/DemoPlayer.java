@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The Android Open Source Project.
+ * Copyright (C) 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,6 +24,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.annotation.RequiresApi;
 import android.view.Surface;
+
 import com.google.android.exoplayer.CodecCounters;
 import com.google.android.exoplayer.DummyTrackRenderer;
 import com.google.android.exoplayer.ExoPlaybackException;
@@ -50,6 +51,7 @@ import com.google.android.exoplayer.upstream.DefaultBandwidthMeter;
 import com.google.android.exoplayer.util.DebugTextViewHelper;
 import com.google.android.exoplayer.util.PlayerControl;
 import com.google.android.media.tv.companionlibrary.TvPlayer;
+
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
@@ -529,7 +531,7 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
     @Override
     public void onPlayerError(ExoPlaybackException exception) {
         for (Callback tvCallback : mTvPlayerCallbacks) {
-            tvCallback.onError(exception);
+            tvCallback.onError();
         }
         rendererBuildingState = RENDERER_BUILDING_STATE_IDLE;
         for (Listener listener : listeners) {
@@ -670,6 +672,7 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
     @Override
     public void onDrawnToSurface(Surface surface) {
         // Do nothing.
+
     }
 
     @Override

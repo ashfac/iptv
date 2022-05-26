@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The Android Open Source Project.
+ * Copyright (c) 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaCodec;
 import android.os.Handler;
+
 import com.google.android.exoplayer.DefaultLoadControl;
 import com.google.android.exoplayer.LoadControl;
 import com.google.android.exoplayer.MediaCodecAudioTrackRenderer;
@@ -45,6 +46,7 @@ import com.google.android.exoplayer.upstream.DefaultBandwidthMeter;
 import com.google.android.exoplayer.upstream.DefaultUriDataSource;
 import com.google.android.exoplayer.util.ManifestFetcher;
 import com.google.android.exoplayer.util.ManifestFetcher.ManifestCallback;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -62,18 +64,20 @@ public class HlsRendererBuilder implements DemoPlayer.RendererBuilder {
     private final Context context;
     private final String userAgent;
     private final String url;
+    private final String httpRequestHeaders;
 
     private AsyncRendererBuilder currentAsyncBuilder;
 
-    public HlsRendererBuilder(Context context, String userAgent, String url) {
+    public HlsRendererBuilder(Context context, String userAgent, String url, String httpRequestHeaders) {
         this.context = context;
         this.userAgent = userAgent;
         this.url = url;
+        this.httpRequestHeaders = httpRequestHeaders;
     }
 
     @Override
     public void buildRenderers(DemoPlayer player) {
-        currentAsyncBuilder = new AsyncRendererBuilder(context, userAgent, url, player);
+        currentAsyncBuilder = new AsyncRendererBuilder(context, userAgent, url, httpRequestHeaders, player);
         currentAsyncBuilder.init();
     }
 
@@ -89,19 +93,23 @@ public class HlsRendererBuilder implements DemoPlayer.RendererBuilder {
 
         private final Context context;
         private final String userAgent;
+        private final String url;
+        private final String httpRequestHeaders;
         private final DemoPlayer player;
         private final ManifestFetcher<HlsPlaylist> playlistFetcher;
 
         private boolean canceled;
 
-        public AsyncRendererBuilder(Context context, String userAgent, String url,
+        public AsyncRendererBuilder(Context context, String userAgent, String url, String httpRequestHeaders,
                 DemoPlayer player) {
             this.context = context;
             this.userAgent = userAgent;
+            this.url = url;
+            this.httpRequestHeaders = httpRequestHeaders;
             this.player = player;
             HlsPlaylistParser parser = new HlsPlaylistParser();
             playlistFetcher = new ManifestFetcher<>(url,
-                    new DefaultUriDataSource(context, userAgent), parser);
+                    new DefaultUriDataSource(context, null, userAgent, httpRequestHeaders, true), parser);
         }
 
         public void init() {
@@ -135,10 +143,10 @@ public class HlsRendererBuilder implements DemoPlayer.RendererBuilder {
                     new PtsTimestampAdjusterProvider();
 
             // Build the video/audio/metadata renderers.
-            DataSource dataSource = new DefaultUriDataSource(context, bandwidthMeter, userAgent);
-            HlsChunkSource chunkSource = new HlsChunkSource(true /* isMaster */, dataSource,
+            DataSource dataSource = new DefaultUriDataSource(context, bandwidthMeter, userAgent, httpRequestHeaders, true);
+            HlsChunkSource chunkSource = new HlsChunkSource(true /* isMaster */, dataSource, url,
                     manifest, DefaultHlsTrackSelector.newDefaultInstance(context), bandwidthMeter,
-                    timestampAdjusterProvider);
+                    timestampAdjusterProvider, HlsChunkSource.ADAPTIVE_MODE_SPLICE);
             HlsSampleSource sampleSource = new HlsSampleSource(chunkSource,
                     loadControl,
                     MAIN_BUFFER_SEGMENTS * BUFFER_SEGMENT_SIZE,
@@ -162,12 +170,12 @@ public class HlsRendererBuilder implements DemoPlayer.RendererBuilder {
             TrackRenderer textRenderer;
             if (preferWebvtt) {
                 DataSource textDataSource =
-                        new DefaultUriDataSource(context, bandwidthMeter, userAgent);
+                        new DefaultUriDataSource(context, bandwidthMeter, userAgent, httpRequestHeaders, true);
                 HlsChunkSource textChunkSource =
                         new HlsChunkSource(false /* isMaster */, textDataSource,
-                               manifest, DefaultHlsTrackSelector.newSubtitleInstance(),
+                                url, manifest, DefaultHlsTrackSelector.newVttInstance(),
                                 bandwidthMeter,
-                                timestampAdjusterProvider);
+                                timestampAdjusterProvider, HlsChunkSource.ADAPTIVE_MODE_SPLICE);
                 HlsSampleSource textSampleSource = new HlsSampleSource(textChunkSource, loadControl,
                         TEXT_BUFFER_SEGMENTS * BUFFER_SEGMENT_SIZE, mainHandler, player,
                         DemoPlayer.TYPE_TEXT);

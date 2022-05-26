@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 The Android Open Source Project.
+ * Copyright 2015 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,9 +25,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.TextView;
+
 import com.example.android.sampletvinput.R;
 import com.google.android.media.tv.companionlibrary.model.Channel;
-import com.google.android.media.tv.companionlibrary.model.ModelUtils;
+import com.google.android.media.tv.companionlibrary.utils.TvContractUtils;
+
 import java.util.List;
 
 /**
@@ -39,12 +41,12 @@ public class RichAppLinkSidePanelActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        List<Channel> channels = ModelUtils.getChannels(getContentResolver());
+        List<Channel> Channels = TvContractUtils.getChannels(getContentResolver());
         Channel appLinkChannel = null;
 
         String displayNumber = getIntent().getStringExtra(RichFeedUtil.EXTRA_DISPLAY_NUMBER);
         if (displayNumber != null) {
-            for (Channel channel : channels) {
+            for (Channel channel : Channels) {
                 if (displayNumber.equals(channel.getDisplayNumber())) {
                     appLinkChannel = channel;
                     break;

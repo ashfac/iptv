@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The Android Open Source Project.
+ * Copyright 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,13 +24,16 @@ import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
+
 import com.google.android.media.tv.companionlibrary.BaseTvInputService;
 import com.google.android.media.tv.companionlibrary.TvPlayer;
 import com.google.android.media.tv.companionlibrary.model.Channel;
 import com.google.android.media.tv.companionlibrary.model.Program;
 import com.google.android.media.tv.companionlibrary.model.RecordedProgram;
-import java.io.IOException;
+
 import junit.framework.Assert;
+
+import java.io.IOException;
 
 /**
  * Dummy TvInputService that may be called for testing purposes

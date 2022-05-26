@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The Android Open Source Project.
+ * Copyright 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,16 +28,20 @@ import android.support.v4.content.PermissionChecker;
 import android.test.ActivityInstrumentationTestCase2;
 import android.util.Log;
 import android.util.LongSparseArray;
+
+import com.google.android.media.tv.companionlibrary.EpgSyncJobService;
 import com.google.android.media.tv.companionlibrary.model.Channel;
-import com.google.android.media.tv.companionlibrary.model.ModelUtils;
 import com.google.android.media.tv.companionlibrary.model.Program;
-import com.google.android.media.tv.companionlibrary.sync.EpgSyncJobService;
+import com.google.android.media.tv.companionlibrary.utils.TvContractUtils;
+
+import junit.framework.Assert;
+
+import org.junit.Before;
+import org.junit.Test;
+
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-import junit.framework.Assert;
-import org.junit.Before;
-import org.junit.Test;
 
 /**
  * Tests the periodic syncing functionality of the EpgSyncJobService to ensure the reliability of
@@ -95,8 +99,8 @@ public class PeriodicEpgSyncJobServiceTest extends ActivityInstrumentationTestCa
         mSampleJobService = new TestJobService();
         mSampleJobService.mContext = getActivity();
         mChannelList = mSampleJobService.getChannels();
-        ModelUtils.updateChannels(getActivity(), mInputId, mChannelList, null);
-        mChannelMap = ModelUtils.buildChannelMap(getActivity().getContentResolver(), mInputId);
+        TvContractUtils.updateChannels(getActivity(), mInputId, mChannelList);
+        mChannelMap = TvContractUtils.buildChannelMap(getActivity().getContentResolver(), mInputId);
         assertEquals(2, mChannelMap.size());
     }
 

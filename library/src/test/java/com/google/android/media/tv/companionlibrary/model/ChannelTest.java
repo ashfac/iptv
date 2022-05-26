@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The Android Open Source Project.
+ * Copyright 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,19 +15,20 @@
  */
 package com.google.android.media.tv.companionlibrary.model;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.MatrixCursor;
 import android.media.tv.TvContract;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+
 import com.google.android.media.tv.companionlibrary.BuildConfig;
+
+import junit.framework.TestCase;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
+import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
@@ -35,11 +36,10 @@ import org.robolectric.annotation.Config;
  * Tests that channels can be created using the Builder pattern and correctly obtain
  * values from them
  */
-@RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 23,
-    manifest = "src/main/AndroidManifest.xml")
+@RunWith(RobolectricGradleTestRunner.class)
+@Config(constants = BuildConfig.class, sdk = 23, manifest = "src/main/AndroidManifest.xml")
 @RequiresApi(api = Build.VERSION_CODES.M)
-public class ChannelTest {
+public class ChannelTest extends TestCase {
     private static final String KEY_SPLASHSCREEN = "splashscreen";
     private static final String KEY_PREMIUM_CHANNEL = "premium";
     private static final String SPLASHSCREEN_URL = "http://example.com/splashscreen.jpg";

@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 The Android Open Source Project.
+ * Copyright 2015 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,6 +27,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.StrictMode;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
@@ -35,24 +36,32 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.accessibility.CaptioningManager;
+import android.widget.Toast;
+
 import com.example.android.sampletvinput.R;
-import com.example.android.sampletvinput.SampleJobService;
+import com.example.android.sampletvinput.parsers.TvUrlParser;
 import com.example.android.sampletvinput.player.DemoPlayer;
 import com.example.android.sampletvinput.player.RendererBuilderFactory;
+
+import com.example.android.sampletvinput.SampleJobService;
+import com.example.android.sampletvinput.util.SimpleHttpClient;
+import com.example.android.sampletvinput.util.Util;
 import com.google.android.exoplayer.ExoPlayer;
 import com.google.android.exoplayer.MediaFormat;
 import com.google.android.exoplayer.text.CaptionStyleCompat;
 import com.google.android.exoplayer.text.Cue;
 import com.google.android.exoplayer.text.SubtitleLayout;
-import com.google.android.media.tv.companionlibrary.BaseTvInputService;
 import com.google.android.media.tv.companionlibrary.TvPlayer;
 import com.google.android.media.tv.companionlibrary.model.Advertisement;
 import com.google.android.media.tv.companionlibrary.model.Channel;
 import com.google.android.media.tv.companionlibrary.model.InternalProviderData;
 import com.google.android.media.tv.companionlibrary.model.Program;
 import com.google.android.media.tv.companionlibrary.model.RecordedProgram;
-import com.google.android.media.tv.companionlibrary.sync.EpgSyncJobService;
+import com.google.android.media.tv.companionlibrary.BaseTvInputService;
+import com.google.android.media.tv.companionlibrary.EpgSyncJobService;
 import com.google.android.media.tv.companionlibrary.utils.TvContractUtils;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -92,6 +101,9 @@ public class RichTvInputService extends BaseTvInputService {
     public void onCreate() {
         super.onCreate();
         mCaptioningManager = (CaptioningManager) getSystemService(Context.CAPTIONING_SERVICE);
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
     }
 
     @Override
@@ -120,6 +132,7 @@ public class RichTvInputService extends BaseTvInputService {
         private boolean mCaptionEnabled;
         private String mInputId;
         private Context mContext;
+        private String mVideoUrl = null;
 
         RichTvInputSessionImpl(Context context, String inputId) {
             super(context, inputId);
@@ -201,14 +214,34 @@ public class RichTvInputService extends BaseTvInputService {
                 notifyVideoUnavailable(TvInputManager.VIDEO_UNAVAILABLE_REASON_TUNING);
                 return false;
             }
-            createPlayer(program.getInternalProviderData().getVideoType(),
-                    Uri.parse(program.getInternalProviderData().getVideoUrl()));
+
+            String videoUrl = program.getInternalProviderData().getVideoUrl();
+            String httpRequestHeaders = null;
+
+            // return from here if videoUrl is the same as that of currently playing program
+            if(videoUrl.equalsIgnoreCase(mVideoUrl)) {
+                return true;
+            }
+
+            mVideoUrl = videoUrl;
+            videoUrl = TvUrlParser.parseVideoUrl(videoUrl);
+
+            if(videoUrl == null || videoUrl.length() == 0) {
+                Toast.makeText(mContext, "Channel Offline" , Toast.LENGTH_SHORT).show();
+                    return false;
+            }
+
+            if(videoUrl.contains(Util.HTTP_REQUEST_HEADERS)) {
+                httpRequestHeaders = videoUrl.substring(videoUrl.indexOf(Util.HTTP_REQUEST_HEADERS)
+                        + Util.HTTP_REQUEST_HEADERS.length());
+                videoUrl = videoUrl.substring(0, videoUrl.indexOf(Util.HTTP_REQUEST_HEADERS));
+            }
+
+            createPlayer(program.getInternalProviderData().getVideoType(), Uri.parse(videoUrl), httpRequestHeaders);
             if (startPosMs > 0) {
                 mPlayer.seekTo(startPosMs);
             }
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                notifyTimeShiftStatusChanged(TvInputManager.TIME_SHIFT_STATUS_AVAILABLE);
-            }
+            notifyTimeShiftStatusChanged(TvInputManager.TIME_SHIFT_STATUS_AVAILABLE);
             mPlayer.setPlayWhenReady(true);
             return true;
         }
@@ -216,14 +249,12 @@ public class RichTvInputService extends BaseTvInputService {
         @RequiresApi(api = Build.VERSION_CODES.N)
         public boolean onPlayRecordedProgram(RecordedProgram recordedProgram) {
             createPlayer(recordedProgram.getInternalProviderData().getVideoType(),
-                    Uri.parse(recordedProgram.getInternalProviderData().getVideoUrl()));
+                    Uri.parse(recordedProgram.getInternalProviderData().getVideoUrl()), null);
 
             long recordingStartTime = recordedProgram.getInternalProviderData()
                     .getRecordedProgramStartTime();
             mPlayer.seekTo(recordingStartTime - recordedProgram.getStartTimeUtcMillis());
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                notifyTimeShiftStatusChanged(TvInputManager.TIME_SHIFT_STATUS_AVAILABLE);
-            }
+            notifyTimeShiftStatusChanged(TvInputManager.TIME_SHIFT_STATUS_AVAILABLE);
             mPlayer.setPlayWhenReady(true);
             return true;
         }
@@ -245,13 +276,13 @@ public class RichTvInputService extends BaseTvInputService {
         @Override
         public void onPlayAdvertisement(Advertisement advertisement) {
             createPlayer(TvContractUtils.SOURCE_TYPE_HTTP_PROGRESSIVE,
-                    Uri.parse(advertisement.getRequestUrl()));
+                    Uri.parse(advertisement.getRequestUrl()), null);
         }
 
-        private void createPlayer(int videoType, Uri videoUrl) {
+        private void createPlayer(int videoType, Uri videoUrl, String httpRequestHeaders) {
             releasePlayer();
             mPlayer = new DemoPlayer(RendererBuilderFactory.createRendererBuilder(
-                    mContext, videoType, videoUrl));
+                    mContext, videoType, videoUrl, httpRequestHeaders));
             mPlayer.addListener(this);
             mPlayer.setCaptionListener(this);
             mPlayer.prepare();
@@ -362,9 +393,7 @@ public class RichTvInputService extends BaseTvInputService {
 
         @Override
         public void onCues(List<Cue> cues) {
-            if (mSubtitleView != null) {
-                mSubtitleView.setCues(cues);
-            }
+            mSubtitleView.setCues(cues);
         }
 
         public void requestEpgSync(final Uri channelUri) {

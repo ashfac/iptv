@@ -1,0 +1,301 @@
+{
+  "version": 1,
+  "timezone": "+05:00",
+  "programs": [
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "00:00",
+      "endtime": "01:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "01:00",
+      "endtime": "02:00",
+      "name": "Nadeem Malik",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/10/hum-nadeem-malik-europe.jpg"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "01:00",
+      "endtime": "02:00",
+      "name": "Pakistan Tonight",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/10/hum-pak-tonight-europe.jpg"
+    },
+    {
+      "days": ["Monday"],
+      "starttime": "02:00",
+      "endtime": "03:00",
+      "name": "Mein Nahi Hum",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Mein-Nahi-Hum.png"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "starttime": "02:00",
+      "endtime": "03:00",
+      "name": "Bari Baat",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Bari-Baat.png"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "02:00",
+      "endtime": "03:00",
+      "name": "Hum Investigates"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "03:00",
+      "endtime": "04:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "04:00",
+      "endtime": "05:00",
+      "name": "News Line",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Newsline.png"
+    },
+    {
+      "days": ["Saturday"],
+      "starttime": "04:00",
+      "endtime": "05:00",
+      "name": "Mein Nahi Hum",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Mein-Nahi-Hum.png"
+    },
+    {
+      "days": ["Sunday", "Monday"],
+      "starttime": "04:00",
+      "endtime": "05:00",
+      "name": "Agenda Pakistan",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Agenda-pakistan.png"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "05:00",
+      "endtime": "06:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday"],
+      "starttime": "06:00",
+      "endtime": "07:00",
+      "name": "Mein Nahi Hum",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Mein-Nahi-Hum.png"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "starttime": "06:00",
+      "endtime": "07:00",
+      "name": "Bari Baat",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Bari-Baat.png"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "06:00",
+      "endtime": "07:00",
+      "name": "Hum Investigates"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "07:00",
+      "endtime": "08:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday"],
+      "starttime": "08:00",
+      "endtime": "09:00",
+      "name": "Agenda Pakistan",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Agenda-pakistan.png"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "08:00",
+      "endtime": "09:00",
+      "name": "News Line",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Newsline.png"
+    },
+    {
+      "days": ["Saturday", "Sunday"],
+      "starttime": "08:00",
+      "endtime": "09:00",
+      "name": "Mein Nahi Hum",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Mein-Nahi-Hum.png"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "09:00",
+      "endtime": "10:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "10:00",
+      "endtime": "12:00",
+      "name": "Subah Se Agay",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Subh-Se-Agay.png"
+    },
+    {
+      "days": ["Saturday"],
+      "starttime": "10:00",
+      "endtime": "12:00",
+      "name": "News"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "10:00",
+      "endtime": "11:00",
+      "name": "Hum Investigates"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "11:00",
+      "endtime": "12:00",
+      "name": "Agenda Pakistan",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Agenda-pakistan.png"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "12:00",
+      "endtime": "13:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday"],
+      "starttime": "13:00",
+      "endtime": "14:00",
+      "name": "Mein Nahi Hum",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Mein-Nahi-Hum.png"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "13:00",
+      "endtime": "14:00",
+      "name": "Bari Baat",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Bari-Baat.png"
+    },
+    {
+      "days": ["Saturday"],
+      "starttime": "13:00",
+      "endtime": "14:00",
+      "name": "News"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "13:00",
+      "endtime": "14:00",
+      "name": "Hum Investigates"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "14:00",
+      "endtime": "15:00",
+      "name": "Nadeem Malik",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/10/hum-nadeem-malik-europe.jpg"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "14:00",
+      "endtime": "15:00",
+      "name": "Pakistan Tonight",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/10/hum-pak-tonight-europe.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "15:00",
+      "endtime": "16:00",
+      "name": "News"
+    },
+    {
+      "days": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "16:00",
+      "endtime": "17:00",
+      "name": "Special Report"
+    },
+    {
+      "days": ["Saturday", "Sunday", "Monday"],
+      "starttime": "16:00",
+      "endtime": "17:00",
+      "name": "Agenda Pakistan",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Agenda-pakistan.png"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "17:00",
+      "endtime": "18:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "18:00",
+      "endtime": "19:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "19:00",
+      "endtime": "20:00",
+      "name": "News Line",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Newsline.png"
+    },
+    {
+      "days": ["Saturday", "Sunday"],
+      "starttime": "19:00",
+      "endtime": "20:00",
+      "name": "Coke Studio"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "starttime": "20:00",
+      "endtime": "21:00",
+      "name": "Nadeem Malik",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/10/hum-nadeem-malik-europe.jpg"
+    },
+    {
+      "days": ["Friday", "Saturday", "Sunday"],
+      "starttime": "20:00",
+      "endtime": "21:00",
+      "name": "Pakistan Tonight",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/10/hum-pak-tonight-europe.jpg"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "starttime": "21:00",
+      "endtime": "22:00",
+      "name": "News"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "starttime": "22:00",
+      "endtime": "23:00",
+      "name": "Bari Baat",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Bari-Baat.png"
+    },
+    {
+      "days": ["Saturday"],
+      "starttime": "22:00",
+      "endtime": "23:00",
+      "name": "Hum Investigates"
+    },
+    {
+      "days": ["Sunday"],
+      "starttime": "22:00",
+      "endtime": "23:00",
+      "name": "Mein Nahi Hum",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Mein-Nahi-Hum.png"
+    },
+    {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "starttime": "23:00",
+      "endtime": "24:00",
+      "name": "Hum News Extra"
+    },
+    {
+      "days": ["Friday", "Saturday", "Sunday"],
+      "starttime": "23:00",
+      "endtime": "24:00",
+      "name": "Agenda Pakistan",
+      "poster": "https://www.humnews.pk/wp-content/uploads/2018/07/Agenda-pakistan.png"
+    }
+  ]
+}

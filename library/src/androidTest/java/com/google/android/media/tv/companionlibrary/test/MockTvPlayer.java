@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The Android Open Source Project.
+ * Copyright 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,9 +21,12 @@ import android.media.PlaybackParams;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.view.Surface;
+
 import com.google.android.media.tv.companionlibrary.TvPlayer;
-import java.io.IOException;
+
 import junit.framework.Assert;
+
+import java.io.IOException;
 
 /**
  * The MockTvPlayer is an implementation of TvPlayer which plays media with Android's MediaPlayer.

@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The Android Open Source Project.
+ * Copyright 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,12 +18,16 @@ package com.google.android.media.tv.companionlibrary.test;
 import android.content.Context;
 import android.net.Uri;
 import android.support.annotation.VisibleForTesting;
-import com.google.android.media.tv.companionlibrary.ads.EpgSyncWithAdsJobService;
+
+import com.google.android.media.tv.companionlibrary.EpgSyncJobService;
+import com.google.android.media.tv.companionlibrary.XmlTvParser;
 import com.google.android.media.tv.companionlibrary.model.Channel;
 import com.google.android.media.tv.companionlibrary.model.InternalProviderData;
 import com.google.android.media.tv.companionlibrary.model.Program;
 import com.google.android.media.tv.companionlibrary.utils.TvContractUtils;
-import com.google.android.media.tv.companionlibrary.xmltv.XmlTvParser;
+
+import junit.framework.Assert;
+
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -31,10 +35,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-import junit.framework.Assert;
 
-/** Generic concrete class that returns non-null values for test purposes */
-public class TestJobService extends EpgSyncWithAdsJobService {
+/**
+ * Generic concrete class that returns non-null values for test purposes
+ */
+public class TestJobService extends EpgSyncJobService {
     // For testing purposes we use the test activity context
     public static Context mContext;
     public static final String GMAIL_BLUE_VIDEO_URL = "assets://introducing_gmail_blue.mp4";
@@ -47,36 +52,33 @@ public class TestJobService extends EpgSyncWithAdsJobService {
         InternalProviderData internalProviderData = new InternalProviderData();
         internalProviderData.setRepeatable(true);
         ArrayList<Channel> testChannels = new ArrayList<>();
-        testChannels.add(
-                new Channel.Builder()
-                        .setOriginalNetworkId(0)
-                        .setDisplayName("Test Channel")
-                        .setDisplayNumber("1")
-                        .setInternalProviderData(internalProviderData)
-                        .build());
+        testChannels.add(new Channel.Builder()
+                .setOriginalNetworkId(0)
+                .setDisplayName("Test Channel")
+                .setDisplayNumber("1")
+                .setInternalProviderData(internalProviderData)
+                .build());
 
         // Add an XML parsed channel
-        Uri xmlUri =
-                Uri.parse("android.resource://" + mContext.getPackageName() + "/" + R.raw.xmltv)
-                        .normalizeScheme();
+        Uri xmlUri = Uri.parse("android.resource://" + mContext.getPackageName()
+                + "/" + com.google.android.media.tv.companionlibrary.test.R.raw.xmltv)
+                .normalizeScheme();
         try {
-            InputStream inputStream = mContext.getContentResolver().openInputStream(xmlUri);
+            InputStream inputStream = mContext.getContentResolver()
+                    .openInputStream(xmlUri);
             Assert.assertNotNull(inputStream);
             testChannels.addAll(XmlTvParser.parse(inputStream).getChannels());
         } catch (FileNotFoundException | XmlTvParser.XmlTvParseException e) {
-            throw new RuntimeException(
-                    "Exception found of type "
-                            + e.getClass().getCanonicalName()
-                            + ": "
-                            + e.getMessage());
+            throw new RuntimeException("Exception found of type " + e.getClass().getCanonicalName()
+                    + ": " + e.getMessage());
         }
 
         return testChannels;
     }
 
     @Override
-    public List<Program> getOriginalProgramsForChannel(
-            Uri channelUri, Channel channel, long startMs, long endMs) {
+    public List<Program> getProgramsForChannel(Uri channelUri, Channel channel, long startMs,
+            long endMs) {
         ArrayList<Program> testPrograms = new ArrayList<>();
 
         if (channel.getOriginalNetworkId() == 0) {
@@ -84,34 +86,29 @@ public class TestJobService extends EpgSyncWithAdsJobService {
             InternalProviderData internalProviderData = new InternalProviderData();
             internalProviderData.setVideoType(TvContractUtils.SOURCE_TYPE_HTTP_PROGRESSIVE);
             internalProviderData.setVideoUrl(GMAIL_BLUE_VIDEO_URL);
-            testPrograms =
-                    new ArrayList<>(
-                            Collections.singletonList(
-                                    new Program.Builder()
-                                            .setTitle("Test Program")
-                                            .setChannelId(channel.getId())
-                                            .setInternalProviderData(internalProviderData)
-                                            .setStartTimeUtcMillis(0)
-                                            .setEndTimeUtcMillis(1000 * 60 * 15) // 15 Minutes long
-                                            .build()));
-        } else if (channel.getOriginalNetworkId()
-                == "com.example.android.sampletvinput.2-1".hashCode()) {
+            testPrograms = new ArrayList<>(Collections.singletonList(new Program.Builder()
+                    .setTitle("Test Program")
+                    .setChannelId(channel.getId())
+                    .setInternalProviderData(internalProviderData)
+                    .setStartTimeUtcMillis(0)
+                    .setEndTimeUtcMillis(1000 * 60 * 15) // 15 Minutes long
+                    .build()));
+        } else if (channel.getOriginalNetworkId() ==
+                "com.example.android.sampletvinput.2-1".hashCode()) {
             // Obtain programs from Xml
-            Uri xmlUri =
-                    Uri.parse("android.resource://" + mContext.getPackageName() + "/" + R.raw.xmltv)
-                            .normalizeScheme();
+            Uri xmlUri = Uri.parse("android.resource://" + mContext.getPackageName()
+                    + "/" + com.google.android.media.tv.companionlibrary.test.R.raw.xmltv)
+                    .normalizeScheme();
             try {
-                InputStream inputStream = mContext.getContentResolver().openInputStream(xmlUri);
+                InputStream inputStream = mContext.getContentResolver()
+                        .openInputStream(xmlUri);
                 Assert.assertNotNull(inputStream);
                 XmlTvParser.TvListing listing = XmlTvParser.parse(inputStream);
                 List<Program> programList = listing.getPrograms(channel);
                 testPrograms.addAll(programList);
             } catch (FileNotFoundException | XmlTvParser.XmlTvParseException e) {
-                throw new RuntimeException(
-                        "Exception found of type "
-                                + e.getClass().getCanonicalName()
-                                + ": "
-                                + e.getMessage());
+                throw new RuntimeException("Exception found of type " +
+                        e.getClass().getCanonicalName() + ": " + e.getMessage());
             }
         }
         // Create some delay to test longer syncing
@@ -124,7 +121,9 @@ public class TestJobService extends EpgSyncWithAdsJobService {
         return testPrograms;
     }
 
-    /** Generates an EpgSyncTask for testing. */
+    /**
+     * Generates an EpgSyncTask for testing.
+     */
     @VisibleForTesting
     public TestEpgSyncTask getDefaultEpgSyncTask() {
         return new TestEpgSyncTask();
